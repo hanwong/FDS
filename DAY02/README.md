@@ -7,7 +7,7 @@
 * Emmet 
   * Lorem Ipsum, |e, |c, 반복 압축 입력 예시
 * Sublime 
-  * cc:ie, cc:noie
+  * snippet, cc:ie, cc:noie
 * Chrome 
   * Preserve log, 확장 프로그램:Web Develover, 
 * Photoshop 
