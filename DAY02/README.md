@@ -1,7 +1,7 @@
 # DAY 02
 <hr>
 
-### 진행내용
+### 학습내용
 * HTML 
   * em, strong, sup, sub, h1-6, br, div, link, a, img, hr, pre, ie조건부주석문, Entity Code
 * Emmet 
@@ -12,3 +12,6 @@
   * Preserve log, 확장 프로그램:Web Develover, 
 * Photoshop 
   * 이미지 크기 조절, 웹용으로 저장
+
+
+###세부내용
