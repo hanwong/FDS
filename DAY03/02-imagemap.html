@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>HTML 이미지 맵 요소</title>
+</head>
+<body>
+	<img src="images/worldmap.png" 
+				alt="세계지도 링크 서비스"
+				usemap="#world-map">
+	<map name="world-map">
+		<area shape="rect" coords="80, 97, 332, 250" href="./map/eurupe.html" alt="유럽" title="유럽 페이지로 이동">
+		<!-- <area shape="cir" coords="centerx, centery, radius" href="" alt=""> -->
+		<area shape="poly" coords="551, 239, 538, 255, 542, 268, 548, 282, 563, 279" href="" alt="한국" title="한국 페이지로 이동">
+	</map>	
+</body>
+</html>
