@@ -1,11 +1,10 @@
-#HTML 요소
 
-* image - src, alt
-> alt - 이미지를 보지 못하는 사용자를 위한 속성, 적절한 문구를 넣어야 한다.
-> width, height - 로딩 중에 위치 및 구조가 지정되어 있어서 화면이 바뀌는 경험
-> longdesc - 긴 설명을 추가 하는 속성,
-
-* image map
+# HTML 요소
+    - image - src, alt
+        - alt - 이미지를 보지 못하는 사용자를 위한 속성, 적절한 문구를 넣어야 한다.
+        - width, height - 로딩 중에 위치 및 구조가 지정되어 있어서 화면이 바뀌는 경험
+        - longdesc - 긴 설명을 추가 하는 속성,
+    - image map
         - img tag에서 usemap으로 연결
         - map - 맵의 전체 영역
         - area - 맵 안에 다른 문서를 연결시키는 영역, 겹치는 경우 위에 있는 요소가 우선순위가 됨.
@@ -78,15 +77,11 @@
             - name 값이 있어야지만 전송이 가능하고, 벨류 값을 가져 올 수 있다.
             - id는 label과 연결시키주기 위해서 필요한 속성
 
-- Emmet 기능
+# Emmet 기능
     - .hi#this - .class #id
     - emmet update : ctrl+shift+i  - 이미지 크기 자동으로 넣기
 
-- Sublime 기능
+# Sublime 기능
     - ctrl+shift+↑↓ - 다중커서 선택
     - ctrl+command+↑↓ - 위치 변경
 
-
-- Chrome 기능
-
-- Photoshop 기능
