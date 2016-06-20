@@ -48,7 +48,7 @@
 
 - `abbr`
     - title 속성에 약어 표시
-    - 링크요소를 추가하기 위해 <a>요소로 감싸면 됨, taget=“_blank”를 추가해서 새로운 창에서 열리도록 함.
+    - 링크요소를 추가하기 위해 `<a>`요소로 감싸면 됨, `taget=“_blank”`를 추가해서 새로운 창에서 열리도록 함.
 
 - meta-info - http://cafe.naver.com/webstandardproject/603
     - og:
@@ -60,8 +60,8 @@
 - `form`
     - 속성
     - `name` - 이름, 요즘 대부분 `id`로 변경되지만 form에서는 사용함
-        - name 안에 이름을 쓸 때는 _를 삽입하면 크롬 검사에서 `document.name_name` 으로 검색 가능하고
-        - -가 삽입 되면 `document[name-name]`으로 검색 가능함
+        - name 안에 이름을 쓸 때는 `_`를 삽입하면 크롬 검사에서 `document.name_name` 으로 검색 가능하고
+        - name 안에 이름을 쓸 때 `-`가 삽입 되면 `document[name-name]`으로 검색 가능함
     - `action` - 데이터 전송 목적지
     - `method`
         - `get` - 덜 보안적, 주소에 모든게 표시됨. 길이가 제한적
