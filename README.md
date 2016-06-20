@@ -1,2 +1,3 @@
 # FDS
-프론트엔드 개발 스터디 
+Front-end Development School
+프론트엔드 개발 스쿨
