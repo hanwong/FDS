@@ -78,7 +78,7 @@
         - id는 label과 연결시키주기 위해서 필요한 속성
 
 # Emmet 기능
-- .hi#this - .class #id
+- `.` - class,  `#` - id
 - emmet update : ctrl+shift+i  - 이미지 크기 자동으로 넣기
 
 # Sublime 기능
