@@ -28,6 +28,7 @@
 
 ### form
 > 의미에 맞게 쓴다는 것은 모든 기기에서 인식할 수 있도록 구조화 한다는 것
+
 * button 요소는 type=“button” 일 때 form 밖에 써도 괜찮음.
     * type이 submit, reset 은 form 내부에서 사용하는것이 좋음
 * input은 기본 값이 text, 스크린리더가 편집창으로 읽음
