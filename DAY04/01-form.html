@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta charset="UTF-8">
+  <title>HTML Form 디자인</title>
+</head>
+<body>
+  <form name="register-form" action="#" method="get">
+    
+    <fieldset>
+      <legend>필수 입력</legend>
+      <div>
+        <label for="register-id">ID</label>
+        <input id="register-id" type="text" placeholder="user name">
+      </div>
+      
+      <div>
+        <label for="register-email">E-Mail</label>
+        <input type="email" id="register-email" placeholder="username@email.com">
+      </div>
+      
+      <div>
+        <label for="register-password">PASSWORD</label>
+        <input id="register-password" type="password">
+      </div>
+    </fieldset>
+
+    <div>
+      <h3>GENDER</h3>
+      <!-- <label for="register-gender">GENDER</label> -->
+
+      <!-- 명시적  label 사용법 -->
+      <!-- <div>
+        <input type="radio" name="register-gender-a" id="gender-male"><label for="gender-male">Male</label>
+        <input type="radio" name="register-gender-a" id="gender-female"><label for="gender-female">Female</label>
+        </div> -->
+      
+      <!-- 암묵적 label 사용법 -->
+      <div>
+        <label><input type="radio" name="register-gender-b" value="1" checked>Male</label>
+        <label><input type="radio" name="register-gender-b" value="2">Female</label>
+      </div>
+
+    </div>
+
+    <div>
+      <h3>HOBBY</h3>
+      <ul>
+        <li><label><input type="checkbox" value="movie" name="hobby">영화</label></li>
+        <li><label><input type="checkbox" value="book" name="hobby">독서</label></li>
+        <li><label><input type="checkbox" value="music" name="hobby">음악</label></li>
+      </ul>
+    </div>
+
+    <div>
+      <hr>
+      <label for="register-upload">File</label>
+      <input multiple type="file" name="register-upload" id="register-upload">
+      <hr>
+    </div>
+
+    <!-- <p contenteditable="true">한글 로렘입숨 더미텍스트. 운동화도 찬란한 꽃보다, 하루를 가슴을 너, 청춘 하고 꽃처럼 피어나는 젊음의 보기만 사명으로 설레는 눈부신 씩씩하게 설레게 장엄한 소리! 너야말로 너 피어나는 쿵쿵대는, 흐르는 세상을 쉬지 엮어가는 만들 씩씩하게? 보기만 티셔츠 땀 아름다운 실수조차도, 만들 하고 씩씩하게 꽃처럼 사명으로 장엄한 청춘 너 심장 않고 빛나는 청춘의 설레게 쿵쿵대는 청춘아 눈부신 아름답다 해도 어디에나 엮어가는 설레는 거추장스런 하루를. 청춘 소리, 너야말로. 사명으로 청춘, 빛나는 소리! 그대 심장 쿵쿵대는 청춘의 사명으로 눈부신, 엮어가는, 고동소리 청춘 내일의 찬란한 어디에나 청춘 빛나는, 숨소리가 운동화도 거추장스런 하루를 꽃보다. 숨소리가, 내일의 거추장스런 소리 흐르는, 쉬지 만들 땀 청춘아! 않고 피어나는, 실수조차도 숨죽여도 청춘의.</p> -->
+
+    <textarea name="register-message" cols="30" rows="10"></textarea>
+
+    <div>
+      <h3>JOB</h3>
+      <select name="register-job">
+        <option value="">Select Your Job.</option>
+        <optgroup label="web">          
+            <option value="planner">web planner</option>
+            <option value="designer">web designer</option>
+            <option value="developer">web developer</option>
+        </optgroup>
+        <option value="doctor">Doctor</option>
+        <option value="studet">Student</option>
+        <option value="developer">Developer</option>
+        <option value="etc">etc.</option>
+      </select>
+    </div>
+    <!--  type : submit, reset, button  -->
+    <input type="submit" value="전송">
+    <input type="reset" value="초기화">
+    <!-- <button type="submit"><img src="" alt="">버튼</button> -->
+    <!-- <input type="button" value="버튼"> -->
+
+  </form>
+</body>
+</html>
