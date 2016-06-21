@@ -1,8 +1,8 @@
 ###### Front-end Development School
 
-##DAY 04
+#DAY 04
 
-### 웹 디자인의 역사
+## 웹 디자인의 역사
 * 테이블을 사용할 때는 무엇이 중요한지 알기가 어려웠음
 * CSS는 GPU를 사용해서 사용 환경이 javascript보다 자연스럽고 가볍다.
 * javascript는 cpu를 사용함.
@@ -20,13 +20,13 @@
     * Mobile First
 * 웹 디자인의 미래
 
-### 웹 환경
+## 웹 환경
 > 프론트엔드 개발자가 OS, 브라우저가 변해도 컨텐츠에 접근할 수 있도록 해줘야 한다.
 
-### 호스팅
+## 호스팅
 > mamp - 로컬 서버 테스팅
 
-### form
+## form
 > 의미에 맞게 쓴다는 것은 모든 기기에서 인식할 수 있도록 구조화 한다는 것
 
 * button 요소는 type=“button” 일 때 form 밖에 써도 괜찮음.
@@ -64,7 +64,7 @@
 * fieldset - form 요소 내에서 그룹을 만들 경우 사용
 * legend - 필드셋의 이름을 지정, 필드 영역의 이름
 
-### prgramming
+## prgramming
 * script
     * javascript
 * noscript
