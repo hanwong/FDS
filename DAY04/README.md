@@ -28,6 +28,7 @@
 
 ## form
 > 의미에 맞게 쓴다는 것은 모든 기기에서 인식할 수 있도록 구조화 한다는 것이 중요함.
+
 ```html
 <form action="/register.php" method="GET" name="register_form" enctype="multipart/form-data">
     <!-- fieldset과 legend로 form field를 구분할 수 있다 -->
