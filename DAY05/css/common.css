@@ -1,0 +1,15 @@
+/* 공통 스타일 */
+h1, h2, h4 {
+  font-weight: 100;
+  color: #212121;
+}
+
+h1 {
+  font-size: 3em;
+}
+h2 {
+  font-size: 2em;
+}
+h4 {
+  font-size: 1.5em;
+}
