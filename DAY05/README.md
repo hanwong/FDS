@@ -89,11 +89,11 @@
 - figure - 이미지를 감싸는 요소, 그래픽 요소로 인식하게 됨.
     - 애플 사이트에서 볼 수 있음
 
-> id 보다는 class를 사용하는것을 권장
-    - class는 멀티로도 됨
-    - id = 딱 하나 인것 만 사용, 서울시
-        - 요즘은 정말 필요한 경우 아니면 id는 쓰지 않는 것이 좋다!!
-    - class  = 같은 역할을 하는 것을 여러번 사용할 때, OO시청
+>##### id 보다는 class를 사용하는것을 권장
+> id = 딱 하나 인것 만 사용, 서울시
+> 요즘은 정말 필요한 경우 아니면 id는 쓰지 않는 것이 좋다!!
+> class  = 같은 역할을 하는 것을 여러번 사용할 때, OO시청
+> class는 멀티로도 됨
 
 ## Web forms 2.0
 > email, url, number, search, range, data picker, color, datalist, keygen, output
