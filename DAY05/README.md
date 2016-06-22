@@ -3,6 +3,7 @@
 #DAY 05
 
 ##HTML 기타 요소
+
 - style 코드는 script 코드 보다 먼저 나와야 한다
     - css는 병렬식 다운로드 - 그래서 빠름
     - javascript는 직렬식 다운로드 - 그래서 느림
@@ -67,6 +68,7 @@
 
 
 ##HTML5
+
 > 시멘틱 웹, 시멘틱 요소, 캔버스 본격활용 - 양산형 코드 NO!!
 > javascript  - 사용자 위치 정보 활용, 클라이언튼 데이터 저장, 오프라인 웹 구현!!
 > 플러그인을 사용하지 않고도 웹을 쓸 수 있다.!!!
@@ -96,9 +98,11 @@
 > class는 멀티로도 됨
 
 ## Web forms 2.0
+
 > email, url, number, search, range, data picker, color, datalist, keygen, output
 
 ## CSS
+
 - 1em = 16px, 인터넷 환경 기본 폰트 크기
 - inline 스타일을 사용할 때만 크롬 콘솔에서 $0으로 요소 값을 가져 올 수 있음
     - window.getComputedStyle($0, null).color - 이 방법으로 가져올 수 있음
