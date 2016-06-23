@@ -126,7 +126,7 @@
 * fieldset - form 요소 내에서 그룹을 만들 경우 사용
 * legend - 필드셋의 이름을 지정, 필드 영역의 이름
 
-## prgramming
+## programming
 * script
     * javascript
 * noscript
