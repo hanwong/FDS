@@ -1,0 +1,47 @@
+body {
+  margin: 10%
+}
+
+/*.lecture*/
+.reset-list ul {
+  /* 기본적인 리스트 스타일 초기화 
+      HTML 마크업을 하면서 많이 사용하는 코드, 자주 재사용하는 코드
+  */
+  list-style-type: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+
+/*파일 타입 이미지 제공을 위한 기본 디자인*/
+.lecture-file-list a {
+  display: block;
+  font-size: 2.38em;
+  text-decoration: none;
+  text-indent: 40px;
+  background-repeat: no-repeat;
+}
+/* 
+파일 포멧에 따라 자동적으로 아이콘을
+배경 이미지로 설정하는 스타일
+ */ 
+a[href^="http://"][target="_blank"] {
+  /* 배경 이미지 설정 */
+  background-image: url("../img/external.png");
+  background-position: 0 4px;
+  color: #020202;
+}
+
+a[href$=".ai"] {
+  background-image: url(../img/ai.png);
+  color: #3B2A10;
+}
+a[href$=".pdf"] {
+  background-image: url(../img/pdf.png);
+  color: #CB0606;
+}
+a[href$=".psd"] {
+  background-image: url(../img/psd.png);
+  color: #192257;
+}
