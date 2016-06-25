@@ -14,13 +14,17 @@ body {
 }
 
 
+.lecture-file-list li {
+
+}
 /*파일 타입 이미지 제공을 위한 기본 디자인*/
 .lecture-file-list a {
   display: block;
-  font-size: 2.38em;
+  font-size: 1.5em;
   text-decoration: none;
-  text-indent: 40px;
+  text-indent: 1.3em;
   background-repeat: no-repeat;
+  background-size: 0.8em;
 }
 /* 
 파일 포멧에 따라 자동적으로 아이콘을
@@ -43,5 +47,9 @@ a[href$=".pdf"] {
 }
 a[href$=".psd"] {
   background-image: url(../img/psd.png);
+  color: #192257;
+}
+a[href$=".png"] {
+  background-image: url(../img/png.png);
   color: #192257;
 }
