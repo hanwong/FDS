@@ -24,7 +24,8 @@ body {
   text-decoration: none;
   text-indent: 1.3em;
   background-repeat: no-repeat;
-  background-size: 0.8em;
+  /*background-size: contain;*/
+  background-size: 0.9em;
 }
 /* 
 파일 포멧에 따라 자동적으로 아이콘을
@@ -34,6 +35,7 @@ a[href^="http://"][target="_blank"] {
   /* 배경 이미지 설정 */
   background-image: url("../img/external.png");
   background-position: 0 4px;
+  /*background-size: 0.9em;*/
   color: #020202;
 }
 
@@ -45,11 +47,67 @@ a[href$=".pdf"] {
   background-image: url(../img/pdf.png);
   color: #CB0606;
 }
+a[href$=".png"] {
+  background-image: url(../img/png.png);
+  color: #D15AE3;
+}
 a[href$=".psd"] {
   background-image: url(../img/psd.png);
   color: #192257;
 }
-a[href$=".png"] {
-  background-image: url(../img/png.png);
-  color: #192257;
+a[href$=".aac"] {
+  background-image: url(../img/aac.png);
+  color: #07CED5;
+}
+a[href$=".avi"] {
+  background-image: url(../img/avi.png);
+  color: #838383;
+}
+a[href$=".doc"] {
+  background-image: url(../img/doc.png);
+  color: #067FCB;
+}
+a[href$=".flac"] {
+  background-image: url(../img/flac.png);
+  color: #7342D8;
+}
+a[href$=".gif"] {
+  background-image: url(../img/gif.png);
+  color: #EBC200;
+}
+a[href$=".html"] {
+  background-image: url(../img/html.png);
+  color: #BBCACF;
+}
+a[href$=".jpg"] {
+  background-image: url(../img/jpg.png);
+  color: #E28500;
+}
+a[href$=".js"] {
+  background-image: url(../img/js.png);
+  color: #2B2B2B;
+}
+a[href$=".mov"] {
+  background-image: url(../img/mov.png);
+  color: #76B8B7;
+}
+a[href$=".mp3"] {
+  background-image: url(../img/mp3.png);
+  color: #2D25DE;
+}
+a[href$=".mp4"] {
+  background-image: url(../img/mp4.png);
+  color: #435055;
+}
+a[href$=".tiff"] {
+  background-image: url(../img/tiff.png);
+  color: #7B0000;
+}
+a[href$=".txt"] {
+  background-image: url(../img/txt.png);
+  color: #B3B3B3;
+}
+a[href$=".xls"] {
+  background-image: url(../img/xls.png);
+  color: #79AC00;
 }

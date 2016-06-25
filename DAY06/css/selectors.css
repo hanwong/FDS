@@ -106,8 +106,8 @@ body, #shopping1 * {
 .btn{
 
 }
-[ class="btn btn-cancel"]
-.btn-buy { color: orange;  }
+
+.btn.btn-buy { color: orange;  }
 .btn .btn-cancel-buy { color: lime;  }
 /* 공통적인것과 분리되는것을 계속 연습해야 한다.  */
 
@@ -129,7 +129,7 @@ body, #shopping1 * {
  인접 형제 선택자와의 차이점 !!!
  인접 형제와 달라 인접하지 않아도 되며, 
  인접 형제가 1개인데 반해,
- 일반 형제는 1개 이상이 될 수 없다.
+ 일반 형제는 1개 이상이 될 수 다.
 */
 
 #shoppingGrpTab > #shopping1 ~ h3 a { color: #00FF00; }
