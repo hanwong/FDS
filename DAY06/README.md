@@ -56,6 +56,13 @@
 
 #### 클래스 선택자  -  0010
 
+```html
+<button type="button" class="btn btn-buy">구매</button>
+<div class="btn">
+  <button type="button" class="btn btn-cancel-buy">취소</button>
+</div>
+```
+
 ```css
 .btn.btn-buy { color: orange;  }
 .btn .btn-cancel-buy { color: lime;  }
