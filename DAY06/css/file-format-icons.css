@@ -19,7 +19,8 @@ body {
 }
 /*파일 타입 이미지 제공을 위한 기본 디자인*/
 .lecture-file-list a {
-  display: block;
+  /* 텍스트 표시 영역까지만 링크 영역으로 하기 위해서 a 요소 속성을 inline-block으로 설정 */
+  display: inline-block;
   font-size: 1.5em;
   text-decoration: none;
   text-indent: 1.3em;
