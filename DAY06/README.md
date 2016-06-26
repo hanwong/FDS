@@ -77,7 +77,7 @@
 - `.class-name1.class-name2`  
     - 멀티 클래스
     - 교집합, HTML 속성에서 선언된 클래스 이름을 모두 가지고 있어야 한다.
-    - `class = class-name1 class-name2`형태로 클래스 이름을 작성해야됨.
+    - `class = "class-name1 class-name2"`형태로 클래스 이름을 작성해야됨.
     - **붙어 있으면 하나의 클래스임**
 - `.class-name1 .class-name2`  
     - `class-name1`부모 요소 안에 `class-name2`자식 요소에게 스타일을 적용하는 결과가 나옴
