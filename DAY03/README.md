@@ -66,6 +66,14 @@
     - `method`
         - `get` - 덜 보안적, 주소에 모든게 표시됨. 길이가 제한적
         - `post` - 겟이 비해 보안적, 모든 주소가 표시 안됨, 길이 제한 없음.
+        - `enctype` - `multipart/form-data`, 인코딩 타입, 파일 업로드 시 사용함
+    - 인풋 요소
+    - `input`
+        - 암묵적 연결 방법은 쓰면 안됨, 스크린리더가 읽어주지 않음
+        - 명시적 방법 id로 연결
+        - name 값이 있어야지만 전송이 가능하고, 벨류 값을 가져 올 수 있다.
+        - id는 label과 연결시키주기 위해서 필요한 속성
+
 
 조건 | GET | POST
 ---|---|---
@@ -75,15 +83,6 @@
 뒤로가기, 재전송 | 사용자가 입력한 내용 다시 작성 | 사용자에게 지워짐을 경고 함
 인코딩 | `application-x-www-form-urlencoded` | `multipart/form-data`, `application-x-www-form-urlencoded`
 
-
-    - `enctype` - `multipart/form-data`, 인코딩 타입, 파일 업로드 시 사용함
-
-    - 인풋 요소
-    - `input`
-        - 암묵적 연결 방법은 쓰면 안됨, 스크린리더가 읽어주지 않음
-        - 명시적 방법 id로 연결
-        - name 값이 있어야지만 전송이 가능하고, 벨류 값을 가져 올 수 있다.
-        - id는 label과 연결시키주기 위해서 필요한 속성
 
 # Emmet 기능
 - `.` - class,  `#` - id
