@@ -66,6 +66,16 @@
     - `method`
         - `get` - 덜 보안적, 주소에 모든게 표시됨. 길이가 제한적
         - `post` - 겟이 비해 보안적, 모든 주소가 표시 안됨, 길이 제한 없음.
+
+조건 | GET | POST
+---|---|---
+보안 | POST에 비해 덜 보안적 | GET에 비해 보안적
+데이터 제한 | 제한적, url 허용 길이만큼 | 제한 없음
+데이터 타입 제한 | 오직 아스키 문자만 해당 | 제한 없음, 바이너리 역시 사용가능
+뒤로가기, 재전송 | 사용자가 입력한 내용 다시 작성 | 사용자에게 지워짐을 경고 함
+인코딩 | `application-x-www-form-urlencoded` | `multipart/form-data`, `application-x-www-form-urlencoded`
+
+
     - `enctype` - `multipart/form-data`, 인코딩 타입, 파일 업로드 시 사용함
 
     - 인풋 요소

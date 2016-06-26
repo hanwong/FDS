@@ -121,14 +121,14 @@
 ```
 
 `^=` 해당 속성 맨 앞 부분이 해당 값으로 시작하는 모든 경우를 찾음
-```
+```css
 #shopping3 [class^="screen_out"] {
   border: 4px solid #FF00FF;
 }
 ```
 
 `$=` 해당 속성 맨 뒷 부분이 해당 값으로 끝나는 모든 경우를 찾음
-```
+```css
 #shopping3 [class$="screen_out"] {
   border: 4px solid #FF00FF;
 }
