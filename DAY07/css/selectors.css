@@ -1,0 +1,268 @@
+/*@import url("common.css");
+*/
+body {
+  line-height: 1.6;
+  margin: 20%;
+}
+/* 
+속성 선택자
+[attr]
+[attr = "value"]
+[attr |= "value"]
+[attr ~= "value"]
+[attr *= "value"]  
+*/
+
+/*공백으로 구분되는 단어가 일치할 때 선택*/
+[class~="container"] {
+  /*border: 1px dashed #cacaca;*/
+  /*padding: 1em;*/
+}
+
+/*하이픈(-)으로 구분되는 단어가 일치할 때 선택*/
+[lang|="en"] {
+  color: #4d4840;
+}
+
+/*
+상태 디자인 (State Design) 선택자
+기본 상태 (Normal)
+커서가 올라간 상태 (Hover)
+커서로 누른 상태 (Active)
+*/
+
+/*기본 상태 (Normal)*/
+.container p {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0.88em;
+  color: #84888a;
+  background: #fff;
+}
+
+/*커서가 올라간 상태 (Hover)*/
+/*Pseudo Class: 가상(유사, 의사) 클래스 */
+.container p:hover {
+  color: #0c0d0d;
+  background: #bfbfbf;
+
+}
+
+/*커서로 누른 상태 (Active)*/
+.container p:active {
+  color: #fff;
+  background-color: #000;
+}
+
+/*
+하이퍼링크 (<a href>)
+ 상태 디자인 (State Design)
+ 가상 (유사, 의사) 클래스 
+ Pseudo Class
+
+:link     | 기본 상태
+:visited | 방문한 상태 
+:hover  | 커서 올라간 상태
+:active  | 커서로 누르고 있는 상태
+:focus   | 키보드 포커싱 상태
+*/
+
+/*:link     | 기본 상태*/
+a {
+  padding-left: 0.25em; /* 4/16 */
+  padding-right: 0.25em; /* 4/16 */
+  text-decoration: none;
+  color: #363636;
+  background-color: #ebebeb;
+  line-height: 1.5em;
+}
+
+
+/*:visited | 방문한 상태 */
+/* 가능한 상태 속성 
+color
+ba
+*/
+a:visited {
+  color: #fe4940;
+  background-color: #fff;
+}
+
+/*:hover  | 커서 올라간 상태*/
+/*margin-top 은 inline-block 안에서 음수 값이 적용이 안됨*/
+a:hover {
+  /*text-decoration: underline;*/
+  padding-bottom: 1px;
+  border-bottom: 2px dotted;
+}
+
+/*:active  | 커서로 누르고 있는 상태*/
+a:active {
+  background: #ff0;
+}
+
+/*:focus   | 키보드 포커싱 상태*/
+a:focus {
+  outline: 3px solid #fc414b;
+}
+
+/*:focus:hover;   | 키보드 포커싱 상태*/
+a:focus:hover {
+  outline-offset: 10px;
+}
+
+
+/*
+.box
+*/
+.box {
+  display: inline-block;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  width: 130px;
+  height: 130px;
+  outline: none;
+  background: #efefef;
+}
+
+.box:hover {
+  outline: 10px solid #fe4940;
+}
+
+/* 
+.rounded-box
+*/
+.rounded-box {
+  width: 200px;
+  background: #eee;
+}
+
+/*first,last-child는 부모로 부터의 관계를 나타*/
+.rounded-box *:first-child {
+    /*background: #FF00FF;*/
+}
+.rounded-box:last-child {
+      /*background: #FF7F00;*/
+}
+
+.wrapper:nth-child(2n) {}
+
+/*
+:lang(en)
+*/
+:lang(es) {
+  /*스페인어 사용*/
+
+}
+/*[lang|="en"] {}*/
+
+/*
+가상(유사, 의사) 요소
+Pseudo Element
+가상으로 요소(콘텐츠)를 만들어 줍니다.
+
+CSS 2/2.1    | CSS 3+
+:first-line      | ::first-line
+:first-letter   | ::first-letter
+:before         | ::before
+:after           | ::after
+
+실제 요소를 쓸때의 유지 보수 수고를 둘어주는 것임
+*/
+
+/* 잡지 디자인 Drop Cap Design */
+.dropcap-demo {
+  color: #7F007F;
+}
+
+/*.dropcap::first-letter */
+.dropcap::first-line {
+  /*font-size: 300%;*/
+  color: #7F007F;
+  line-height: 1em;
+}
+
+.dropcap {
+  margin: 0;
+}
+
+/*
+가상 요소
+::before
+::after
+*/
+
+abbr {
+  cursor: help;
+}
+
+.msg .before,
+.msg::before {
+  display: block;
+  content: 'Hey!!';
+  color: #800000;
+  /*line-height: 0.5em;*/
+  /*margin-bottom: 0;*/
+}
+
+.msg .after,
+.msg::after {
+  content: 'Hand up!!';
+  color: #800000;
+}
+
+/*
+접근성 관점에서 링크의 주소를 출력하는 스타일
+*/
+
+/* 해당 미디어에서만 출력되는 스타일 */
+@media print {
+
+  a::after {
+    /* 함수: () 안에 전달하는 무엇을 통해 뭔가를 처리해서 결과를 보여준다.  */
+    content: '(' attr(href) ','attr(title) ')';
+/*  content: '(' attr(target) ')';*/
+    color: #400080
+  }  
+
+  abbr::after {
+    content: '(' attr(title) ')';
+  }
+}
+
+
+/* 페이지에서 루트요소를 가리키는 것 <html>에서는 Html , xml 에서는 루트가 정해져 있지 않음*/
+:root {}
+
+:target {
+  background: #ff0;
+}
+
+/*
+:not 선택자
+*/
+/*.parent * {
+  border: 1px solid #b64926;
+}
+.parent a  {
+  border: none;
+}*/
+.parent *:not(a):not(p) {
+  border: 1px solid #b64926;
+}
+
+
+/*
+사용자가 커서로 클릭 후, 텍스트 블록을 선탁할 경우 가상으로 요소를 만들어 디자인
+그룹핑 안됨 브라우저 지원에 따라 따로 만들어줘야됨
+*/
+p::selection {
+  text-shadow: 2px 2px 8px #FF00FF;
+  background: #AF61AF;
+  color: #fff;
+}
+p::-moz-selection {
+  text-shadow: 2px 2px 8px #FF00FF;
+  background: #AF61AF;
+  color: #fff;
+}
