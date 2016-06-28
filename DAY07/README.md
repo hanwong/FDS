@@ -201,9 +201,9 @@ p::-moz-selection {
 
 
 
-#### HTML CSS
-display 요소 변경이 인되는 요소는 가상 선택자 :visited
-나머지는 다변경됨,
+## HTML CSS
+* display 요소 변경이 인되는 요소는 가상 선택자 :visited
+* 나머지는 다변경됨,
 
 
 #### 과제 : 디자인 시안 만들기 
