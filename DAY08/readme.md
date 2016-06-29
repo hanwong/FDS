@@ -102,6 +102,7 @@ border: 10px solid #0080FF;
 `max-width`, `min-width`, `max-height`, `min-height`
   * 콘텐츠의 속성에 따라 보기 쉬운 형태를 유지하기 위해 적용한다.
 
+<br>
 ##### 중앙 정렬
 * `line-height` 
   * `font-size`와 텍스트 위아래 여백값을 더한 총합값
