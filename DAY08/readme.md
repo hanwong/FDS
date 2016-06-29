@@ -35,7 +35,7 @@
 * Outline - UI에 영향을 주지 않음, 시각적인 효과만 제공
 
 <br>  
-#### margin
+#### `margin`
 > 색이 적용되지 않는다. 투명함
 
 > 음수 값을 사용할 수 있다. 접점에서 사용
@@ -61,7 +61,7 @@
 * 부모 요소에  `padding`이나 `border`이 존재하면 부모의 `padding`이나 `border` 안쪽 영역으로 자식 요소의 `margin` 값이 적용됨
 
 <br>
-#### padding
+#### `padding`
 > 색이 적용되고, 양수 값만 사용 가능
 
 > contente와 border 사이를 벌리는데 사용
@@ -69,7 +69,7 @@
 > 각 요들은 대각선으로 ??? 별도 그릴 수 있음
 
 <br>
-#### border
+#### `border`
 
 `border-style `
 * 테두리 모양 설정 - solid:  직선, dashed: 파선, dotted: 점선, double: 이중괘선, inset, outset
