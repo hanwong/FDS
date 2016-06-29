@@ -1,0 +1,32 @@
+/*
+마진이 상하 방향으로 접혀지는 현상
+마진은 겹치는 상태에서 큰 값을 먹는다. 큰 값 이상을 적용해야 간격을 벌릴수 있음
+
+*/
+
+h1 {
+  margin-bottom: 1.88em; /*em은 해당 요소의 글자 크기에 상대적이다.*/
+  font-weight: bolder; /* 숫자를 인식하지 못하는 하위 브라우저의 하위 호환 고려를 위해서 제공*/
+  font-weight: 900; /*100 - 400(Normal) - 700(bold) - 900(bolder) */
+  font-size: 2.2em; /*상대값을 쓰면 브라우저가 계산해서 쓰지만, px값을 소수점으로 입력하면 브라우져에 따라 계산하는 값이 달라질 수 있다.*/
+  
+}
+
+p {
+  margin-top: 20px;
+  color: #323130;
+  font-size: 0.875em;
+}
+
+p a {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background: #000;
+  color: #fff;
+}
+
+p span {
+  background: #f00;
+  color: #ff0;
+}
+

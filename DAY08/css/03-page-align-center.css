@@ -1,0 +1,33 @@
+/*
+.page
+*/
+.page {
+  /*width : auto; */ /*블록 이니까~*/
+  width: 90%;
+  height: 333px;
+  margin: 100px auto;
+  padding-top: 1.25rem;
+  padding-left: 1.25rem;
+  background: #8000FF;
+  /*width: 50vw; *//*vw? = view width*/
+  /*height: 100vh;  *//*vh? = view height, %가 부모에 대해서 올바로 동작하지 않는 경우가 많아 이때 주로 사용한다. */
+}
+
+
+.inner-page {
+  margin-top: 0;
+  width: 250px;
+  height: 111px;
+  padding-top: inherit;
+  padding-left: inherit;
+  background: #FF8000;
+
+}
+
+.print-class-attr::before {
+  display: block;
+  content: attr(data-name);
+  color: #fff;
+  font-size: 1.375rem;
+}
+

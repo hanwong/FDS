@@ -1,0 +1,95 @@
+/*
+em 단위 사용의 어려움움
+*/
+html {
+  font-size: 100%; /*16px*/
+}
+
+body {
+  font-size: 87.5%; /*14px*/
+}
+
+/*
+미디어 기술 사용 :  @media
+CSS3 미디어 쿼리  :  @media 환경 and 조건1 and 조건2
+중단점(Breakpoint) 설계(Design)
+--1-- (600) --2-- (1000) --3--
+
+media 쿼리를 쓰는 경우 모바일 first를 쓰는 것이 좋다
+현재 모바일 시장이 훨씬 크다.  모바일이 데스크탑의 4배 이상
+*/
+/*
+only 최신 브라우저에만 지원하는 경우 사용
+ie 에서 media screen은 지원하지만 쿼리는 지원하지 않음
+*/
+@media only screen and (max-width: 37.5em) {
+  body::before {
+    content: '스크린의 폭이 600px보다 작습니다.';
+  }
+  body { background: #000; color: #fff;}
+}
+@media only screen and (min-width: 37.5em) and (max-width: 62.5em) {
+  body::before {
+    content: '스크린의 폭이 600px보다 크고 1000px 보다 작습니다.';
+  }
+  body { background: #888; }
+}
+@media only screen and (min-width: 62.5625em) {
+  body::before {
+    content: '스크린의 폭이 1000px보다 큽니다.';
+  }
+  body { background: #fff; }
+}
+
+
+/*
+박스 스타일
+*/
+
+div {
+    width: 70%;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px dashed #fff;
+    padding: 5%;
+    color: #fff;
+}
+
+/*
+폰트 사이즈는 부모로 부터 상속 받는다.
+em은 중첩된 구조 내에서 사용하기 어려움, 나를 포함한 부모로 부터 값을 기준으로 변경됨
+
+px로 다 처리하면 유지 보수 할 수 없음
+rem (root em) 필수 적임 - 디바이스에 따라 Root Element 의 기본 크기만 변경하면 됨
+ - 
+*/
+.wrapper-parent {
+    font-size: 40px;
+    /* 1em = 14px */
+    font-size: 2.5em; /* 14*2.5 = 35px*/
+    font-size: 2.5rem; 
+    background: #400080;
+}
+
+.parent {
+    font-size: 30px;
+    /* 1em = 35px */
+    font-size: 1.88em; /* 35*1.88 = 65.8px */
+    font-size: 1.88rem; 
+    background: #8000FF;
+}
+
+.child {
+    font-size: 20px;
+    font-size: 1.25em;
+    font-size: 1.25rem;
+    background: #CC66FF;
+}
+
+.inner-child {
+    font-size: 10px;
+    font-size: 0.63em;
+    font-size: 0.63rem;
+    background: #FF6FCF;
+}
