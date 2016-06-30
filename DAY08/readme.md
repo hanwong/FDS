@@ -64,7 +64,7 @@
 #### `padding`
 > 색이 적용되고, 양수 값만 사용 가능
 
-> contente와 border 사이를 벌리는데 사용
+> content와 border 사이를 벌리는데 사용
 
 > 각 요들은 대각선으로 ??? 별도 그릴 수 있음
 
@@ -75,7 +75,7 @@
 * 테두리 모양 설정 - solid:  직선, dashed: 파선, dotted: 점선, double: 이중괘선, inset, outset
 
 `border-width`
-* 테두리 두꼐 설정
+* 테두리 두께 설정
 
 `border-color`
 * 테두리 색상 설정
@@ -97,9 +97,9 @@ border: 10px solid #0080FF;
 
 * `auto`는 브라우저의 값을 자동으로 사용, `position`을 쓰면 폭이 줄어드는데 넓혀 주기 위해서 쓴다.
 * `inherit` - 부모의 값을 상속 받는다.
-  * `input`요소는 기본적으로 부모로 부터 상속을 받지 않기 때문에 상속 받기 위해서 `inherit`을 사용한다.
+  * `input`요소는 기본적으로 부모로 부터 상속을 받지 않기 때문에 상속이 필요할 때 상속 받기 위해서 `inherit`을 사용한다.
 
-`max-width`, `min-width`, `max-height`, `min-height`
+* `max-width`, `min-width`, `max-height`, `min-height`
   * 콘텐츠의 속성에 따라 보기 쉬운 형태를 유지하기 위해 적용한다.
 
 <br>
@@ -119,7 +119,7 @@ border: 10px solid #0080FF;
   * `img` 요소에 `vertical-align : middle`를 준다. 
   * `display: inline, table-cell` 에만 `vertical-align`이 적용된다.
 
-  [그외 중앙 정렬 방법](www.student.oulu.fi/~lauirai/www/css/middle)
+  [그외 중앙 정렬 방법](http://www.student.oulu.fi/~lauirai/www/css/middle)
 
 <br>
 ## Size 단위
@@ -134,11 +134,11 @@ border: 10px solid #0080FF;
 * 디바이스에 따라 Root Element 의 기본 크기만 변경하면 됨, 유지보수가 가장 편리
 
 #### `vw`, `vh`, `vmin`, `vmax`
-
 * viewport - 디바이스의 화면
 * **vh를 활용하는 경우** - `%`가 부모에 대해서 올바로 동작하지 않는 경우가 있어 이때 주로 사용한다. 
 * 대체 기술 - polyfill , 하위 브라우저 지원
-* 모바일에서 사용하기 적절
+* 모바일에서 사용하기 적절함
+
 [viewport units, caniuse](http://caniuse.com/#search=vw)
 
 [viewport units, css-tricks](https://css-tricks.com/viewport-sized-typography/)
