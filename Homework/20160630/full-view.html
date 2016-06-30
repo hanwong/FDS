@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta charset="UTF-8">
+  <title>브라우저 창 가득 채우는 방법</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0 0;
+    }
+    #contents {
+       min-height: 100%;
+       margin: -100px 0;
+       background: #FFCC66;
+    }
+    #inner-contents {
+       padding: 100px 0;
+       background: #66CCFF;
+    }
+    #header, #footer {
+       position: relative;
+       z-index: 1;
+       height: 100px;
+       background: #CCFF66;
+    }
+    div::before{
+      content: attr(id);
+    }
+  </style>
+</head>
+<body>
+  <div id="header"></div>
+  <div id="contents">
+    <div id="inner-contents"></div>
+  </div>
+  <div id="footer"></div>
+  
+</body>
+</html>
