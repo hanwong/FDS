@@ -119,7 +119,7 @@ border: 10px solid #0080FF;
   * `img` 요소에 `vertical-align : middle`를 준다. 
   * `display: inline, table-cell` 에만 `vertical-align`이 적용된다.
 
-  [그외 중앙 정렬 방법](http://www.student.oulu.fi/~lauirai/www/css/middle)
+* [그외 중앙 정렬 방법](http://www.student.oulu.fi/~lauirai/www/css/middle)
 
 <br>
 ## Size 단위
@@ -139,9 +139,8 @@ border: 10px solid #0080FF;
 * 대체 기술 - polyfill , 하위 브라우저 지원
 * 모바일에서 사용하기 적절함
 
-[viewport units, caniuse](http://caniuse.com/#search=vw)
-
-[viewport units, css-tricks](https://css-tricks.com/viewport-sized-typography/)
+* [viewport units, caniuse](http://caniuse.com/#search=vw)
+* [viewport units, css-tricks](https://css-tricks.com/viewport-sized-typography/)
 
 <br>
 ## Font, Text
