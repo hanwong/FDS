@@ -104,6 +104,10 @@ border: 10px solid #0080FF;
 
 <br>
 ##### 중앙 정렬
+> 최근엔 `flexbox`를 이용함.
+
+* [flexbox](http://ko.learnlayout.com/flexbox.html)
+
 * `line-height` 
   * `font-size`와 텍스트 위아래 여백값을 더한 총합값
   * 부모 박스의 높이 만큼 `line-height`를 주면 세로 중앙 정렬됨.
@@ -119,7 +123,7 @@ border: 10px solid #0080FF;
   * `img` 요소에 `vertical-align : middle`를 준다. 
   * `display: inline, table-cell` 에만 `vertical-align`이 적용된다.
 
-* [그외 중앙 정렬 방법](http://www.student.oulu.fi/~lauirai/www/css/middle)
+* [그외 중앙 정렬 방법](http://www.student.oulu.fi/~laurirai/www/css/middle/)
 
 <br>
 ## Size 단위
@@ -165,6 +169,7 @@ border: 10px solid #0080FF;
 
 * 현재 모바일 시장이 훨씬 크다.  모바일이 데스크탑의 4배 이상, media 쿼리를 쓰는 경우 모바일 first로 설계하는 것이 좋다.
 
+* 단위 값은 em을 사용한다.
 * `only` 최신 브라우저에만 지원하는 경우 사용
   * ie 에서 media screen은 지원하지만 쿼리는 지원하지 않음
 
