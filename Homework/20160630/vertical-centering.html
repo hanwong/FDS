@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta charset="UTF-8">
+  <title>Vertical-Centering</title>
+  <style>
+    /* Common code of examples */
+    .text, .image, .block     /* All container divs*/
+     {width:14rem;height:8rem;margin:0.5rem;           
+      border:thick solid;background:#fff;}       
+         
+    .text  {border-color:#99f;}      /* pastel blue border */
+  
+    .image {border-color:#f99;}   /* pastel red border */
+    .image img {width:50px;height:50px;} /* image size */
+
+    /*.block {color:#ff4;}*/      /* pastel yellow border */
+    .block div {border:dashed;width:10rem;} /* to make it more interesting*/
+
+
+    div.use-line-height {line-height:8rem;}
+    img.use-line-height {vertical-align:middle;}
+
+    .text.use-table-cell, .image.use-table-cell, .block.use-table-cell {display:table-cell;}
+    div.use-table-cell, img.use-table-cell { vertical-align:middle;}
+
+    .block.use-inline-block-p {line-height:8rem;}
+    .block div.use-inline-block-c {display:inline;display:inline-table;display:inline-block; line-height:1rem; vertical-align:middle;}
+
+
+  </style>
+</head>
+
+<body>
+  <h3>Common code of examples</h3>
+    <div class="text">
+      <span>Some Text</span>
+    </div>
+    
+    <div class="image">
+      <img src="../../ASSETS/blue.gif" alt="blue square">
+    </div>
+
+    <div class="block">
+      <div> Block element, with long enough content to wrap.</div>
+    </div>
+  
+
+  <h3>Using line-height (and vertical-align)</h3>
+    <div class="text use-line-height">
+      <span>Some Text</span>
+    </div>
+    
+    <div class="image use-line-height">
+      <img src="../../ASSETS/blue.gif" alt="blue square">
+    </div>
+
+  
+  <h3>Using display:table-cell</h3>
+    <div class="text use-table-cell">
+      <span>Some Text</span>
+    </div>
+    
+    <div class="image use-table-cell">
+      <img src="../../ASSETS/blue.gif" alt="blue square">
+    </div>
+
+    <div class="block use-table-cell">
+      <div> Block element, with long enough content to wrap.</div>
+    </div>
+  
+
+
+  <h3>Using line-height and display:inline-block</h3>
+<!--     <div class="text use-inline-block">
+      <span>Some Text</span>
+    </div>
+    
+    <div class="image use-inline-block">
+      <img src="../../ASSETS/blue.gif" alt="blue square">
+    </div>
+ -->
+    <div class="block use-inline-block-p">
+      <div class="use-inline-block-c"> Block element, with long enough content to wrap.</div>
+    </div>
+  
+
+</body>
+</html>
