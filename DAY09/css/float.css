@@ -1,0 +1,32 @@
+/*
+display: [none, block, inline, inline-block]
+overflow: [visible, hidden, auto, scroll]
+*/
+
+.parent-box {
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-bottom: 300px;
+  height: 80px;
+  border: 3px solid #66CCFF;
+}
+
+.auto {
+  overflow: auto;
+}
+.hidden {
+  overflow: hidden;
+}
+.scroll {
+  overflow: scroll;
+}
+
+.align-left {
+  float: left;
+  margin: 1em 1em;
+}
+
+.align-right {
+  float: right;
+  margin: 1em 1em;
+}

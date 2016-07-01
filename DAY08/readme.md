@@ -119,7 +119,7 @@ border: 10px solid #0080FF;
 ```
 
 * `img` 밑에 알 수 없는 공간이 생겨서 세로 중앙 조절하기 어렵다.
-  * `img` 요소에 `vertical-align : middle`를 준다. 
+  * `img` 요소에 `vertical-align : middle` 또는 `bottom`을 준다. 
   * `display: inline, table-cell` 에만 `vertical-align`이 적용된다.
 
 * [그외 중앙 정렬 방법](http://www.student.oulu.fi/~laurirai/www/css/middle/)
@@ -151,9 +151,8 @@ border: 10px solid #0080FF;
 * Text - paragraph, 정렬, 자간, 행간 ...
 
 #### `font-weight`
-* 숫자를 인식하지 못하는 하위 브라우저의 하위 호환 고려를 위해서 제공
 * 100 - 400(Normal) - 700(bold) - 900(bolder) 
-
+* 숫자를 인식하지 못하는 하위 브라우저의 하위 호환 고려를 위해 키워드 값 제공
 ```css
   font-weight: bolder; 
   font-weight: 900; 
