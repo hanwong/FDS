@@ -1,4 +1,6 @@
 body {
+  width: 1040px;
+  height: 670px;
   background-image: url(img/Background.png);
   background-repeat: no-repeat;
 }
