@@ -2,7 +2,7 @@ body {
   background-image: url(img/Background.png);
   background-repeat: no-repeat;
 }
-div { float: left; margin: 0;}
+div { float: left; margin: 0; box-shadow: 0px 5px 3px #5D5D5D;}
 img { vertical-align: bottom; }
 
 .blank01 {  width: 1036px; height: 180px; }
@@ -21,17 +21,13 @@ img { vertical-align: bottom; }
 .box06 { margin-top: -78px; }
 .box07 { margin-top: -61px; margin-left: -10px;}
 .box08 { margin-top: -64px; margin-left: 54px;}
-
-.box09 { box-shadow: 0px 5px 3px #5D5D5D; margin-top: -62px; }
+/*                                       */
+.box09 { margin-top: -62px; }
 .box10 { margin-top: -12px; }
-.box11 { box-shadow: 0px 5px 3px #5D5D5D; margin-top: 8px; }
+.box11 { margin-top: 8px; }
 .box13 { margin-top: -11px; }
-.box14 { box-shadow: 0px 5px 3px #5D5D5D; margin-top: -33px; margin-left: -384px;}
-.box15 { box-shadow: 0px 5px 3px #5D5D5D; margin-top: -11px; }
-.box17 { box-shadow: 0px 5px 3px #5D5D5D; margin-top: -35px; margin-left: -249px;}
+.box14 { margin-top: -33px; margin-left: -384px;}
+.box15 { margin-top: -11px; }
+.box17 { margin-top: -35px; margin-left: -249px;}
 
-.box18 { box-shadow: 0px 5px 3px #5D5D5D; }
-.box19 { box-shadow: 0px 5px 3px #5D5D5D; }
-.box21 { box-shadow: 0px 5px 3px #5D5D5D; }
-.box22 { box-shadow: 0px 5px 3px #5D5D5D; }
 /*box-shadow: 0px 10px 5px #888888;*/
