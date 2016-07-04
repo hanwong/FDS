@@ -1,8 +1,86 @@
 @media only screen and (max-width: 900px){
   body { width: 450px; }
+
+  .longbox:hover::before {
+    display: block;
+    content: "";
+    border-right: 50px solid transparent;
+    border-bottom: 50px solid #FFF1E2; 
+    transform:rotate(135deg);
+    position: absolute;
+    left: 45%;
+    top: -1%;
+  }
+  .speaker:nth-child(2n) img, .speaker:nth-child(2n) div { float: left; }
+  .speaker:nth-child(2n-1) img, .speaker:nth-child(2n-1) div { float: right; }
+
+  .speaker:nth-child(2n) div:hover::before {
+    display: block;
+    content: "";
+    border-right: 50px solid transparent;
+    border-bottom: 50px solid #FFF1E2; 
+    transform:rotate(45deg);
+    position: absolute;
+    left: -2%;
+    top: 39%;
+  }
+
+  .speaker:nth-child(2n-1) div:not(.longbox):hover::after {
+    display: block;
+    content: "";
+    border-right: 50px solid transparent;
+    border-bottom: 50px solid #FFF1E2; 
+    transform:rotate(225deg);
+    position: absolute;
+    right: -2%;
+    top: 39%;
+  }
 }
+
 @media only screen and (min-width: 900px){
   body { width: 900px; }
+
+  .longbox:hover::before {
+    display: block;
+    content: "";
+    border-right: 50px solid transparent;
+    border-bottom: 50px solid #FFF1E2; 
+    transform:rotate(45deg);
+    position: absolute;
+    left: -1%;
+    top: 39%;
+  }
+  .speaker:first-child img, .speaker:first-child div,
+  .speaker:nth-child(2) img, .speaker:nth-child(2) div,
+  .speaker:nth-child(3) img, .speaker:nth-child(3) div { float: left; }
+  
+  .speaker:nth-child(4), .speaker:nth-child(5) { float: left }
+  .speaker:nth-child(4) img, .speaker:nth-child(4) div,
+  .speaker:nth-child(5) img, .speaker:nth-child(5) div { float: right; }
+
+  .speaker:nth-child(2) div:hover::before,
+  .speaker:nth-child(3) div:hover::before {
+    display: block;
+    content: "";
+    border-right: 50px solid transparent;
+    border-bottom: 50px solid #FFF1E2; 
+    transform:rotate(45deg);
+    position: absolute;
+    left: -2%;
+    top: 39%;
+  }
+
+  .speaker:nth-child(4) div:hover::after,
+  .speaker:nth-child(5) div:hover::after {
+    display: block;
+    content: "";
+    border-right: 50px solid transparent;
+    border-bottom: 50px solid #FFF1E2; 
+    transform:rotate(225deg);
+    position: absolute;
+    right: -2%;
+    top: 39%;
+  }
 }
 body {
   margin-right: auto;
@@ -47,26 +125,9 @@ p {
     color: #464646;
 }
 
-img,
-.longbox,
-.box {
-    float: left;
-}
-
-.rightbox {
-  float: right;
-}
-.speaker.leftbox {
-  float: left;
-}
-
-
-
 div:hover {
     background: #FFF1E2;
 }
-
-
 
 .icon-twitter {
     width: 20px;
@@ -77,67 +138,4 @@ div:hover {
     fill: #4BA5DE;
     width: 20px;
     height: 20px;
-}
-
-.leftarrow:hover::before {
-display: block;
-content: "";
-width: 0px;height:0px;
-border-right:50px solid transparent;border-bottom:50px solid #FFF1E2; 
-transform:rotate(45deg);
--ms-transform:rotate(45deg);
--webkit-transform:rotate(45deg);
--moz-transform:rotate(45deg);
--o-transform:rotate(45deg);
-position: absolute;
-left: -2%;
-top: 39%;
-}
-
-.rightarrow:hover::after {
-display: block;
-content: "";
-width: 0px;height:0px;
-border-right:50px solid transparent;border-bottom:50px solid #FFF1E2; 
-transform:rotate(225deg);
--ms-transform:rotate(225deg);
--webkit-transform:rotate(225deg);
--moz-transform:rotate(225deg);
--o-transform:rotate(225deg);
-position: absolute;
-right: -2%;
-top: 39%;
-}
-
-.longbox:hover::before {
-display: block;
-content: "";
-width: 0px;height:0px;
-border-right:50px solid transparent;border-bottom:50px solid #FFF1E2; 
-transform:rotate(45deg);
--ms-transform:rotate(45deg);
--webkit-transform:rotate(45deg);
--moz-transform:rotate(45deg);
--o-transform:rotate(45deg);
-position: absolute;
-left: -1%;
-top: 39%;
-}
-@media only screen and (max-width: 900px){
-  body { width: 450px; }
-  .longbox:hover::before {
-  display: block;
-  content: "";
-  width: 0px;height:0px;
-  border-right:50px solid transparent;border-bottom:50px solid #FFF1E2; 
-  transform:rotate(135deg);
-  -ms-transform:rotate(135deg);
-  -webkit-transform:rotate(135deg);
-  -moz-transform:rotate(135deg);
-  -o-transform:rotate(135deg);
-  position: absolute;
-  left: 45%;
-  top: -1%;
-  }
-
 }
