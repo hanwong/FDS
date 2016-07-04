@@ -8,3 +8,18 @@ ol.reset-list {
   padding-left: 0;
   list-style: none;
 }
+
+img { vertical-align: bottom; }
+
+.cf:: after {
+  content: '';
+  display: block;
+  clear: both;
+}
+/* ie6,7 대응 */
+.lt-ie8 .cf { zoom: 1; }
+
+.bb-img img + * ,.
+img.bb-img + * {
+  overflow: hidden;
+}

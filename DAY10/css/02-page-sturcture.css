@@ -1,0 +1,49 @@
+/*
+#FF0000
+#FF8000
+#FFFF00
+#00FF80
+#0080FF
+
+
+
+*/
+body {
+  text-align: center;
+  line-height: 20vh;
+  color: #FFFFFF;
+}
+
+[class*="page-"] {
+  height: 20vh;
+}
+[class*="page-"]::before {
+  display: block;
+  content: attr(class);
+  font-size: 1.8rem;
+
+}
+
+.page-header {
+  background: #FF6666;
+}
+.page-navigation {
+  background: #FFCC66;
+}
+.page-main {
+  background: #FFFF66;
+  /*height: 40vh;*/
+  color: #666666;
+  width: 50vw;
+  float: left;
+}
+.page-sidebar {
+  background: #66FF66;
+  height: 40vh;
+  /*width: 20vw;*/
+  /*float: right;*/
+}
+.page-footer {
+  /*clear: both;*/
+  background: #66CCFF;
+}

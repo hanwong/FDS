@@ -54,7 +54,7 @@
 
 #### `text-indent`
   * 단락의 첫줄에만 적용됨.
-  * block요소에는 적용 안됨.
+  * block요소에는 적용 안됨. - block요소에서는 `padding`을 활용
   * ir technic (image replacement)
     * 이미지 대체 기법
     * phark method - 접근성 문제가 있기 때문에 쓰지 않는 것이 좋다.
