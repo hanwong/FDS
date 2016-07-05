@@ -1,7 +1,8 @@
 @media only screen and (max-width: 900px){
   body { width: 450px; }
 
-  .longbox:hover::before {
+  .longbox:hover::before,
+  .longbox:active::before {
     display: block;
     content: "";
     border-right: 50px solid transparent;
@@ -14,7 +15,8 @@
   .speaker:nth-child(2n) img, .speaker:nth-child(2n) div { float: left; }
   .speaker:nth-child(2n-1) img, .speaker:nth-child(2n-1) div { float: right; }
 
-  .speaker:nth-child(2n) div:hover::before {
+  .speaker:nth-child(2n) div:hover::before,
+  .speaker:nth-child(2n) div:active::before {
     display: block;
     content: "";
     border-right: 50px solid transparent;
@@ -25,7 +27,8 @@
     top: 39%;
   }
 
-  .speaker:nth-child(2n-1) div:not(.longbox):hover::after {
+  .speaker:nth-child(2n-1) div:not(.longbox):hover::after,
+  .speaker:nth-child(2n-1) div:not(.longbox):active::after {
     display: block;
     content: "";
     border-right: 50px solid transparent;
