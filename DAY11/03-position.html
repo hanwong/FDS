@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta charset="UTF-8">
+  <title>Position</title>
+  <style>
+    .parent {
+      position: relative;
+      width: 400px;
+      height: 400px;
+      background: #B3B3B3;
+    }
+    .child {
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      top: 30%;
+      left: 30%;
+      background: #6666FF;
+    }
+    .child2 {
+      border-right: 1.2rem solid #6666FF;
+      border-top: 1rem solid transparent;
+      border-bottom: 1rem solid transparent;
+      position: absolute;
+      top: 30%;
+      left: -1.2rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="parent">
+    <div class="child">
+      <div class="child2"></div>
+    </div>
+  </div>
+  
+</body>
+</html>

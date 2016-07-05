@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="initial-scale=1.0">
+
+  <title>Explode iPhone</title>
+  <style>
+    .iphone {
+      width: 1000px;
+      height: 700px;
+      background: #C2B193;
+      position: relative;
+    }
+    .layer {
+      transform: scale(0.5, 0.5);
+      position: absolute;
+    }
+    .glass { top: 100px; left: 100px; z-index: 100; transition: 0.4s cubic-bezier(.38,0,.63,1) }
+    .screen { top: 125px; left: 155px; z-index: 90; transition: 0.4s cubic-bezier(.38,0,.63,1) }
+    .screen-border { top: 128px; left: 152px; z-index: 80; transition: 0.4s cubic-bezier(.38,0,.63,1) }
+    .front { top: 100px; left: 100px; z-index: 70; transition: 0.4s cubic-bezier(.38,0,.63,1) }
+    .home { top: 327px; left: 341px; z-index: 60; transition: 0.4s cubic-bezier(.38,0,.63,1) }
+    .battery { top: 135px; left: 135px; z-index: 50; transition: 0.4s cubic-bezier(.38,0,.63,1) }
+    .memory { top: 141px; left: 123px; z-index: 40; transition: 0.4s cubic-bezier(.38,0,.63,1) }
+    .sim { top: 314px; left: 506px; z-index: 30; transition: 0.4s cubic-bezier(.38,0,.63,1) }
+    .back { top: 93px; left: 91px; z-index: 20; transition: 0.4s cubic-bezier(.38,0,.63,1) }
+    .screw { top: 395px; left: 318px; z-index: 10; transition: 0.4s cubic-bezier(.38,0,.63,1) }
+
+    .iphone:hover:active .glass { top: -110px; left: 100px; z-index: 100; }
+    .iphone:hover:active .screen { top: -30px; left: 155px; z-index: 90; }
+    .iphone:hover:active .screen-border  { top: 30px; left: 152px; z-index: 80; }
+    .iphone:hover:active .front { top: 70px; left: 100px; z-index: 70; }
+    .iphone:hover:active .home { top: 370px; left: 341px; z-index: 60; }
+    .iphone:hover:active .battery { top: 200px; left: 135px; z-index: 50; }
+    .iphone:hover:active .memory { top: 280px; left: 123px; z-index: 40; }
+    .iphone:hover:active .sim { top: 460px; left: 639px; z-index: 30; }
+    .iphone:hover:active .back { top: 290px; left: 91px; z-index: 20; }
+    .iphone:hover:active .screw { top: 610px; left: 290px; z-index: 10; }
+  </style>
+</head>
+<body ontouchstart="">
+  <section class="iphone">
+    <div class="glass layer">
+      <img src="img/01Glass.png" alt="">
+    </div>
+    <div class="screen layer">
+      <img src="img/02Screen.png" alt="">
+    </div>
+    <div class="screen-border layer">
+      <img src="img/03Screen Border.png" alt="">
+    </div>
+    <div class="front layer">
+      <img src="img/04Front.png" alt="">
+    </div>
+    <div class="home layer">
+      <img src="img/05Home Button.png" alt="">
+    </div>
+    <div class="battery layer">
+      <img src="img/06battery.png" alt="">
+    </div>
+    <div class="memory layer">
+      <img src="img/07memory.png" alt="">
+    </div>
+    <div class="sim layer">
+      <img src="img/08SIM Tray.png" alt="">
+    </div>
+    <div class="back layer">
+      <img src="img/09Back.png" alt="">
+    </div>
+    <div class="screw layer">
+      <img src="img/10screw.png" alt="">
+    </div>
+  </section>
+</body>
+</html>
