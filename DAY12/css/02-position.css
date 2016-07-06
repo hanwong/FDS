@@ -13,7 +13,7 @@ button {
   border: 0px solid transparent;
   background-image: linear-gradient(180deg, white, #B3B3B3);
   box-sizing: border-box;
-  color: #808080
+  color: #808080;
 }
 
 .audio {
@@ -21,6 +21,9 @@ button {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  box-shadow: 0 0 20px 5px #4C4C4C;
+  border-radius: 30px;
+  /*box-shadow: inset/outset x y blur spread color;*/
 }
 
 button:first-child {
