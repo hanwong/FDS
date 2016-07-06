@@ -38,3 +38,12 @@
     * `aira-label = "name"` - 라벨이 없을 경우 사용
 
 
+* 블락 요소 중앙 정렬 방법
+
+```css
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+```
+
