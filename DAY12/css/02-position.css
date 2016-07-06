@@ -1,18 +1,19 @@
 body {
   width: 100vw;
   height: 100vh;
-  background: radial-gradient(#66FFCC, #0080FF);
+  background: radial-gradient(#66CCFF, #8000FF);
 }
 
 button {
   float: left;
   text-transform: uppercase;
-  width: 50px;
+  width: 100px;
   height: 40px;
   position: relative;
   border: 0px solid transparent;
   background-image: linear-gradient(180deg, white, #B3B3B3);
   box-sizing: border-box;
+  color: #808080
 }
 
 .audio {
@@ -26,8 +27,8 @@ button:first-child {
   border-radius: 20px 0 0 20px ;
 }
 button:nth-child(2) {
-  border-left:1px solid #666666 ;
-  border-right:1px solid #666666 ;
+  border-left:1px solid #B3B3B3 ;
+  border-right:1px solid #B3B3B3 ;
 }
 button:last-child {
   border-radius: 0 20px 20px 0;
@@ -37,18 +38,22 @@ button:hover {
 }
 button:focus:active {
   background-image: linear-gradient(180deg, #B3B3B3, white);
-  /*background-image: linear-gradient(180deg, white, #B3B3B3);*/
+  color: #4C4C4C;
 }
 button:focus {
   outline: none;
   background-image: linear-gradient(180deg, #B3B3B3 50%, white);
-
+  color: #4C4C4C;
 }
 
 .fa {
   position: absolute;
-  top: 5%;
+  top: 15%;
   left: 50%;
   transform: translate(-50%, 0);
+}
+
+.label {
+  transform: translate(0, 50%);
 }
 
