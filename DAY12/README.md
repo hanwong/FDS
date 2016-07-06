@@ -26,9 +26,15 @@
     * absolute 적용된 요소의 부모에 relative를 설정하는 이유!
       * relative는 일반 흐름을 깨지 않아서
     * Float과 차이점!
-      * Float 의 경우는 부모요소가 Float된 요소를 감싸게 하는 방법이 있지만, absolute의 경우는 별도로 height 높이를 제공해야 한다.
-* `fixed` (기준: screen, viewport)
-  * 기본적으로 
+      * Float의 경우는 부모요소가 Float된 요소를 감싸게 하는 방법이 있지만,
+        absolute의 경우는 별도로 height 높이를 제공해야 한다.
+* fixed (기준: screen, viewport)
+  * 기본적으로는 absolute와 유사하게 처리되어 보이나, 처리 결과는 다르다.
+  * 고정 형태로 위치가 설정된다. 화면 스크롤과 상관 없이 항상 그 자리를 유지한다.
+* z-index 속성의 경우는 반드시 position 속성(static 제와)과 함께 사용된다.
+  * z-index 속성 값은 양의 정수, 0, 음의 정수 사용이 가능.
+  * 단, 설정 시 1단위가 아닌 10 또는 100 단위로 설정하는 것이 유지보수 관점에서 권장된다.
+**※ 특징! [부모 A, [자식 C]] + [부모 B, [자식 D]]**
 
 
 * webfont icon 
@@ -47,3 +53,20 @@
   transform: translate(-50%, -50%);
 ```
 
+* fixed
+  * 
+
+## CSS Background
+
+* 멀티 백그라운드
+
+```css
+ background: bg, bg, bg, ... ;
+ background-size: size, size, size, ... ;
+ ```
+
+* vignette 효과
+
+```css
+background: radial-gradient(circle, transparent, #000);
+```

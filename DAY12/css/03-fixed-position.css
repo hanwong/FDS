@@ -1,0 +1,55 @@
+body {
+  font-family: "Spoqa Han Sans";
+  font-weight: 200;
+  background: linear-gradient(45deg, transparent 50%, hsla(0, 50%, 0%, 0.3) 52%, transparent 52%), linear-gradient(-45deg, transparent 50%, hsla(0, 50%, 0%, 0.3) 52%, transparent 52%), radial-gradient(circle at center 20%, transparent, #000),url("../img/rain.jpg") no-repeat center;
+  background-size: 30px 30px, 30px 30px, 100%, cover;
+  color: #fff;
+  text-shadow: 0 0 5px hsla(0, 0%, 0%, 0.75);
+}
+
+::selection {
+  background: hsla(194, 23%, 22%, 1);
+  color: #fff;
+  text-shadow: none;
+}
+
+main {
+    margin: 3em 20%;
+}
+
+#page-header-bar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 0.7em 0 1.7em;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.6), transparent);
+  color: rgba(54, 86, 94, 0.65);
+  text-align: center;
+  font-weight: 400;
+}
+
+#page-header-bar h4 {
+    color: #fff;
+     text-shadow: 2px 2px 5px hsla(177, 93%, 77%, 0.8), -2px -2px 5px hsla(271, 57%, 66%, 0.8); 
+    margin-bottom: 0;
+    /*text-shadow: none;*/
+}
+
+#page-footer-bar {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  /*z-index: 1;*/
+  padding: 0.7em 0 1.7em;
+  background:  hsla(0, 0%, 0%, 0.9);
+  color: hsla(0, 0%, 100%, 0.65);
+  text-align: center;
+  font-weight: 400;
+}
+
+#page-footer-bar h4 {
+    margin-bottom: 0;
+    text-shadow: none;
+}

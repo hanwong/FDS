@@ -1,0 +1,155 @@
+html { font-size: 14px; }
+body {
+  /*margin: 3rem;*/
+  width: 1800px;
+  min-height: 100vh;
+  margin-top: 3rem;
+  font-family: "Spoqa Han Sans", Sans-serif;
+  line-height: 1.5rem;
+  color: #2c2c2c;
+
+}
+
+.show-baseline {
+  background-image: linear-gradient(180deg, transparent 95%, #CC66FF 95%);
+  background-size: 1px 1.5rem;
+}
+
+section {
+  margin-left: 3rem;
+  margin-right: 1rem;
+  width: 800px;
+  height: 45rem;
+  float: left;
+}
+.title {
+  font-size: 1.5rem;
+  float: left;
+  color: #969595;
+  line-height: 1.5rem;
+  margin-right: 1rem;
+}
+.subtitle {
+  width: 7.14rem;
+  float: left;
+  color: #C0C1C2;
+}
+.subtitle.descript {
+  width: 17.14rem;
+  line-height: 1.8rem;
+}
+
+hr {
+  margin-bottom: 2.8rem;
+  clear: both;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 1.5rem; /*글자 본문 크기 x 행간 비율*/
+  letter-spacing: -0.03rem;
+  overflow: hidden;
+}
+
+/*h3, h2, h1 { font-weight: 200; }*/
+h1 { font-size: 3.85rem;    line-height: 4.5rem; }
+.header1 .subtitle { line-height: 4.5rem; }
+h2, h3, h4 { line-height: 3rem; }
+.header2 .subtitle, .header3 .subtitle, .header4 .subtitle { line-height: 3rem; }
+h2 { font-size: 2.94rem; }
+h3 { font-size: 2.25rem; }
+h4 { font-size: 1.72rem; }
+h5, h6 { line-height: 1.5rem; }
+.header5 .subtitle, .header6 .subtitle, .paragraph .subtitle { line-height: 1.5rem; }
+h5 { font-size: 1.31rem; }
+/*h6 { font-weight: 700; }*/
+
+
+table  {
+  width: 90%;
+  margin-bottom: 4.5rem;
+}
+
+
+.nonspan-table th {
+  background: #f2f2f2;
+  font-weight: 700;
+}
+.nonspan-table th, .nonspan-table td {
+  height: 3rem; 
+  vertical-align: middle;
+  text-align: center;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+.span-table th {
+  font-weight: 700;
+}
+.span-table td {
+  border-bottom: 1px solid #ddd;
+}
+.span-table th, .span-table td {
+  height: 3rem; 
+  vertical-align: middle;
+  text-align: center;
+} 
+.span-table th, .span-table tr:last-child td, .span-table .row1.last {
+  border-bottom: 1px solid black;
+}
+
+td.row1 {
+  text-align: left;
+  padding-left: 3rem;
+}
+
+article.list {
+  float: left;
+  margin-right: 2rem;
+}
+
+ol li { list-style-type: decimal;}
+ul li { list-style-type: disc; }
+ul li li { list-style-type: circle; }
+li li:last-child { margin-bottom: 1.5rem; }
+/*ol li { color: #969595; }*/
+ol li, ul li { margin-left: 1rem; }
+
+/*dl { width: 450px; }*/
+dd { margin-left: 1rem; }
+
+article.color-box {
+  float: left;
+}
+div.color {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 0.4rem;
+  margin-right: 2rem;
+  line-height: 100px;
+  text-align: center;
+  color: #fff;
+}
+
+div.mean {
+  width: 100px;
+  height: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-family: "Helvetica Light";
+  font-size: 0.86rem;
+  letter-spacing: 1.2px;
+  line-height: 1.5rem;
+  color: #2c2c2c;
+}
+
+.box01 { background: #FCB409; }
+.box02 { background: #63A2FC; }
+.box03 { background: #44cb83; }
+.box04 { background: #7171ef; }
+.box05 { background: #ff5448; }
+.box06 { background: #787f94; }
+.box11 { background: #262932; }
+.box12 { background: #464C64; }
+.box13 { background: #656B81; }
+.box14 { background: #ACB4C5; }
+.box15 { background: #D0D8E4; }
+
