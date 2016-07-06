@@ -1,13 +1,15 @@
 body {
   position: relative;
+  width: 100vw;
   height: 100vh;
   background: radial-gradient(#66FFCC, #0080FF);
 }
 
 .audio {
   position: absolute;
-  top: 45%;
-  left: 45%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 button {
