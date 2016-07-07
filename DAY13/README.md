@@ -15,7 +15,17 @@
 
 > <h1>, <h2> 같이 하위 계층의 헤딩이 연속으로 붙으면 하위 계층에 자동적으로 섹션요소로 분리됨.
 
+#### Mark up
+* 재사용 가능한 공통 모듈!!!
+  * 가운데 정렬하기 위해 재사용 가능한 컨테이너 클래스를 만들어준다.
+  * 
+* `header` 안에는 `nav`(섹션 요소)가 들어오면 안된다. 
 
 
 
-## 
+## Photoshop 색 추출
+* Swatches - small list로 설정
+* Color Picker 창 열기 - 색 선택 - hex code복사 - Add to Swatches
+* Save Swatches - .aco 파일 추출
+* Brackets - Swatcher 실행
+* .aco 파일 .sass 파일과 함께 위치 시키고 불러와서 .sass 파일 연상태에서 import
