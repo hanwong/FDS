@@ -15,7 +15,7 @@
  * --------------------------------
  * Grid Overlay
  * ----------------------------- */
-/*body.show-grid::before {
+/* body.show-grid::before {
   content: '';
   position: absolute;
   z-index: 1000;
@@ -26,6 +26,9 @@
   background-image: linear-gradient(transparent 95%, #fc414b 95%);
   background-size: 1px 24px;
 }*/
+body.overlay-grid::after {
+  height: 1390px;
+}
 /**
  * --------------------------------
  * .page-header
@@ -44,26 +47,22 @@
 }
 
 .page-header .brand {
-  float: left;
-  margin-top: 36px;
-  width: 220px;
+  margin-top: 12px;
   height: 48px;
   background: #18FFFF;
 }
 
 .page-header .gnb {
-  float: right;
-  margin-top: 48px;
+  float: left;
+  margin-top: 24px;
 }
 
 .page-header .gnb li {
-  float: left;
-  margin-left: 30px;
+  width: 94px;
 }
 
 .page-header .gnb a {
   display: block;
-  height: 24px;
   line-height: 24px;
   width: 94px;
   text-align: center;
@@ -73,20 +72,51 @@
   color: rgba(255,255,255,0.2);
 }
 
-.page-header .gnb a:focus {
+.page-header .function-button {
+  float: right;
+}
+
+.page-header .search {
+  margin-top: 24px;
+  color: #666666;
+}
+
+.page-header .search:focus {
   outline: 3px solid #fff;
   color: #fff;
 }
 
-.video.wrapper {
+.page-header .sign-in {
+  float: right;
   margin-top: 24px;
-  width: 940px;
+  line-height: 24px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 14px;
+  color: rgba(255,255,255,0.2);
+  background: #003044;
+}
+
+.page-header .gnb a:focus, 
+.page-header .search:focus,
+.page-header .function-button a:focus {
+  outline: 3px solid #fff;
+  color: #fff;
+}
+
+.video-content .news-video {
   height: 264px;
   background: #99F1FF;
   position: relative;
 }
 
-.video .circle {
+.video-content .sports-video {
+  height: 264px;
+  background: #99F1FF;
+  position: relative;
+}
+
+.video-content .play-button{
   width: 72px;
   height: 72px;
   border-radius: 50%;
@@ -94,53 +124,59 @@
   position: absolute;
   top: 50%;
   left: 50%;
+  z-index: 1;
   transform: translate( -50%, -50%);
 }
-.video .circle:focus {
-  outline: 3px solid #fff;
-  color: #fff;
-}
 
-.video .tri {
+.video-content .play-button::before {
+  display: block;
+  content: '';
   border-left: 28px solid white;
   border-top: 15px solid transparent;
   border-bottom: 15px solid transparent;
   position: absolute;
   top: 50%;
   left: 54%;
+  z-index: 2;
   transform: translate( -50%, -50%);
 }
 
-.content.wrapper {
-  height: 816px;
-  margin-top: 24px;
-}
-
-.content .main-content {
-  float: left;
-  width: 620px;
+.post-content .main-content {
   height: 816px;
   background: #D1F9FF;
 }
 
-.content .aside-content {
-  float: right;
-  width: 300px;
-  height: 360px;
+.post-content .aside-content {
+  height: 504px;
+  margin-bottom: 24px;
   background: #A9E7F1;
 }
 
+.post-content .banner-content,
+.post-content .ad-content {
+  height: 312px;
+  margin-bottom: 24px;
+  background: #A9E7F1;
+}
+
+/*.post-content .ad-content {
+  float: right;
+  height: 720px;
+  margin-bottom: 24px;
+  background: #7cd4e2;
+}
+*/
 .page-footer {
   width: auto;
   height: 96px;
   margin-top: 24px;
+  padding-top: 24px;
   background: #667E87;
-  border: 1px solid #667E87;
 }
 .footer {
   width: 620px;
   height: 24px;
-  margin-top: 35px;
+  margin-top: 12px;
   margin-right: auto;
   margin-left: auto;
   background: #9FAFB5;
@@ -150,9 +186,10 @@
  * Common Grid Style Module
  * ----------------------------- */
 .wrapper {
-  width: 940px;
-  height: 120px;
+  width: 1218px;
   margin-left: auto;
   margin-right: auto;
+  padding-top: 24px;
+  /*padding-bottom: 24px;*/
 }
 

@@ -1,3 +1,5 @@
+###### Front-end Development School
+
 # DAY 02
 
 ### 학습내용

@@ -1,0 +1,30 @@
+body {
+  height: 2780px;
+}
+
+.page-header {
+  height: 90px;
+  background: #000;
+  color: #fff;
+  text-transform: capitalize;
+}
+
+.f-left, li { float: left; }
+.f-right { float: right; }
+
+.newyork-news {
+  width: 66.66%;
+  height: 55.38vh;
+  outline: 1px solid black;
+}
+
+.breaking-news {
+  width: 33.33%;
+  height: 55.38vh;
+  outline: 1px solid black;
+}
+
+.sub-news {
+  height: 36.93vh;
+  outline: 1px solid black;
+}
