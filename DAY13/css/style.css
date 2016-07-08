@@ -152,16 +152,15 @@ body.overlay-grid::after {
   background: #A9E7F1;
 }
 
-.post-content .banner-content,
-.post-content .ad-content {
+.post-content .banner-content {
   height: 312px;
   margin-bottom: 24px;
   background: #A9E7F1;
 }
-
-/*.post-content .ad-content {
+/*
+.post-content .ad-content {
   float: right;
-  height: 720px;
+  height: 312px;
   margin-bottom: 24px;
   background: #7cd4e2;
 }

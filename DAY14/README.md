@@ -15,7 +15,13 @@
 3. 그리드 컬럼 모듈 - 
 
 
-
 ## Photoshop
 * Static Grid Image 만들기
   * layer (label옆 공간에서 command 누른 상태로 선택) - copy merged - file new - paste 
+
+
+## 나머지 공부
+* float 된 요소들은 normal flow에 따라서 바로 앞에 있는 요소를 넘어서 올라갈 수는 없음. 
+  * 잘 알려지지 않은 방법이지만 ?? isolate flow를 써서 할 수 있음 다음주에 배울 예정.
+* body 영역은 html 영역에 배경이 없으면 자신이 html 전체라고 생각해서 모든 영역에 배경이 적용된다. 
+  * html 영역에 배경을 적용하면 body 영역에만 배경 적용이 됨!!!!
