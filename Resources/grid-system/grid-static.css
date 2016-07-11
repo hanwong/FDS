@@ -11,7 +11,9 @@ body.overlay-grid::after {
   min-height: 100%;
   transform: translateX(-50%);
 }
-
+body.overlay-grid:hover::after {
+  background: none;
+}
 body.overlay-grid::after,
 .container {
   width: 1218px;
