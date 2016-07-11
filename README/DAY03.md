@@ -1,3 +1,6 @@
+###### Front-end Development School
+
+# DAY 03
 
 # HTML 요소
 - `image` - `src`, `alt`
