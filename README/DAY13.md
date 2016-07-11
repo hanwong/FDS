@@ -13,7 +13,7 @@
 
 > [document outline algorithm](https://www.smashingmagazine.com/2011/08/html5-and-the-document-outlining-algorithm/)
 
-> <h1>, <h2> 같이 하위 계층의 헤딩이 연속으로 붙으면 하위 계층에 자동적으로 섹션요소로 분리됨.
+> `<h1>`, `<h2>` 같이 하위 계층의 헤딩이 연속으로 붙으면 하위 계층에 자동적으로 섹션요소로 분리됨.
 
 #### Mark up
 * 재사용 가능한 공통 모듈!!!
