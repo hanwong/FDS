@@ -1,0 +1,40 @@
+/*
+Grid System 
+*/
+
+/*
+Grid container module
+*/
+.grid-container {
+  width: 1250px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*
+Grid module
+*/
+.grid::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/*
+Unit module
+*/
+[class*="unit-"] {
+  float: left;
+  margin-right: 30px;
+}
+[class*="unit-"]:lastchild, .last, .omega {
+  margin-right: 0;
+}
+.unit-1 { width: 130px; }
+.unit-2 { width: 290px; }
+.unit-3 { width: 450px; }
+.unit-4 { width: 610px; }
+.unit-5 { width: 770px; }
+.unit-6 { width: 930px; }
+.unit-7 { width: 1090px; }
+.unit-8 { width: 1250px; }
