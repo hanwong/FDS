@@ -26,6 +26,7 @@
 
 /*button.slide-from */
 button[class*="slide-"] {
+  overflow: hidden;
   position: relative;
   border: 2px solid #CC66FF;
   background: #CC66FF;
@@ -34,6 +35,7 @@ button[class*="slide-"] {
 }
 
 button[class*="slide-"]::after {
+
   content: '';
   position: absolute;
   background: #A050CB;
@@ -52,7 +54,13 @@ button[class*="slide-"]:focus::after {
 button.slide-from-left::after { right: 100%; }
 button.slide-from-right::after { border-radius: 3px; left: 100%; }
 button.slide-from-top::after { border-radius: 6px; bottom: 100%; }
-button.slide-from-bottom::after { border-radius: 12px; top: 100%; }
+button.slide-from-bottom::after { 
+  border-radius: 12px; 
+  left: 0;
+  right: 0;
+  top: 100%;
+  bottom: -100%;
+}
 
 
 button[class*="grow-"] {
