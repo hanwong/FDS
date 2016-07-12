@@ -1,0 +1,117 @@
+/*
+Grid System 
+*/
+
+/*
+Overlay grid guide module
+*/
+.grid-container::before {
+  content: '';
+  position: absolute;
+  z-index: 10000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2300px;
+}
+
+.grid-container.show-grid::before {
+  background: hsla(60, 50%, 50%, 0.3);
+  background: linear-gradient(90deg, rgba(191, 64, 64, 0.3) 120px, rgba(0, 0, 0, 0) 120px),     linear-gradient(rgba(0, 0, 0, 0) 9px, #26923f 9px);
+  background-size:
+    240px 1px,
+    1px 10px;
+}
+
+
+/*
+Grid container module
+*/
+.grid-container {
+  position: relative;
+  width: 960px;
+  height: 2300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*
+Grid module
+*/
+.grid::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/*
+Unit module
+*/
+[class*="unit-"] {
+  float: left;
+}
+.unit-1_2 { width: 60px; }
+.unit-1 { width: 120px; }
+.unit-2 { width: 240px; }
+.unit-3 { width: 360px; }
+.unit-4 { width: 480px; }
+.unit-5 { width: 600px; }
+.unit-6 { width: 720px; }
+.unit-7 { width: 840px; }
+.unit-8 { width: 960px; }
+
+/*
+push, pull module
+ì¼ë°˜íë¦„ì—ì„œ ìˆœì„œë¥¼ ë°”ê¿€ë•Œ ë§Žì´ ì‚¬ìš©í•¨
+positionì„ ì¨ì•¼ ì£¼ë³€ ìš”ì†Œì— ì˜í–¥ì„ ì£¼ì§€ ì•Šê³  ì´ë™í•  ìˆ˜ ìžˆìŒ
+*/
+.grid [class*="push-"] { position: relative; }
+.push-1_2 { left: 60px; }
+.push-1 { left: 120px; }
+.push-2 { left: 240px; }
+.push-3 { left: 360px; }
+.push-4 { left: 480px; }
+.push-5 { left: 600px; }
+.push-6 { left: 720px; }
+.push-7 { left: 840px; }
+.push-8 { left: 960px; }
+
+.grid [class*="pull-"] { position: relative; }
+.pull-1_2 { right: 60px; }
+.pull-1 { right: 120px; }
+.pull-2 { right: 240px; }
+.pull-3 { right: 360px; }
+.pull-4 { right: 480px; }
+.pull-5 { right: 600px; }
+.pull-6 { right: 720px; }
+.pull-7 { right: 840px; }
+.pull-8 { right: 960px; }
+
+/*
+Prefix, Suffix Module
+margin - 
+padding - 
+ì¶•ì „ì²´ë¥¼ ì›€ì§ì¼ ë•Œ ì‚¬ìš©í•˜ê¸°ì— ìœ ìš©í•˜ë‹¤.
+ë§ˆì§„ì€ ìƒ‰ì„ ì•ˆë¨¹ê³  íŒ¨ë”©ì€ ìƒ‰ì„ ë¨¹ëŠ”ë‹¤ëŠ” ê²ƒì„ ê³ ë ¤í•´ì„œ ê³¨ë¼ ì‚¬ìš©í•˜ë©´ ëœë‹¤.
+*/
+.prefix-1_2 { margin-left: 60px; }
+.prefix-1 { margin-left: 120px; }
+.prefix-2 { margin-left: 240px; }
+.prefix-3 { margin-left: 360px; }
+.prefix-4 { margin-left: 480px; }
+.prefix-5 { margin-left: 600px; }
+.prefix-6 { margin-left: 720px; }
+.prefix-7 { margin-left: 840px; }
+.prefix-8 { margin-left: 960px; }
+
+.suffix-1_2 { margin-right: 60px; }
+.suffix-1 { margin-right: 120px; }
+.suffix-2 { margin-right: 240px; }
+.suffix-3 { margin-right: 360px; }
+.suffix-4 { margin-right: 480px; }
+.suffix-5 { margin-right: 600px; }
+.suffix-6 { margin-right: 720px; }
+.suffix-7 { margin-right: 840px; }
+.suffix-8 { margin-right: 960px; }
+
+

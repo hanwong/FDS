@@ -27,6 +27,11 @@ img.image-overflow + * {
   text-indent: -9999em;
 }
 
+img.flex-img {
+  width: 100%;
+  height: auto;
+}
+
 /* 클리어픽스 */
 .clearfix::after {
   content: '';

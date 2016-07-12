@@ -1,0 +1,161 @@
+@charset "utf-8";
+
+.button {
+  cursor: pointer;
+  border: none;
+  border-bottom: 2px solid #400080;
+  font-size: 1rem;
+  padding: 0.25em 0.5em;
+  background: #6666FF;
+  color: #fff;
+  margin-right: 20px;
+  margin-bottom: 30px
+}
+.round { border-radius: 3px; }
+.rounder { border-radius: 6px; }
+.roundest { border-radius: 12px; }
+.button.button-3d {
+  border-bottom: none;
+  box-shadow: 
+  1px 1px 1px #000,
+  2px 2px 2px #000,
+  3px 3px 3px #000,
+  4px 4px 4px #000,
+  5px 5px 5px #000
+}
+
+/*button.slide-from */
+button[class*="slide-"] {
+  position: relative;
+  border: 2px solid #CC66FF;
+  background: #CC66FF;
+  color: #fff;
+  z-index: 0;
+}
+
+button[class*="slide-"]::after {
+  content: '';
+  position: absolute;
+  background: #A050CB;
+  transition: all 0.3s;
+  z-index: -1;
+}
+
+button[class*="slide-"]:hover::after,
+button[class*="slide-"]:focus::after { 
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+button.slide-from-left::after { right: 100%; }
+button.slide-from-right::after { border-radius: 3px; left: 100%; }
+button.slide-from-top::after { border-radius: 6px; bottom: 100%; }
+button.slide-from-bottom::after { border-radius: 12px; top: 100%; }
+
+
+button[class*="grow-"] {
+  overflow: hidden;
+  position: relative;
+  border: 4px solid #54AAD6;
+  padding: 0.725em 0.9em;
+  background: #54AAD6;
+  color: #4C4C4C;
+  z-index: 1;
+}
+
+button[class*="grow-"]::after {
+  content: '';
+  position: absolute;
+  background: #66CCFF;
+  transition: all 0.3s;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+/*button[class*="grow-"]:hover::after,
+button[class*="grow-"]:focus::after{
+ transform: scale(1);
+}*/
+
+button.grow-box::after  {
+  transform: scale(0);
+}
+button.grow-box:hover::after,
+button.grow-box:focus::after{
+ transform: scale(1);
+}
+
+button.grow-ellipse::after {
+  border-radius: 50%;
+  transform: scale(0);
+}
+button.grow-ellipse:hover::after,
+button.grow-ellipse:focus::after{ 
+  transform: scale(1.5);
+}
+
+button.grow-circle::after {
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  margin: -50px 0 0 -50px;
+  transform: scale(0);
+}
+button.grow-circle:hover::after,
+button.grow-circle:focus::after{ 
+  transform: scale(1.5);
+}
+
+
+button.grow-skew::after {
+  left: 50%;
+  right: 50%;
+  transform: skew(45deg);
+}
+button.grow-skew:hover::after,
+button.grow-skew:focus::after{ 
+  left: -20%;
+  right: -20%;
+}
+
+button.grow-skew-45::after {
+  left: 50%;
+  right: 50%;
+  transform: skew(-45deg);
+}
+button.grow-skew-45:hover::after,
+button.grow-skew-45:focus::after{ 
+  left: -20%;
+  right: -20%;
+}
+
+button.grow-spin-cw::after {
+  transform: rotate(-180deg) scale(0) ;
+}
+button.grow-spin-cw:hover::after,
+button.grow-spin-cw:focus::after{ 
+  transform: rotate(0deg) scale(1) ;
+}
+
+button.grow-spin-ccw::after {
+  transform: rotate(180deg) scale(0) ;
+}
+button.grow-spin-ccw:hover::after,
+button.grow-spin-ccw:focus::after{ 
+  transform: rotate(0deg) scale(1) ;
+}
+
+
+
+
+.wrapper {
+  width: 80%;
+  margin: 50px auto;
+}
