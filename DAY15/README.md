@@ -70,7 +70,6 @@ a[class*="slide-"] {
   display: inline-block;
   position: relative;
   padding: 0.06em 0.12em;
-  border-bottom: none;
   vertical-align: bottom;
 }
 

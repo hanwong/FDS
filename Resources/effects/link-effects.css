@@ -174,12 +174,12 @@ a.underline-from-right:focus::before {
 }
 
 a.underline-from-center::before {
-  left: 0%;
-  right: 0%;
+  left: 50%;
+  right: 50%;
 }
 
 a.underline-from-center:hover::before,
 a.underline-from-center:focus::before {
-  left: 50%;
-  right: 50%;
+  left: 0;
+  right: 0;
 }
