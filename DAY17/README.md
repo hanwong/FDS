@@ -48,7 +48,7 @@
 
 #### Unit, Gutterm Offset Module
 
-```html
+```css
 
 [class*="unit-"] {
   box-sizing: border-box;
