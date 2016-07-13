@@ -35,10 +35,7 @@ a {
 
 .header > * { height: 80px; }
 
-
-
 .slider .content { position: relative; height: 480px; background: url(../img/Content.png); }
-
 .slider .content h4 {text-align: left;top: 128px;}
 .slider .content p.big-title {text-align: left;top: 201px;font-size: 40px;}
 .slider .content p.description {text-align: left;top: 285px;}
@@ -58,10 +55,7 @@ a {
   color: white;
   text-align: center;
 }
-
-
 .slider [class*="slide-"] { display: block; height: 120px; background: #eee;}
-
 [class*="slide-"]{ position: relative; }
 [class*="slide-"]:hover::after {
   content: '';
@@ -74,23 +68,14 @@ a {
   background: url(../img/hover.png);
 }
 
-
 .banner > *,
 .featured > *,
 .blog > *
  { height: 240px; }
-
 [class*="-sale"] { position: relative; }
-
-.banner .banner-women-sale {
-  background: url("../img/banner-women.png");
-}
-.banner .banner-men-sale {
-  background: url("../img/banner-men.png");
-}
-.banner .banner-accessories-sale {
-  background: url("../img/banner-acc.png");
-}
+.banner .banner-women-sale { background: url("../img/banner-women.png"); }
+.banner .banner-men-sale { background: url("../img/banner-men.png"); }
+.banner .banner-accessories-sale { background: url("../img/banner-acc.png"); }
 .banner .banner-women-sale .description {top: 84%;}
 .banner .banner-women-sale .big-title {
   font-size: 2rem;
@@ -107,46 +92,38 @@ a {
 .banner .banner-accessories-sale p {top: 81%;}
 
 .featured > * ,
-.blog > * { background: #fff; border: 1px solid #CCCCCC; }
-.featured > * { position: relative; }
+.blog > * {
+  position: relative;
+  background: #fff;
+  outline: 1px solid #CCCCCC;
+}
 .featured .featured-header h4 {font-size: 1.5rem;top: 45%;}
 .featured .featured-header .description {top: 73%;}
 .featured .featured-header .icon {width: 15px;height: 82px;background: url(../img/svg-icon-ruby.png) no-repeat;top: 85px;}
-
 .featured .feature-title {height: 70px; padding-top: 25px;font-size: 0.9rem;}
 .featured .feature-img { height: 100px;  line-height: 70px; }
 .featured .feature-tag { height: 70px;  line-height: 70px; position: relative;}
 .featured .feature-cost { width: 118px; height: 70px;  line-height: 70px; font-weight: 900; }
 .featured .feature-salecost {height: 70px; line-height: 70px;font-size: 0.7rem;color: gray;}
 
-
-
-
-.blog .blog-header { position: relative; }
 .blog .blog-header h4 {font-size: 1.5rem;top: 45%;}
 .blog .blog-header .description {top: 73%;}
 .blog .blog-header .icon {width: 15px;height: 82px;background: url(../img/svg-icon-news.png) no-repeat;top: 85px;}
-
 .blog .blog-date { font-style: italic; color: #B3B3B3; font-size: 0.75rem; padding-top: 2.5rem;}
 .blog .blog-title { font-size: 1.125rem;  padding-top: 1rem;}
 .blog .blog-author { color: #B3B3B3; font-size: 0.625rem; padding-top: 1rem;}
-
 .blog > :nth-last-child(1), 
 .blog > :nth-last-child(2) { height: 120px; }
 .blog > :nth-last-child(1) *,
 .blog > :nth-last-child(2) * { text-align: left; }
 .blog > :nth-last-child(1) .blog-date,
 .blog > :nth-last-child(2) .blog-date { padding-top: 1rem; padding-left: 2rem;}
-
 .blog > :nth-last-child(1) .blog-title,
 .blog > :nth-last-child(2) .blog-title { font-size: 0.875rem; padding-top: 1rem; padding-left: 2rem;}
-
-.blog .blog-article1:hover {
+.blog [class*="blog-article"]:hover {
   background: url('../img/blog-hover.png');
   color: #fff;
 }
-
-
 
 .what-people-say,
 .who-we-are {
@@ -155,7 +132,6 @@ a {
   /*position: relative;*/
   /*border: 1px solid #CCCCCC;*/
 }
-
 .what-people-say .wps-chat,
 .what-people-say .wps-title,
 .what-people-say .wps-reload
@@ -197,7 +173,6 @@ a {
 .what-people-say .wps-author {top: 36%;left: 59%;}
 .what-people-say .wps-nation {top: 55%;left: 56%;}
 
-
 .who-we-are .pictures > , .who-we-are .quote { height: 60px; }
 .who-we-are .pictures div {
   height: 60px;
@@ -214,10 +189,7 @@ a {
   font-size: 0.75rem; 
   font-style: italic; 
 }
-.who-we-are .quote { 
-  line-height: 50px;
-}
-
+.who-we-are .quote { line-height: 50px; }
 .who-we-are .quote-title {
   font-size: 1.5rem;
   line-height: 2rem;
@@ -229,16 +201,15 @@ a {
   line-height: 1.4;
 }
 
-
 .brands > * { 
   position: relative; 
   height: 120px; 
   background: #fff; 
-  border: 1px solid #eee; }
+  outline: 1px solid #eee; 
+}
 
 .footer { height: 180px; background: #222222;}
-.footer > * { border: 1px solid #393939; }
-/*.footer .category {  height: 60px; margin: 0 auto; }*/
+.footer > * { outline: 1px solid #393939; }
 .footer .category a ,
 .footer .category .middot { 
   height: 60px; 
@@ -253,7 +224,6 @@ a {
   display: inline-block;
   color: #7F7F7F;
 }
-
 .footer .copyright, 
 .footer .send-email * { 
   color: #7a7a7a; 
@@ -268,7 +238,6 @@ a {
   padding-top: 25px;
   padding-bottom: 10px;
 }
-
 .footer .send-email .input-email {
   width: 360px;
   height: 30px;
@@ -301,7 +270,6 @@ a {
   top: 0;
   width: 15px;
 }
-
 .footer .send-email div { height: 50px; }
 .footer .send-email a { 
   padding-right: 10px; 
@@ -309,11 +277,10 @@ a {
   font-family: sans-serif;
   font-style: normal;
 }
-
 .footer .social a,
 .footer .payment a {
-  height: 58px;
-  line-height: 58px;
+  height: 60px;
+  line-height: 60px;
   font-size: 1.8rem;
   color: #656565;
   padding-right: 10px;
