@@ -12,6 +12,11 @@
         background-image: url("img/sprite-steps.png");
         animation: play .8s steps(10) infinite;
     }
+    
+    @keyframes play {
+      100% { background-position: -500px; }
+    }
+    
     .monster {
         width: 190px;
         height: 240px;
@@ -19,9 +24,7 @@
         animation: play-x .8s steps(10) infinite;
     }    
     
-    @keyframes play {
-      100% { background-position: -500px; }
-    }
+    
     @keyframes play-x {
       100% { background-position: -1900px; }
     }

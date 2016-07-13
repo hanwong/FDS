@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta charset="UTF-8">
+  <title>Sprite Animation</title>
+  <style>
+    .mario {
+      border: 1px solid #999;
+      height: 57px;
+      width: 39px;
+      background: url(img/css-sprite-animation-steps-mario.png) no-repeat;
+      animation: mario steps(27) 2s infinite;
+    }
+    @keyframes mario {
+      100% { background-position:  -1080px; }
+    }
+
+    .fox {
+      border: 1px solid #999;
+      width: 156px;
+      height: 150px;
+      background: url(img/css-sprite-animation-steps-foxtail.png);
+      animation: fox steps(45) 1s infinite;
+    }
+    @keyframes fox {
+      100% { background-position: -7020px; }
+    }
+
+    .ken {
+      border: 1px solid #999;
+      width: 70px;
+      height: 110px;
+      background: url(img/css-sprite-animation-steps-ken-tatsumaki-senpuu-kyaku.png);      
+      animation: ken steps(13) 1s infinite;
+    }
+    @keyframes ken {
+      100% { background-position: -910px; }
+    }
+
+    .cat {
+      border: 1px solid #999;
+      width: 399px;
+      height: 199.42px;
+      background: url(img/css-sprite-animation-steps-rachel.png);
+      animation: cat steps(12) 1s infinite;
+    }
+    @keyframes cat {
+      100% { background-position: 0 -2393px; }
+    }
+
+
+  </style>
+</head>
+<body>
+  <div class="mario"></div>
+  <div class="fox"></div>
+  <div class="ken"></div>
+  <div class="cat"></div>
+</body>
+</html>
