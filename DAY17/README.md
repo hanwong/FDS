@@ -46,7 +46,7 @@
 * 퍼센트를 시스템화 해서 만든다.
 * 패딩으로 양옆의 커터를 만든다. 퍼센트 값을 사용할 경우 부모 컨테이너의 비율을 따르기 때문에 박스마다 일일이 계산해야 한다. 
 
-#### Unit, Gutterm Offset Module
+#### Unit, Gutter, Offset Module
 
 ```css
 
