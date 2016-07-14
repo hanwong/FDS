@@ -1,0 +1,152 @@
+body {
+    background: #1A1718;
+    font-family: MaisonNeue, sans-serif;
+}
+
+.logo img {
+    position: absolute;
+    width: 236px;
+    height: 22px;
+    top: 50%;
+    left: 50%;
+    transform: translate( -50%, -50%);
+}
+
+.header {
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 115px;
+}
+
+.header .nav-shop,
+.header .nav-about {
+    margin-top: 45px;
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+.header .nav-shop {
+    float: left;
+}
+
+.header .nav-about {
+    float: right;
+}
+
+.header .nav-shop > li,
+.header .nav-about > li {
+    display: inline-block;
+    padding-right: 0.5em;
+    padding-left: 0.5em;
+}
+
+.header .nav >:nth-child(4) {
+    margin-right: 10em;
+}
+
+.header .nav {
+    position: relative;
+}
+
+.header li ul {
+    display: none;
+    position: absolute;
+    background: #1A1718;
+    width: 250px;
+    padding: 30px;
+    line-height: 1.5;
+    box-shadow: 5px 5px 25px #000;
+}
+.header .nok-list {
+  width: 110px;
+}
+
+
+.header li:hover>ul {
+    display: block;
+}
+
+.header li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 100;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.header li a:hover {
+    text-decoration: underline;
+}
+.header .nav-about .bag a{
+    color: rgba(255,255,255,0.5);
+}
+
+.go-shop {
+    position: relative;
+}
+
+.go-shop a {
+    display: block;
+}
+
+.go-shop video {
+    width: 100%
+}
+
+.go-shop div {
+    position: absolute;
+
+    text-decoration: none;
+    color: #fff;
+}
+
+.go-shop .essential {
+    top: 45%;
+    left: 50%;
+    transform: translate( -50%, -50%);
+    text-align: center;
+    font-size: 4.38rem;
+    animation: up-down 1.5s;
+}
+
+.go-shop .go {
+    top: 63%;
+    left: 50%;
+    transform: translate( -50%, -50%);
+    font-size: 0.875rem;
+    font-weight: 100;
+    animation: down-up 2.5s;
+}
+
+@keyframes up-down {
+    from {
+      top: 20%;
+      opacity: 0;
+    }
+    to {
+      top: 45%;
+      opacity: 1;
+    }
+}
+
+@keyframes down-up {
+    0% {
+      top: 80%;
+      opacity: 0;
+    }
+    40% {
+      top: 80%;
+      opacity: 0;
+    }
+    100% {
+      top: 63%;
+      opacity: 1;
+    }
+}
+
+li.nok {}
