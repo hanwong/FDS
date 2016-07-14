@@ -75,12 +75,27 @@ body {
     font-size: 0.9rem;
     font-weight: 100;
     cursor: pointer;
+}
+
+/*.header li a:hover, a.go:hover {
+    text-decoration: underline;
+}*/
+
+.header li a, a.go { position: relative; }
+.header li a::after, a.go::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 100%;
+    border-bottom: 1px double #fff;
     transition: all 0.3s;
 }
 
-.header li a:hover, a.go:hover {
-    text-decoration: underline;
+.header li a:hover::after, a.go:hover::after {
+    right: 0;
 }
+
 .header .nav-sports .bag a{
     color: rgba(255,255,255,0.5);
 }
