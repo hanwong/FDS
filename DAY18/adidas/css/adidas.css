@@ -78,7 +78,7 @@ body {
     transition: all 0.3s;
 }
 
-.header li a:hover {
+.header li a:hover, a.go:hover {
     text-decoration: underline;
 }
 .header .nav-sports .bag a{
