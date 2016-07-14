@@ -28,6 +28,10 @@
 #### Video
 
 * 비디오 전체 화면으로 보이게 하기 
+
+[비디오 마스킹1](https://codepen.io/SahAssar/pen/YPWxWX)
+
+[비디오 마스킹2](https://developer.mozilla.org/ko/docs/Web/CSS/filter)
  
 ```html
 <video autoplay loop src="media/adidas.mp4"></video>
