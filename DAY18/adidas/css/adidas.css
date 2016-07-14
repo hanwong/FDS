@@ -5,8 +5,8 @@ body {
 
 .logo img {
     position: absolute;
-    width: 236px;
-    height: 22px;
+    fill: #fff;
+    height: 70px;
     top: 50%;
     left: 50%;
     transform: translate( -50%, -50%);
@@ -20,10 +20,11 @@ body {
     top: 0;
     bottom: 0;
     height: 115px;
+    background: rgba(0,0,0,0.3);
 }
 
 .header .nav-shop,
-.header .nav-about {
+.header .nav-sports {
     margin-top: 45px;
     margin-left: 2em;
     margin-right: 2em;
@@ -33,12 +34,12 @@ body {
     float: left;
 }
 
-.header .nav-about {
+.header .nav-sports {
     float: right;
 }
 
 .header .nav-shop > li,
-.header .nav-about > li {
+.header .nav-sports > li {
     display: inline-block;
     padding-right: 0.5em;
     padding-left: 0.5em;
@@ -61,11 +62,9 @@ body {
     line-height: 1.5;
     box-shadow: 5px 5px 25px #000;
 }
-.header .nok-list {
+.header .cutomize-list {
   width: 110px;
 }
-
-
 .header li:hover>ul {
     display: block;
 }
@@ -82,7 +81,7 @@ body {
 .header li a:hover {
     text-decoration: underline;
 }
-.header .nav-about .bag a{
+.header .nav-sports .bag a{
     color: rgba(255,255,255,0.5);
 }
 
@@ -98,9 +97,9 @@ body {
     width: 100%
 }
 
-.go-shop div {
+.go-shop div,
+a.go {
     position: absolute;
-
     text-decoration: none;
     color: #fff;
 }
@@ -115,9 +114,12 @@ body {
 }
 
 .go-shop .go {
+
     top: 63%;
     left: 50%;
     transform: translate( -50%, -50%);
+    /*z-index: 3;*/
+    padding: 5px;
     font-size: 0.875rem;
     font-weight: 100;
     animation: down-up 2.5s;
@@ -148,5 +150,3 @@ body {
       opacity: 1;
     }
 }
-
-li.nok {}
