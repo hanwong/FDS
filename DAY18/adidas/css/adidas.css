@@ -57,7 +57,7 @@ body {
     display: none;
     position: absolute;
     background: #1A1718;
-    width: 250px;
+    min-width: 150px;
     padding: 30px;
     line-height: 1.5;
     box-shadow: 5px 5px 25px #000;
@@ -129,15 +129,63 @@ a.go {
 }
 
 .go-shop .go {
-
     top: 63%;
     left: 50%;
     transform: translate( -50%, -50%);
-    /*z-index: 3;*/
     padding: 5px;
     font-size: 0.875rem;
     font-weight: 100;
     animation: down-up 2.5s;
+}
+
+p {
+    color: #fff;
+    padding: 2em;
+}
+
+.description {
+    position: relative;
+    padding: 3rem;
+}
+
+.close-button { 
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    width: 20px;
+    height: 20px; 
+    padding: 5px;
+    border: none;
+    background: none;
+}
+
+.close-button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    width: 20px;
+    height: 1px;
+    background: #fff;
+    transition: all 0.3s;
+    transform: rotate(45deg);
+}
+
+.close-button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    width: 20px;
+    height: 1px;
+    background: #fff;
+    transition: all 0.3s;
+    transform: rotate(-45deg);
+}
+
+.close-button:hover::before,
+.close-button:hover::after {
+    transform: rotate(0deg);
 }
 
 @keyframes up-down {
