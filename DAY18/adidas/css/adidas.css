@@ -3,6 +3,11 @@ body {
     font-family: MaisonNeue, sans-serif;
 }
 
+p {
+    color: #fff;
+    padding: 2em;
+}
+
 .logo img {
     position: absolute;
     fill: #fff;
@@ -136,11 +141,6 @@ a.go {
     font-size: 0.875rem;
     font-weight: 100;
     animation: down-up 2.5s;
-}
-
-p {
-    color: #fff;
-    padding: 2em;
 }
 
 .description {
