@@ -1,13 +1,37 @@
-body {margin-top: 1.5rem;height: 100vh;background: linear-gradient(#f46b45, #eea849);}
-h1, h2, h3, h4, h5, h6 { font-family: "Spoqa Han Sans", sans-serif; color: #ffbd51; margin-bottom: 1.5rem;  }
-h1 { font-size: 5.6rem; line-height: 6rem; }
-h2 { font-size: 3.5rem; line-height: 4.5rem; }
+body {
+    margin-top: 1.5rem;
+    height: 100vh;
+    background: linear-gradient(#f46b45, #eea849);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Spoqa Han Sans", sans-serif;
+    color: #ffbd51;
+    margin-bottom: 1.5rem;
+}
+
+h1 {
+    font-size: 5.6rem;
+    line-height: 6rem;
+}
+
+h2 {
+    font-size: 3.5rem;
+    line-height: 4.5rem;
+}
+
 .unit-box {
-  height: 3rem;
-  margin-bottom: 1rem;
-  /* border: 3px solid #fdc363; */
-  border-radius: 0.3rem;
-  box-shadow: 0px 3px 15px rgba(255, 189, 81, 0.63);
-  background: #ffb439;
-  /*background: linear-gradient(#fde76b,  #ff9900);*/
+    height: 3rem;
+    line-height: 3rem;
+    text-align: center;
+    color: #ffe2b4;
+    margin-bottom: 1.5rem;
+    border-radius: 0.3rem;
+    box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.2);
+    background: #ffb439;
 }
