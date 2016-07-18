@@ -1,6 +1,9 @@
 ###### Front-end Development School
 
 # Code Style Guide
+* [HTML](#html)
+* [CSS](#CSS)
+
 
 ## HTML
 * [Syntax](#syntax)
@@ -136,44 +139,68 @@
 -
 
 ## CSS
-
-###CSS syntax
-
+* [Declaration order](#declaration-order)
+* [Don't use @import](#dont-use-import)
+* [Classes](#classes)
+* [Selectors](#selectors)
 
 ###Declaration order
+```css
+.declaration-order {
+  /* Positioning */
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+
+  /* Box-model */
+  display: block;
+  float: right;
+  width: 100px;
+  height: 100px;
+
+  /* Typography */
+  font: normal 13px "Helvetica Neue", sans-serif;
+  line-height: 1.5;
+  color: #333;
+  text-align: center;
+
+  /* Visual */
+  background-color: #f5f5f5;
+  border: 1px solid #e5e5e5;
+  border-radius: 3px;
+
+  /* Misc */
+  opacity: 1;
+}
+```
+
+* 다음과 같은 속성의 순서대로 선언한다.
+1. Positioning
+2. Box
+3. Typography
+4. Visual, Misc
 
 
 ###Don't use @import
-
-
-###Media query placement
-
-
-###Prefixed properties
-
-
-###Rules with single declarations
-
-
-###Shorthand notation
-
-
-###Nesting in Less and Sass
-
-
-###Operators in Less and Sass
-
-
-###Comments
-
+```
+<link rel="stylesheet" href="core.css">
+<style>
+  @import url("more.css");
+</style>
+```
+* CSS 파일을 연결할 때 `@import`를 사용하지 않고 `link`를 활용한다.
+  * `@import`는 직렬 방식으로 파일을 불러오기 때문에 성능에 영향을 미친다.
 
 ###Classes
-
+* Class 명칭은 소문자를 사용하고, 단어 사이에는 `-` 로 구분한다.
+* 지나친 축약 보다는 의미가 명확히 전달 가능한 이름을 사용한다.
+* 인접한 부모 Class를 접두사로 활용한다.
 
 ###Selectors
-
-
-###Organization
-
-
+* 일반 요소를 지정하기 보다 Class를 지정하여 선택자로 명시한다.
+* 멀티클래스로 클래스를 나누어 사용하기 보다 접두사를 이용하여 독립적인 클래스를 선택자로 명시한다.
+[Scope CSS classes with prefixes](http://markdotto.com/2012/02/16/scope-css-classes-with-prefixes/)
 -
