@@ -2,7 +2,7 @@
 
 # Code Style Guide
 * [HTML](#html)
-* [CSS](#CSS)
+* [CSS](#css)
 
 
 ## HTML
@@ -186,7 +186,7 @@
 
 
 ###Don't use @import
-```
+```html
 <link rel="stylesheet" href="core.css">
 <style>
   @import url("more.css");
@@ -196,12 +196,32 @@
   * `@import`는 직렬 방식으로 파일을 불러오기 때문에 성능에 영향을 미친다.
 
 ###Classes
+```css
+.btn { ... }
+.btn-focus { ... }
+.btn-hover { ... }
+
+.line { ... }
+.line-focus { ... }
+.line-hover { ... }
+```
 * Class 명칭은 소문자를 사용하고, 단어 사이에는 `-` 로 구분한다.
 * 지나친 축약 보다는 의미가 명확히 전달 가능한 이름을 사용한다.
 * 인접한 부모 Class를 접두사로 활용한다.
 
 ###Selectors
-* 일반 요소를 지정하기 보다 Class를 지정하여 선택자로 명시한다.
+```css
+/* Bad example */
+.btn.nav { ... }
+.line.nav { ... }
+
+/* Good example */
+.btn-nav { ... }
+.line-nav { ... }
+```
+* 선택자를 명시할 때 일반 요소를 지정하기 보다 Class를 지정하여 사용한다.
 * 멀티클래스로 클래스를 나누어 사용하기 보다 접두사를 이용하여 독립적인 클래스를 선택자로 명시한다.
-[Scope CSS classes with prefixes](http://markdotto.com/2012/02/16/scope-css-classes-with-prefixes/)
+* [[Scope CSS classes with prefixes]](http://markdotto.com/2012/02/16/scope-css-classes-with-prefixes/)
+
+
 -
