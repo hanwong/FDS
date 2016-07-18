@@ -178,6 +178,7 @@
 ```
 
 * 다음과 같은 속성의 순서대로 선언한다.
+
 1. Positioning
 2. Box
 3. Typography
