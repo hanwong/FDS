@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta charset="UTF-8">
+  <title>Responsive Viedo</title>
+  <link rel="stylesheet"  href="css/rwd.css">
+</head>
+<body>
+  <div class="container">
+    <h2>RWD Video</h2>
+    
+    <video 
+      class="rwd-video" 
+      poster="media/video-poster.png"
+      src="media/video.mp4"
+      width="640"
+      height="360" 
+      controls>
+    </video>
+
+  <!-- iframe사용시 포지션을 활용한 컨테이너가 필요하다. -->
+    <h3>&lt;iframe 예시&gt;</h3>
+    <div class="iframe-container">
+      <div class="rwd-media-container">
+        <iframe 
+          class="rwd-media" 
+          width="640" 
+          height="360" 
+          src="https://www.youtube.com/embed/nN5fqOUm65Q" 
+          frameborder="0" 
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+    <h3>&lt;vimeo 예시&gt;</h3>
+    <div class="iframe-container">
+      <div class="rwd-media-container">
+        <iframe 
+          class="rwd-media" 
+          src="https://player.vimeo.com/video/147865858" 
+          width="640" 
+          height="360" 
+          frameborder="0" 
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+</html>

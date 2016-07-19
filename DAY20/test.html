@@ -1,0 +1,185 @@
+<html>
+
+  <head>
+    <!-- jQuery -->
+    <script data-require="jquery@*" data-semver="2.0.3" src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+    <!-- JCrop by DeepLiquid -->
+    <script type="text/javascript" src="http://jcrop-cdn.tapmodo.com/latest/js/jquery.Jcrop.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://jcrop-cdn.tapmodo.com/latest/css/jquery.Jcrop.css" />
+    <!-- Face detection by Jay Salvat -->
+    <script src="http://facedetection.jaysalvat.com/js/facedetection/ccv.js"></script> 
+    <script src="http://facedetection.jaysalvat.com/js/facedetection/face.js"></script>
+    <script src="http://facedetection.jaysalvat.com/js/jquery.facedetection.js"></script> 
+    
+    <!-- --------------------------- FileAPI Polyfill - START ---------------------------------------->
+    <!--  I failed using those 2 resources below and revert back to using the standard FileAPI
+    <!--  Do no hesitate to contact me if you managed to fix this... 
+
+    <!-- Canvas2Image by Jacob Seidelin with code from Masanao Izumo ==> not working in IE
+    <script "http://www.nihilogic.dk/labs/canvas2image/canvas2image.js"></script>
+    <script "http://www.nihilogic.dk/labs/canvas2image/base64.js"></script>
+    -->
+    <!-- FileSaver vy Eli Grey -->
+    <script "filesaver.js"></script>
+    <!-- <script "http://eligrey.com/demos/FileSaver.js/Blob.js"></script>
+    <script "http://eligrey.com/demos/FileSaver.js/canvas-toBlob.js"></script>
+    <script "http://eligrey.com/demos/FileSaver.js/FileSaver.js"></script> -->
+
+    <!-- --------------------------- FileAPI Polyfill - END ------------------------------------------>
+        
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        .button {
+  font: bold 11px Arial;
+  text-decoration: none;
+  background-color: #EEEEEE;
+  color: #333333;
+  padding: 2px 6px 2px 6px;
+  border-top: 1px solid #CCCCCC;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-left: 1px solid #CCCCCC;
+}
+    </style>
+  </head>
+
+  <body>
+    <script src="http://blueimp.github.io/JavaScript-Canvas-to-Blob/js/canvas-to-blob.js"></script>
+    
+    <h1>Face Detection and Cropping</h1>
+    <!-- ****************************************************************
+    <!--* Browser issues with Cross-Domain from Plunker ==> use Base64  *
+    <!-- ****************************************************************
+    
+    <!-- <img id="photo" src="http://icdn4.digitaltrends.com/image/steve-jobs-mini-ipad-650x0.jpg"/> -->
+    <!-- <img id="photo" src="http://media.meltybuzz.fr/article-1273643-ajust_930/steve-jobs.jpg" /> -->
+    
+    <!-- Quick and dirty TABLE layout, sorry about that... -->
+    <table style="padding: 5px;">
+      <tr>
+        <td>
+          <img id="photo" src="img/photo.jpg"/>
+                  
+                  <!-- Canvas allows easy export using FileAPI -->
+                  <canvas id="canvas" width="93px" height="70px"></canvas>
+                </div>
+              </td>
+            </tr>                
+            <tr>
+              <td>
+                <!-- <input type="button" onclick="downloadCrop()" value="Download" /> -->
+                <a id="download" href="#" download="photo.png" target="_blank" class="button">Download</a>
+              </td>              
+            </tr>
+          </table>
+        </td>  
+      </tr>  
+    </table>
+    <pre>Special thanks to: DeepLiquid, Jay Salvat, Eli Grey</pre>
+    <br />
+    More 'Face Detection' stuff: <a href="http://blog.mashape.com/post/53379410412/list-of-50-face-detection-recognition-apis">http://blog.mashape.com/post/53379410412/list-of-50-face-detection-recognition-apis</a>
+    
+    <script>
+      // Global variables
+      var jcrop;
+      var $img;
+      var $canvas;
+      var faceCoords = [];
+      var faceCoordsExtended = [];
+    
+      function showPreview(coords) {
+        if (!coords) { return(false); }
+        
+        console.log(coords);
+        var rx     = 93 / coords.w;
+        var ry     = 70 / coords.h;
+        var width  = Math.round(rx * 930) + 'px';
+        var heigth = Math.round(ry * 697) + 'px'
+      
+        $('#preview').css({
+          width     : Math.round(rx * 930) + 'px',
+          height    : Math.round(ry * 697) + 'px',
+          marginLeft: '-' + Math.round(rx * coords.x) + 'px',
+          marginTop : '-' + Math.round(ry * coords.y) + 'px'
+        });
+        
+        var canvas = document.getElementById("canvas");
+        var context = canvas.getContext("2d");
+        context.drawImage(document.getElementById("photo"),
+                          coords.x, 
+                          coords.y,
+                          coords.w,
+                          coords.h,
+                          0,
+                          0,
+                          93,
+                          70);
+        
+        var url = canvas.toDataURL();
+        $("#download").attr("href", url);
+      }
+      
+      function downloadCrop() {
+        /*
+        var canvas = document.getElementById("canvas");
+        var context = canvas.getContext("2d");
+        context.fillStyle = "green";
+        context.fillRect(50, 50, 100, 100);
+        
+        console.log($canvas);
+        //Canvas2Image.saveAsJPEG(canvas);  // will prompt the user to save the image as xxx
+
+        //canvas.toBlob(function(blob) { saveAs(blob, "photo.png"); },
+        //               "image/png");
+        //var bb = new Blob();
+        //var blob = bb.getBlob("image/png");
+        //canvas.toBlob(function(blob) { saveAs(blob, "photo.png" )});
+        
+        debugger;
+        //var imageData = $canvas.toDataURL();
+        //imageData = imageData.replace(/^data:[a-z]*;/, 'data:application/octet-stream;');
+        //$("#download").attr("href", imageData);
+        var url = canvas.toDataURL();
+        $("#download").attr("href", url);
+        */
+      }
+      
+      function processCrop() {
+        var newOptions
+        
+        jcrop.animateTo( faceCoordsExtended ); 
+        newOptions = jcrop.getOptions();
+        newOptions.aspectRatio = 93/70;     // Reinitialize the ratio for no constraints
+        //console.log(newOptions);
+        //jcrop.setOptions(newOptions);
+      }
+      
+      $img = $('#photo');
+      //$img.crossOrigin = '';                    // no credentials flag. Same as img.crossOrigin='anonymous' --> does not work locally on Chrome  :/
+       
+      faceCoords = $img.faceDetection();
+      //console.log($img);
+      //console.log(faceCoords);
+      
+      if (faceCoords && faceCoords[0]) {
+        // only process the first face found
+        faceCoordsExtended = [ faceCoords[0].x,
+                               faceCoords[0].y,
+                               faceCoords[0].x + faceCoords[0].width,
+                               faceCoords[0].y + faceCoords[0].height ];
+        console.log("Face coordinates: " + faceCoordsExtended);
+      }  
+          
+      $img.Jcrop( { aspectRatio  : 0,             // do not set any constraint on width/height ratio of the crop
+                   //,trackDocument: true 
+                    onChange: showPreview,
+                    onSelect: showPreview,
+                  }, 
+                  function() { jcrop = this;
+                               jcrop.setSelect( [0, 0, $img.width(), $img.height()] );
+                               setTimeout(processCrop, 2500);
+                             } );
+    </script>
+  </body>
+
+</html>

@@ -1,0 +1,41 @@
+@charset "utf-8";
+/*
+*/
+.container {
+  max-width: 920px;
+  margin-left: auto;
+  margin-right: auto;
+  background: #999999;
+}
+.rwd-video {
+  max-width: 640px;
+  width: 100%;
+  height: auto;
+}
+
+iframe {
+  border: 0;
+}
+
+.iframe-container {
+  max-width: 640px;
+}
+.rwd-media-container {
+  position: relative;
+  /* max-width: 640px; */
+  width: 100%;
+  /*padding-bottom 을 쓸 경우 임의의 값이 들어 올 수 도 있으므로 높이를 0으로 한다.*/
+  height: 0;
+  /* 
+  4:3 = 75%
+  16:9 = 56.25%
+  21:9 = 42.8571%
+   */
+  padding-bottom: 56.25%;
+}
+.rwd-media {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}

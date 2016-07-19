@@ -1,0 +1,44 @@
+@charset "utf-8";
+
+body {
+  height: 100vh;
+  min-width: 20rem;
+  background: #A8FBEC;
+  font: 1rem/100vh "Spoqa Han Sans", sans-serif;
+  text-align: center;
+}
+
+body::before {
+  content: 'Mobile View';
+  font-size: 3rem;
+  color: #fff;
+}
+
+@media (orientation: landscape) {
+  body {
+    background: #CCCCCC;
+  }
+}
+
+@media (max-height: 400px) {
+  body::before {
+  content: 'Max Height';
+  }
+}
+@media (min-width: 600px) {
+  body {
+    background: #CCFF66;
+  }
+  body::before {
+  content: 'Tablet View';
+  }
+}
+
+@media (min-width: 900px) {
+  body {
+    background: #FF8000;
+  }
+  body::before {
+  content: 'Desktop View';
+  }
+}
