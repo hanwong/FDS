@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-.container::after {
+.grid::after {
   content: '';
   display: block;
   clear: both;
@@ -8,7 +8,7 @@
 
 [class*="unit-"] {
   float: left;
-  width: 100%
+  width: 100%;
 }
 
 /*
@@ -24,6 +24,25 @@ Gutter Moduel
   padding-left: 0;
   padding-right: 0;
 }
+
+/* row module */
+.row-s-1 { height: 21px; }
+.row-s-2 { height: 42px; }
+.row-s-3 { height: 63px; }
+.row-s-4 { height: 84px; }
+.row-s-5 { height: 105px; }
+.row-s-6 { height: 126px; }
+.row-s-7 { height: 147px; }
+.row-s-8 { height: 168px; }
+.row-s-9 { height: 189px; }
+.row-s-10 { height: 210px; }
+.row-s-11 { height: 231px; }
+.row-s-12 { height: 252px; }
+.row-s-13 { height: 273px; }
+.row-s-14 { height: 294px; }
+.row-s-15 { height: 315px; }
+.row-s-20 { height: 420px; }
+.row-s-23 { height: 483px; }
 
 /*
 Unit Module
@@ -192,6 +211,24 @@ Unit Module
 
 
 @media (min-width: 600px) {
+.row-m-1 { height: 21px; }
+.row-m-2 { height: 42px; }
+.row-m-3 { height: 63px; }
+.row-m-4 { height: 84px; }
+.row-m-5 { height: 105px; }
+.row-m-6 { height: 126px; }
+.row-m-7 { height: 147px; }
+.row-m-8 { height: 168px; }
+.row-m-9 { height: 189px; }
+.row-m-10 { height: 210px; }
+.row-m-11 { height: 231px; }
+.row-m-12 { height: 252px; }
+.row-m-13 { height: 273px; }
+.row-m-14 { height: 294px; }
+.row-m-15 { height: 315px; }
+.row-m-23 { height: 483px; }
+.row-m-24 { height: 504px; }
+
 .unit-m-1-2,
 .unit-m-2-4,
 .unit-m-3-6,

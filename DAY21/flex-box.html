@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta charset="UTF-8">
+  <title>Flex Box</title>
+  <link rel="stylesheet" href="../Resources/init/normalize.css">
+  <link rel="stylesheet" href="../Resources/common.css">
+  <style>
+    body {
+      margin: 3rem;
+    }
+    .flex-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: stretch;
+
+      height: 400px;
+      margin: 2rem 0;
+      border: 2px solid #333;
+      padding: .625rem;o
+    }
+    img { vertical-align: bottom; }
+
+    .flex-items {
+      /*width: 100px;*/
+      /*height: 100px;*/
+      background: #333;
+      color: #fff;
+    }
+    .items-1 { /*height: 20px;*/ background: #FF6666; }
+    .items-2 { /*height: 50px;*/ background: #FFCC66; }
+    .items-3 { /*height: 80px;*/ background: #66CCFF; }
+  </style>
+</head>
+<body>
+  <div>
+    <img src="http://placehold.it/400x200/7F7F7F/fff/?text=NormalFlow" alt="alt" width="400" height="200">
+  </div>
+  <div class="flex-container">
+    <div class="flex-items items-1">Flexbox 1</div>
+    <div class="flex-items items-2">Flexbox 2</div>
+    <div class="flex-items items-3">Flexbox 3</div>
+  </div>
+  <img src="http://placehold.it/400x200/FF6FCF/fff/?text=NormalFlow" alt="alt" width="400" height="200">
+  <div>
+    <div>한글 로렘입숨 더미텍스트. 티셔츠 너 꽃처럼 하루를 너야말로 쿵쿵대는 장엄한 그대 아름답다 숨죽여도 소리 운동화도 내일의 엮어가는 피어나는 고동소리 설레는 청춘아 아름다운 설레게, 쉬지 찬란한 눈부신 소리 하고 가슴을 청춘 않고! 장엄한, 피어나는 고동소리 햇볕처럼 흐르는 하루를 너야말로, 내일의 다 들리는! 꽃처럼, 장엄한 만들 설레는, 숨죽여도 심장 하고 소리 어디에나, 세상을 내일의 숨소리가 청춘의 눈부신 흐르는 실수조차도 청춘 쉬지 피어나는. 가슴을 청춘아! 설레는 찬란한 티셔츠, 씩씩하게 세상을 청춘 빛나는 숨죽여도 햇볕처럼, 아름답다, 사명으로 심장 쿵쿵대는 해도 고동소리 흐르는 눈부신 하고 소리 청춘, 그대 피어나는 내일의 설레게 너야말로. 세상을 찬란한 피어나는, 심장 숨죽여도 하고 햇볕처럼! 심장 너야말로 어디에나 꽃보다 가슴을 운동화도 청춘.</div>
+    <div>하루를 설레게 그대 쉬지 어디에나 사명으로, 흐르는 내일의 찬란한 너 숨소리가 운동화도 꽃보다, 땀 아름답다 눈부신 만들 청춘의. 청춘, 꽃보다 아름답다 너야말로 쉬지 심장, 숨소리가. 꽃보다 티셔츠 그대, 실수조차도 청춘의 내일의 심장 운동화도 설레는 하루를 소리 땀 찬란한 엮어가는 장엄한 젊음의 어디에나, 고동소리 햇볕처럼 아름다운, 빛나는 쿵쿵대는? 그대, 심장 흐르는. 피어나는 그대 땀 장엄한 만들, 소리 설레게 실수조차도 찬란한, 청춘, 해도 엮어가는 꽃보다? 쉬지 아름다운 장엄한 쿵쿵대는, 꽃처럼 너야말로 사명으로 설레는 너 않고! 흐르는 설레는 젊음의, 해도 쿵쿵대는 아름다운 다 들리는. 젊음의 실수조차도 햇볕처럼 소리 쿵쿵대는 내일의 않고 쉬지 만들, 어디에나. 청춘 가슴을 눈부신 만들 해도, 아름다운 설레게 그대 다 들리는 숨소리가.</div>
+    <div>햇볕처럼, 내일의 설레게 보기만 너 피어나는, 소리 세상을 젊음의 가슴을? 청춘의 가슴을 청춘 빛나는, 피어나는 엮어가는 설레는, 하고 숨소리가 세상을 내일의 찬란한 않고 소리 숨죽여도 다 들리는 너야말로 꽃보다 쿵쿵대는 젊음의 햇볕처럼 심장 너 어디에나 장엄한? 어디에나 꽃처럼 다 들리는 청춘아! 실수조차도 그대 아름답다, 사명으로 심장, 거추장스런 숨소리가 찬란한, 보기만 소리 흐르는 숨죽여도 세상을 청춘 젊음의. 가슴을, 세상을 그대 청춘 하루를 고동소리, 청춘아? 청춘 숨죽여도 아름답다 아름다운 내일의, 만들 운동화도 하루를 고동소리 숨소리가 사명으로, 다 들리는 햇볕처럼 설레게 보기만 피어나는 너 청춘의 눈부신 젊음의 설레는, 땀 해도 그대 흐르는 소리. 청춘 청춘아, 설레게 청춘의 않고. 눈부신 설레는 숨소리가, 너 쉬지 너야말로 청춘 엮어가는!</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta charset="UTF-8">
+  <title>Flex Layout</title>
+  <style>
+    body { margin: 0;  color: #fff;}
+    header, footer { height: 100px; }
+    header { background: #66CCFF; }
+    footer { background: #B3B3B3; }
+    main { 
+      display: flex;
+      border: 2px solid #888; 
+    }
+    section { order: 2; height: 500px; background: #FF6666; flex-grow: 1; flex-basis: 300px;}
+    aside { flex-shrink: 0; height: 200px; }
+    .side-A { order: 1; width: 200px; background: #FFCC66; }
+    .side-B { order: 3; width: 200px; background: #CC66FF; align-self: flex-end;}
+  </style>
+</head>
+<body>
+  <header>header</header>
+  <main>
+    <section>section</section>
+    <aside class="side-A">aside A</aside>
+    <aside class="side-B">aside B</aside>
+  </main>
+  <footer>footer</footer>
+</body>
+</html>
