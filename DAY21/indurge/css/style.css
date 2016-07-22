@@ -149,11 +149,8 @@ a { display: block; text-decoration: none; color: #fff; text-transform: uppercas
   background: #8c7172;
 }
 
-.sign-up::after { content: 'Free Sign up'; }
-.visit-street::after { content: 'Visit Street'; }
-
-.sign-up::after,
-.visit-street::after {
+.sign-up a,
+.visit-street a {
   display: block;
   width: 60%;
   margin-top: 21px;
@@ -181,7 +178,7 @@ a { display: block; text-decoration: none; color: #fff; text-transform: uppercas
 
   .contents p {  padding-top: 21px; }
   .sign-up p, .visit-street p { width: 70%; margin-right: auto; margin-left: auto; text-align: center; }
-  .sign-up::after, .visit-street::after { font-size: 0.75rem; }
+  .sign-up a, .visit-street a { font-size: 0.75rem; }
   .hope p { width: 75%; margin-left: 12%; text-align: right; }
   .car p { margin-right: 5%; text-align: right; }
   .turnel p { margin-left: 5%; }
@@ -222,7 +219,7 @@ a { display: block; text-decoration: none; color: #fff; text-transform: uppercas
   .field { background-image: url(../img/field.png); }
 
   .sign-up p, .visit-street p { font-size: 1.375rem; line-height: 1.875rem; width: 55%; padding-top: 42px; margin-right: auto; margin-left: auto; text-align: center; }
-  .sign-up::after, .visit-street::after { font-size: 1rem; line-height: 1.875rem; }
+  .sign-up a, .visit-street a { font-size: 1rem; line-height: 1.875rem; }
   .wide-box p, .small-box p { font-size: 1rem; line-height: 1.8125rem; }
   .hope p { width: 75%; margin-left: 12%; text-align: right; }
   .car p { margin-right: 5%; text-align: right; }

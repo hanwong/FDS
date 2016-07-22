@@ -1,0 +1,42 @@
+.unit-3 {
+  margin-left: 10px;
+  margin-right: 10px;
+  float: left;
+  width: 280px;
+}
+
+.unit-4 {
+  margin-left: 10px;
+  margin-right: 10px;
+  float: left;
+  width: 380px;
+}
+
+.unit-8 {
+  margin-left: 10px;
+  margin-right: 10px;
+  float: left;
+  width: 780px;
+}
+
+.unit-12 {
+  margin-left: 10px;
+  margin-right: 10px;
+  float: left;
+  width: 1180px;
+}
+
+.header,
+.menu,
+.main,
+.footer {
+  margin-bottom: 24px;
+}
+
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*# sourceMappingURL=sass-start.css.map */

@@ -1,0 +1,106 @@
+@charset "UTF-8";
+/* 중첩 규칙
+  &: 부모 참조 선택자 */
+.page .page-header {
+  position: relative;
+  height: 20vh;
+}
+
+.page .brand {
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+}
+
+.page .brand a {
+  color: #6666FF;
+}
+
+.ho-woo .page .brand a:hover {
+  color: #CC66FF;
+}
+
+.page .brand-sample a {
+  color: #FF6FCF;
+}
+
+.page .brand-sample a:focus {
+  color: #D56FC7;
+}
+
+/* 중첩 속성 */
+.page {
+  margin-top: 20px;
+  margin-right: 10px;
+  margin-bottom: 0px;
+  margin-left: auto;
+  font-size: 1rem;
+  font-width: 600;
+  font-style: oblique;
+  font-variant: small-caps;
+  font-family: "Spoqa Han Sans", sans-serif;
+  border-top-color: red;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-bottom-color: transparent;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-right-color: hotpink;
+  border-right-style: dashed;
+  border-right-width: 2px;
+}
+
+/* 중첩 규칙 + 미디어쿼리 */
+aside.page-sidebar {
+  float: left;
+  width: 100%;
+}
+
+@media (min-width: 600px) {
+  aside.page-sidebar {
+    width: 45%;
+  }
+}
+
+@media (min-width: 1100px) {
+  aside.page-sidebar {
+    width: 33.3333%;
+  }
+}
+
+.button, .sass-button {
+  display: inline-block;
+  padding: 0.6em 1em;
+  background: #eaeaea;
+  text-align: center;
+}
+
+.button.primary, .primary.sass-button {
+  background: #1466FF;
+  color: #adcaff;
+}
+
+.button.secondary, .secondary.sass-button {
+  background: #3666E1;
+  color: #bbcbf5;
+}
+
+.button.round, .round.sass-button {
+  border-radius: 2px;
+}
+
+.button.rounder, .rounder.sass-button {
+  border-radius: 4px;
+}
+
+.button.roundest, .roundest.sass-button {
+  border-radius: 8px;
+}
+
+.button-error {
+  background: #f00;
+  color: #fff;
+  border: 3px solid #290000;
+}
+
+/*# sourceMappingURL=../map/style.css.map */

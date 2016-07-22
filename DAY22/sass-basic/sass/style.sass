@@ -1,0 +1,103 @@
+// 한줄 주석
+
+// sass vs scss 
+// 한줄 주석은 동일하다.
+
+// * 여러 줄 주석 사용시 주의점
+//  sass vs scss
+// scss 문법과 달리 sass 문법은 여러 줄 주석 사용시, 끝나는 부분 앞에 공백이 꼭 한 걔 존재해야함!!!
+// sass 문법은 indent 가 중요함
+
+/* 중첩 규칙
+  &: 부모 참조 선택자
+  
+
+.page
+  .page-header
+    position: relative
+    height: 20vh
+  .brand
+    overflow: hidden
+    position: absolute
+    left: 0
+    a 
+      color: #6666FF
+      .ho-woo &:hover
+        color: #CC66FF
+    &-sample
+      a
+        color: #FF6FCF
+        &:focus
+          color: #D56FC7
+
+/* 중첩 속성
+.page
+  margin: 
+    top: 20px
+    right: 10px
+    bottom: 0px
+    left: auto
+  font:
+    size: 1rem
+    width: 600
+    style: oblique
+    variant: small-caps
+    family: "Spoqa Han Sans", sans-serif
+
+  border: 
+    top: 
+      color: red
+      style: solid
+      width: 2px
+    bottom: 
+      color: transparent
+      style: solid
+      width: 2px
+    right: 
+      color: hotpink
+      style: dashed
+      width: 2px
+
+/* 중첩 규칙 + 미디어쿼리
+aside.page-sidebar
+  float: left
+  width: 100%
+  @media (min-width: 600px)
+    width: 45%
+  @media (min-width: 1100px)
+    width: 33.3333%
+
+// 선택자 상속 (Selector Inheritance)
+
+$button-radius: 2px
+$button-align: center
+$button-gap: 0.6em
+$button-default-color: #eaeaea
+$button-primary-color: #1466FF
+$button-secondary-color: #3666E1
+.button 
+  display:  inline-block
+  padding: $button-gap 1em
+  background: $button-default-color
+  text-align: $button-align
+  &.primary
+    background: $button-primary-color
+    color: lighten($button-primary-color, 30%)
+  &.secondary
+    background: $button-secondary-color
+    color: lighten($button-secondary-color, 30%)
+  &.round
+    border-radius: $button-radius
+  &.rounder
+    border-radius: $button-radius * 2
+  &.roundest
+    border-radius: $button-radius * 4
+
+.sass-button
+  @extend .button
+
+.button-error
+  @extend .buttons !optional
+  background: #f00
+  color: #fff
+  border: 3px solid darken(#f00, 42%)
