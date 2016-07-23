@@ -18,7 +18,7 @@
 }
 @media (min-width: 600px) { 
   body { background-image: url(../img/sea.png); } 
-  .container { width: 100%; max-width: 1180px; }
+  .container { width: 100%; min-width: 1180px; }
   .header-mobile { display: none; }
   .header { display: block; }
   .header a {display: inline-block;position: relative;margin-left: 1.875rem;text-transform: none;}
