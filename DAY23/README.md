@@ -1,4 +1,4 @@
-###### Front-end Development School
+###### Fr트nt-end Development School
 
 #DAY 23
 

@@ -3,13 +3,48 @@
   width: 100%;
 }
 
-.page-header {
-  width: 25%;
+.page-header .a .b {
+  height: 15px;
+}
+
+.page-header .a .b {
+  height: 10px;
+}
+
+.page-header .a .b:hover {
+  height: 5px;
 }
 
 .main-content {
   float: right;
   width: 90%;
+}
+
+@media (min-width: 780px) {
+  .page-header {
+    width: 25%;
+  }
+  .main-content {
+    width: 33.3333%;
+  }
+}
+
+@media (min-width: 1280px) {
+  .page-header {
+    width: 16.6667%;
+  }
+  .main-content {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1600px) {
+  .page-header {
+    width: 10%;
+  }
+  .main-content {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=../../map/scripts/media-qurie.css.map */
