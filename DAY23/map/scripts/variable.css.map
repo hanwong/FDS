@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"file": "../../css/scripts/variable.css",
+	"sources": [
+		"../../sass/scripts/variable.sass"
+	],
+	"mappings": ";AAAA;;;;;;;IAOI;AAeJ,AARA,UAQU,EAKV,AAbA,OAaO,CAbc;EACnB,MAAM,AAAC,CAAC,AACN,IAAI,EAAE,IAAK;EADb,MAAM,AAAC,CAAC,AAEN,KAAK,EAAE,IAAK;CAAK;;AAKrB,AAAA,UAAU,CAAC;EAET,SAAS,EALO,MAAM;EAMtB,UAAU,EAAE,KAAI;CAAuB;;AAEzC,AAAA,OAAO,CAAC;EAEN,KAAK,EAAE,IAAK;EACZ,UAAU,EAVA,OAAO;EAWjB,KAAK,EAAQ,yBAAO;CAA4B",
+	"names": []
+}

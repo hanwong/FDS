@@ -1,0 +1,26 @@
+@charset "UTF-8";
+/* Sass 변수는 변수 이름 앞에 $ 기호를 붙인다.
+  * Sass 변수 이름 작성 규칙
+    - 변수 이름 사이에 공백을 사용하지 않는다.
+    - 변수 이름의 음절 사이에 `-`, `_` 등을 사용한다.
+    - 만약 프로그래밍에 익숙해서 camelCase 방식이 익숙하다면 사용해도 좋은데,
+      다만, camelCase 표기식은 일반적으로 함수 이름에 사용되기 때문에 권장하지 않는다.
+    - `-`, `_` 가 다르게 입력되어 있어도 오류가 나지 않는다.
+  */
+.container, .footer {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container {
+  max-width: 1260px;
+  min-height: 630px;
+}
+
+.footer {
+  width: 80vh;
+  background: #3d3c31;
+  color: rgba(168, 166, 146, 0.45);
+}
+
+/*# sourceMappingURL=../../map/scripts/variable.css.map */

@@ -1,0 +1,28 @@
+@charset "utf-8";
+
+body {
+    margin-top: 1.5rem;
+    height: 100vh;
+    background: linear-gradient(#f46b45, #eea849);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Spoqa Han Sans", sans-serif;
+    color: #ffbd51;
+    margin-bottom: 1.5rem;
+}
+
+h1 {
+    font-size: 5.6rem;
+    line-height: 6rem;
+}
+
+h2 {
+    font-size: 3.5rem;
+    line-height: 4.5rem;
+}

@@ -1,0 +1,46 @@
+// RWD(Fluid, Flexibel, Media Quries) 
+// + Mobile First + Progressive Enhancement = Adapt Web
+
+$medium-screen: 780px
+$large-screen: 1280px
+$wide-screen: 1600px
+
+
+
+.page-header
+  float: left
+  width: 100%
+  @mixin medium-header()
+  & 
+    width: 1/4*100%
+  @mixin large-header()      
+    &
+      width: 1/6*100%
+  @mixin wide-header()
+    &
+      width: 1/10*100%
+
+.main-content
+  float: right
+  width: 90%
+  @mixin medium-main()
+    &
+      width: 1/3*100%
+  @mixin large-main()
+    &
+      width: 1/2*100%
+  @mixin wide-main()
+    &
+      width: 100%
+
+@media (min-width: $medium-screen) 
+  @include medium-header
+  @include medium-main
+
+@media (min-width: $large-screen) 
+  @include large-header
+  @include large-main      
+
+@media (min-width: $wide-screen) 
+  @include wide-header
+  @include wide-main

@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"file": "../css/scss-review.css",
+	"sources": [
+		"../sass/scss-review.scss"
+	],
+	"mappings": ";AACA,2BAA2B;AAE3B,AAAA,IAAI,CAAC;EACH,UAAU,EAAE,MAAO;CACpB",
+	"names": []
+}
