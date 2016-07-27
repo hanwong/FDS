@@ -1,0 +1,71 @@
+@charset "UTF-8";
+/* 웹 폰트 */
+@import url("http://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-ko.css");
+/* 본문 설계 */
+body {
+  font: 16px/24px "Spoqa Han Sans"; }
+
+#area .hanwong {
+  margin-left: 20%;
+  margin-right: 20%; }
+  #area .hanwong::after {
+    content: 'dynamic'; }
+
+@media screen and (min-width: 760px) {
+  .hanwong {
+    display: flex;
+    flex-flow: row-reverse wrap; } }
+
+@media screen and (min-width: 1220px) {
+  .hanwong {
+    display: block;
+    padding: 1rem; } }
+
+@media not screen and (min-width: 21cm) {
+  .hanwong {
+    background: #fff !important;
+    color: #000 !important; } }
+
+/* 믹스인 */
+header, main, footer {
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px; }
+
+header {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+main {
+  width: 1000px;
+  height: 800px;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box; }
+
+nav {
+  height: 40vh; }
+  nav ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0; }
+    nav ul::before {
+      width: 0;
+      height: 0;
+      border-bottom: 40px solid #000;
+      border-right: 20px solid transparent;
+      border-left: 20px solid transparent; }
+
+footer {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+  footer ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0; }
+
+/*# sourceMappingURL=../map/sass-script.css.map */

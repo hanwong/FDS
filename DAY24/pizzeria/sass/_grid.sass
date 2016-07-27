@@ -1,0 +1,25 @@
+/* 그리드 시스템
+@import variable
+
+.container 
+  margin-right: auto
+  margin-left: auto
+
+.row
+  display: flex
+  flex: 1 0 auto
+  flex-direction: row
+  flex-wrap: wrap
+
+.col-s-1
+  flex-basis: $small-unit-module*1
+.col-s-2
+  flex-basis: $small-unit-module*2 + $small-gutter-module*1
+.col-s-3
+  flex-basis: $small-unit-module*3 + $small-gutter-module*2
+.col-s-4
+  flex-basis: $small-unit-module*4 + $small-gutter-module*3
+.col-s-5
+  flex-basis: $small-unit-module*5 + $small-gutter-module*4
+.col-s-6
+  flex-basis: $small-unit-module*6 + $small-gutter-module*5

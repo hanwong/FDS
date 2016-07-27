@@ -1,0 +1,39 @@
+@charset "UTF-8";
+/* 그리드 시스템 */
+.container {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.row {
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.col-s-1 {
+  flex-basis: 13.7931%;
+}
+
+.col-s-2 {
+  flex-basis: 30.7112%;
+}
+
+.col-s-3 {
+  flex-basis: 47.6293%;
+}
+
+.col-s-4 {
+  flex-basis: 64.5474%;
+}
+
+.col-s-5 {
+  flex-basis: 81.4655%;
+}
+
+.col-s-6 {
+  flex-basis: 98.3836%;
+}
+
+/*# sourceMappingURL=../map/style.css.map */

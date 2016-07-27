@@ -1,0 +1,76 @@
+//
+  * ----------------------------------------
+  * Sass Script Operation
+
+@import var
+@import mixins
+
+/* 웹 폰트 */
+// 인터폴레이션 보간법 -> 문자를 접합(용접과 비슷)
+@import url("http://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-#{$spoqa-language}.css")
+
+/* 본문 설계 */
+body 
+  font: #{$base-font-size}/#{$base-line-height} $spoqa-font-family
+  // font-size: $base-font-size
+  // font-family: "Spoqa Han Sans"
+  // line-height: $base-line-height
+
+  // @debug red == #f00
+  // @debug type-of(red)
+
+//
+  보간법(Interpolation) #{}
+$selector: hanwong
+$pseudo-name: "::after"
+
+#area .#{$selector}
+  margin: 
+    left: 20%
+    right: 20%
+  &#{$pseudo-name}
+    content: 'dynamic'
+
+$media-md: "screen and (min-width: 760px)"
+$media-lg: "screen and (min-width: 1220px)"
+$media-print: "not screen and (min-width: 21cm)"
+
+.#{$selector}
+  @media #{$media-md}
+    display: flex
+    flex-flow: row-reverse wrap
+  @media #{$media-lg}
+    display: block
+    padding: 1rem
+  @media #{$media-print}
+    background: #fff !important
+    color: #000 !important
+
+/* 믹스인
+
+%border-radius
+  -webkit-border-radius: 4px
+  -moz-border-radius: 4px
+  border-radius: 4px
+
+header
+  @extend %border-radius
+  @include box-sizing
+
+main
+  @include size(1000px, 800px)
+  @extend %border-radius
+  @include box-sizing(content-box)
+
+nav
+  @include size($height: 40vh)
+  ul
+    @include reset-list
+    &::before
+      @include tri(up, 20px, #000)
+
+footer
+  @extend %border-radius
+  @include box-sizing
+  ul
+    @include reset-list

@@ -3,16 +3,16 @@
   width: 100%;
 }
 
-.page-header .a .b {
-  height: 15px;
-}
-
-.page-header .a .b {
+.page-header .nav {
   height: 10px;
 }
 
-.page-header .a .b:hover {
-  height: 5px;
+.page-header.nav {
+  height: 15px;
+}
+
+.page-header-nav {
+  height: 20px;
 }
 
 .main-content {

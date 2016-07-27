@@ -1,0 +1,18 @@
+{
+	"version": 3,
+	"file": "../css/style.css",
+	"sources": [
+		"../sass/style.sass",
+		"../sass/_grid.sass",
+		"../sass/_variable.sass",
+		"../sass/_font.sass",
+		"../sass/_header.sass",
+		"../sass/_slider.sass",
+		"../sass/_welcome.sass",
+		"../sass/_info.sass",
+		"../sass/_about.sass",
+		"../sass/_footer.sass"
+	],
+	"mappings": ";ACAA,yBAAyB;AAGzB,AAAA,UAAU,CAAC;EACT,YAAY,EAAE,IAAK;EACnB,WAAW,EAAE,IAAK;CAAG;;AAEvB,AAAA,IAAI,CAAC;EACH,OAAO,EAAE,IAAK;EACd,IAAI,EAAE,QAAS;EACf,cAAc,EAAE,GAAI;EACpB,SAAS,EAAE,IAAK;CAAG;;AAErB,AAAA,QAAQ,CAAC;EACP,UAAU,EAAE,QAAkB;CAAK;;AACrC,AAAA,QAAQ,CAAC;EACP,UAAU,EAAE,QAAkB;CAA8B;;AAC9D,AAAA,QAAQ,CAAC;EACP,UAAU,EAAE,QAAkB;CAA8B;;AAC9D,AAAA,QAAQ,CAAC;EACP,UAAU,EAAE,QAAkB;CAA8B;;AAC9D,AAAA,QAAQ,CAAC;EACP,UAAU,EAAE,QAAkB;CAA8B;;AAC9D,AAAA,QAAQ,CAAC;EACP,UAAU,EAAE,QAAkB;CAA8B",
+	"names": []
+}

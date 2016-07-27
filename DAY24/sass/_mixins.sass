@@ -1,0 +1,55 @@
+//  믹스인 (Mixin)
+//  코드를 섞는다.
+
+@mixin box-sizing($type: border-box)
+  -webkit-box-sizing: $type
+  -moz-box-sizing: $type
+  box-sizing: $type
+
+@mixin transition($props...)
+  -webkit-transition:  $props
+  -moz-transition:  $props
+  -ms-transition:  $props
+  -o-transition:  $props
+  transition:  $props
+
+@mixin size($width: null, $height: null)
+  width: $width
+  height: $height
+
+@mixin reset-list 
+  list-style: none
+  padding-left: 0
+  margin-top: 0
+  margin-bottom: 0
+
+@mixin zero-box
+  width: 0
+  height: 0
+
+
+@mixin tri($direction: up, $size: 10px, $color: #fff)
+  $direction1: null
+  $direction2: null
+  $direction3: null
+  @if $direction == up
+    $direction1: bottom
+    $direction2: right
+    $direction3: left
+  @else if $direction == down
+    $direction1: top
+    $direction2: right
+    $direction3: left
+  @else if $direction == right
+    $direction1: left
+    $direction2: top
+    $direction3: bottom
+  @else if $direction == left
+    $direction1: right
+    $direction2: top
+    $direction3: bottom
+  @include zero-box
+  border-#{$direction1}: $size*2 solid $color
+  border-#{$direction2}: $size solid transparent
+  border-#{$direction3}: $size solid transparent
+  
