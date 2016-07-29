@@ -4,82 +4,107 @@
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <meta charset="UTF-8">
   <title>Pizzeria</title>
+  <link rel="stylesheet" href="../../Resources/init/ress.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
-<div class="container">
-
   <section class="header">
-    <section class="app-bar">
-      <a href="" class="title">Pizzeria&amp;Trattoria SUD</a>
-      <a href="" class="login">LOGIN</a>
-      <a href="" class="join">JOIN US</a>
-      <a href="" class="sitemap">SITEMAP</a>
+
+    <section class="app-bar row">
+      <div class="bar row">
+        <a href="" class="title">Pizzeria&amp;Trattoria SUD</a>
+        <div class="sign">
+          <a href="" class="login">LOGIN</a>
+          <a href="" class="join">JOIN US</a>
+          <a href="" class="sitemap">SITEMAP</a>
+        </div>
+      </div>
     </section>
-    <section class="menu">
-      <button class="grid" type="button">GRID</button>
-      <button class="menu" type="button">MENU</button>
+
+    <section class="menu-mobile row">
+     
+      <div class="menu-row row">
+        <button class="grid" type="button">GRID</button>
+        <button class="menu" type="button">MENU</button>
+      </div>
+      <div class="logo-oval row">
+          <img class="resturant" src="img/m-Italian-restaurant.png" alt="">
+          <img class="pizza-color" src="img/m-pizza-color.png" alt="">
+        </div>
+    </section>
+
+    <section class="menu" style="display: none">
       <img class="logo" src="" alt="">
+      <button class="grid" type="button">GRID</button>
+      <button class="about" type="button">ABOUT</button>
+      <button class="menu" type="button">MENU</button>
+      <button class="event" type="button">EVENT</button>
+      <button class="community" type="button">COMMUNITY</button>
     </section>
+
   </section>
 
-  <aside class="slider">
-    <ul>
-      <li></li>
-      <li></li>
-      <li></li>
-    </ul>
-    <button class="left-button" type="button"></button>
-    <button class="right-button" type="button"></button>
+  <aside class="slider row">
+    <button class="left-button" type="button">&lt;</button>
+    <div class="slider-pizza">
+      <pre>Delicious!<br>     Pizzeria</pre>
+    </div>
+    <button class="right-button" type="button">&gt;</button>
   </aside>
-  
-  <main>
-    <section class="welcome">
-      <article class="special-menu">
-        <h3>Special menu open</h3>
-        <a href=""></a>
-        <a href=""></a>
-        <a href=""></a>
-      </article>
 
-      <article class="news">
+  <section class="welcome">
+    <div class="container-l row">
+      <article class="special-menu col-s-6 col-m-4">
+        <h3>Special menu open</h3>
+        <div>
+          <a href=""><img src="img/m-special1.png" alt=""></a>
+          <a href=""><img src="img/m-special2.png" alt=""></a>
+          <a href=""><img src="img/m-special3.png" alt=""></a>
+        </div>
+      </article>
+      
+      <article class="news col-s-6 col-m-4">
         <h3>This week event news</h3>
         <p>요리에 기교보단 재료 본연의 맛을 살리는 레스토랑입니다. 항상 신선하고 살아있는 제철재료로 어떠한 인공 조미료를 넣지 않는 건강한 음식을 만들겠습니다. 저희 수드를 방문해 주셔서 진심으로 감사드립니다.</p>
-        <p>Owner Chef. 최주영</p>
+        <p class="owner"><em>Owner Chef.</em> 최주영</p>
       </article>
-
-      <article class="welcome-message">
+      
+      <article class="welcome-message  col-s-6 col-m-4 row">
         <h3>Welcome to our restaurant</h3>
         <p>싱그러운 5월을 맞아 수드에서 3가지 빅 이벤트를 진행 하고자 합니다. 여러분들의 많은 관심과 참여를 부탁드립니다. 5월 한달동안 진행될 에정이니 많이 찾아주셔서 혜택을 함께 누려보세요!</p>
-        <button></button>
+        <button>이벤트 바로가기</button>
       </article>
-    </section>
+    </div>
+  </section>
 
-    <section class="info">
-      <h2>Restaurant Information</h2>
-      <article class="open">
-        <h3>OPEN</h3>
-        <p>AM 11:00 ~ PM 10:00<br>( Reservation Call )<br>02-256-8972</p>
-      </article>
-      <article class="service">
+  <section class="info">
+    <div class="container-s container-m container-l row">
+      <h2 class="col-s-6 col-m-12">Restaurant Information</h2>
+      <article class="open col-s-6 col-m-3">
         <h3>SERVICE</h3>
-        <p>AM 11:00 ~ PM 10:00<br>( Reservation Call )<br>02-256-8972</p>
+        <p>Pumpkin Soup<br>Cheese Bread<br>Coffee</p>
       </article>
-      <article class="event">
+      <article class="service col-s-6 col-m-3">
         <h3>OPEN</h3>
-        <p>AM 11:00 ~ PM 10:00<br>( Reservation Call )<br>02-256-8972</p>
+        <p>AM 11:00 ~ PM 10:00</p><p>( Reservation Call )<br>02-256-8972</p>
       </article>
-    </section>
+      <article class="event col-s-6 col-m-3">
+        <h3>EVENT</h3>
+        <p>Salad 50% Discount<br>Free CocaCola<br>Lunch Set Discount</p>
+      </article>
+    </div>
+  </section>
 
-    <section class="about">
-      <h2>About Pizzeria Trattoria SUD</h2>
-      <p>Delicious</p>
-      <p>저희 수드는 매일 아침 들여오는 신선한 재료들로 요리를 만듭니다. 항상 가족같은 마음으로 정성껏 준비하겠습니다.</p>
-    </section>
-  </main>
+  <section class="about">
+    <h2>About Pizzeria Trattoria SUD</h2>
+    <p>Delicious</p>
+    <p>저희 수드는 매일 아침 들여오는 신선한 재료들로 요리를 만듭니다. 항상 가족같은 마음으로 정성껏 준비하겠습니다.</p>
+  </section>
 
   <section class="footer">
-    <div class="info">
+    <div class="contact-info">
       <a href="" class="contact">Contact us</a>
       <a href="" class="blog">Our blog</a>
       <a href="" class="gallery">The gallery</a>
@@ -100,7 +125,6 @@
     </div>
   </section>
 
-</div>
 
 </body>
 </html>

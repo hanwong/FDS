@@ -1,0 +1,33 @@
+@import variable
+@import boxing
+.welcome
+  margin-bottom: 2rem
+  h3
+    line-height: 4rem
+    text-align: center
+    font-family: $font-amazone
+    font-size: 1.375rem
+    color: #ed1c24
+  p
+    padding-right: 1%
+    padding-left: 1%
+    line-height: 1.5rem
+    font-family: $font-yd
+    font-size: 0.75rem
+    color: #717171
+  span
+    font-size: 0.8125rem
+  article
+    +article-box(0.3%, null, null,null, 5px)
+  .special-menu
+    text-align: center
+  .news
+    .owner
+      width: 100%
+      text-align: right
+  .welcome-message
+    flex-direction: column
+    button
+      align-self: flex-end
+      +button-box(127px, 38px, 14px)
+      

@@ -1,0 +1,50 @@
+@import variable
+@import boxing
+
+.app-bar
+  align-items: center
+  height: 48px
+  padding-left: 3%
+  padding-right: 3%
+  background: linear-gradient(90deg, #ed1c24 32px, #c30007 32px )
+  background-size: 64px
+  .bar
+    justify-content: space-between
+    align-items: center
+    margin-right: auto
+    margin-left: auto
+    font-family: $font-hv
+    font-size: .625rem
+    line-height: 1rem
+    border-bottom: 1px solid #fadb48
+    a
+      color: #fff
+      text-decoration: none
+    .sign a
+      margin-left: 1rem
+    .title
+      font-size: .75rem
+
+.menu-mobile
+  position: relative
+  padding-right: 3%
+  padding-left: 3%
+  font-size: 0.625rem
+  background: #fff
+  border-bottom: 1px solid #c6c6c6
+  .logo-oval
+    +center-box(-50%, -18%)
+    flex: 0 1 auto
+    flex-flow: column wrap
+    align-items: center
+    padding-bottom: 3%
+    background: #fff
+    border-radius: 50%
+    border-bottom: 1px solid #c6c6c6
+  .menu-row 
+    justify-content: space-between
+    align-items: flex-start
+  button
+    margin-top: 1rem
+    margin-bottom: 1rem
+    +button-box
