@@ -1,6 +1,7 @@
 /* 그리드 시스템
 @import variable
 @import media
+@import function
 
 .row
   display: flex
@@ -15,24 +16,12 @@
 .col-s
   flex-basis: 100%
   max-width: 100%
-.col-s-1
-  flex-basis: $small-unit-module*1*100#{"%"}
-  max-width: $small-unit-module*1*100#{"%"}
-.col-s-2
-  flex-basis: (($small-unit-module*2)+($small-gutter-module*1))*100#{"%"}
-  max-width: (($small-unit-module*2)+($small-gutter-module*1))*100#{"%"}
-.col-s-3
-  flex-basis: (($small-unit-module*3)+($small-gutter-module*2))*100#{"%"}
-  max-width: (($small-unit-module*3)+($small-gutter-module*2))*100#{"%"}
-.col-s-4
-  flex-basis: (($small-unit-module*4)+($small-gutter-module*3))*100#{"%"}
-  max-width: (($small-unit-module*4)+($small-gutter-module*3))*100#{"%"}
-.col-s-5
-  flex-basis: (($small-unit-module*5)+($small-gutter-module*4))*100#{"%"}
-  max-width: (($small-unit-module*5)+($small-gutter-module*4))*100#{"%"}
-.col-s-6
-  flex-basis: (($small-unit-module*6)+($small-gutter-module*5))*100#{"%"}
-  max-width: (($small-unit-module*6)+($small-gutter-module*5))*100#{"%"}
+
+$total: 6
+@for $i from 1 through $total
+  .col-s-#{$i}
+    flex-basis: percent-width($i, $small-unit-module, $small-gutter-module)
+    max-width: percent-width($i, $small-unit-module, $small-gutter-module)
 
 +mq-medium
   .container-m
@@ -42,42 +31,12 @@
   .col-m
     flex-basis: 100%
     max-width: 100%
-  .col-m-1
-    flex-basis: $medium-unit-module*1*100#{"%"}
-    max-width: $medium-unit-module*1*100#{"%"}
-  .col-m-2
-    flex-basis: (($medium-unit-module*2)+($medium-gutter-module*1))*100#{"%"}
-    max-width: (($medium-unit-module*2)+($medium-gutter-module*1))*100#{"%"}
-  .col-m-3
-    flex-basis: (($medium-unit-module*3)+($medium-gutter-module*2))*100#{"%"}
-    max-width: (($medium-unit-module*3)+($medium-gutter-module*2))*100#{"%"}
-  .col-m-4
-    flex-basis: (($medium-unit-module*4)+($medium-gutter-module*3))*100#{"%"}
-    max-width: (($medium-unit-module*4)+($medium-gutter-module*3))*100#{"%"}
-  .col-m-5
-    flex-basis: (($medium-unit-module*5)+($medium-gutter-module*4))*100#{"%"}
-    max-width: (($medium-unit-module*5)+($medium-gutter-module*4))*100#{"%"}
-  .col-m-6
-    flex-basis: (($medium-unit-module*6)+($medium-gutter-module*5))*100#{"%"}
-    max-width: (($medium-unit-module*6)+($medium-gutter-module*5))*100#{"%"}
-  .col-m-7
-    flex-basis: (($medium-unit-module*7)+($medium-gutter-module*6))*100#{"%"}
-    max-width: (($medium-unit-module*7)+($medium-gutter-module*6))*100#{"%"}
-  .col-m-8
-    flex-basis: (($medium-unit-module*8)+($medium-gutter-module*7))*100#{"%"}
-    max-width: (($medium-unit-module*8)+($medium-gutter-module*7))*100#{"%"}
-  .col-m-9
-    flex-basis: (($medium-unit-module*9)+($medium-gutter-module*8))*100#{"%"}
-    max-width: (($medium-unit-module*9)+($medium-gutter-module*8))*100#{"%"}
-  .col-m-10
-    flex-basis: (($medium-unit-module*10)+($medium-gutter-module*9)) *100#{"%"}
-    max-width: (($medium-unit-module*10)+($medium-gutter-module*9)) *100#{"%"}
-  .col-m-11
-    flex-basis: (($medium-unit-module*11)+($medium-gutter-module*10))*100#{"%"}
-    max-width: (($medium-unit-module*11)+($medium-gutter-module*10))*100#{"%"}
-  .col-m-12
-    flex-basis: (($medium-unit-module*12)+($medium-gutter-module*11))*100#{"%"}
-    max-width: (($medium-unit-module*12)+($medium-gutter-module*11))*100#{"%"}
+  
+  $total: 12
+  @for $i from 1 through $total
+    .col-m-#{$i}
+      flex-basis: percent-width($i, $medium-unit-module, $medium-gutter-module)
+      max-width: percent-width($i, $medium-unit-module, $medium-gutter-module)
 
 +mq-large
   .container-l
@@ -87,39 +46,9 @@
   .col-l
     flex-basis: 100%
     max-width: 100%
-  .col-l-1
-    flex-basis: $large-unit-module*1*100#{"%"}
-    max-width: $large-unit-module*1*100#{"%"}
-  .col-l-2
-    flex-basis: (($large-unit-module*2)+($large-gutter-module*1))*100#{"%"}
-    max-width: (($large-unit-module*2)+($large-gutter-module*1))*100#{"%"}
-  .col-l-3
-    flex-basis: (($large-unit-module*3)+($large-gutter-module*2))*100#{"%"}
-    max-width: (($large-unit-module*3)+($large-gutter-module*2))*100#{"%"}
-  .col-l-4
-    flex-basis: (($large-unit-module*4)+($large-gutter-module*3))*100#{"%"}
-    max-width: (($large-unit-module*4)+($large-gutter-module*3))*100#{"%"}
-  .col-l-5
-    flex-basis: (($large-unit-module*5)+($large-gutter-module*4))*100#{"%"}
-    max-width: (($large-unit-module*5)+($large-gutter-module*4))*100#{"%"}
-  .col-l-6
-    flex-basis: (($large-unit-module*6)+($large-gutter-module*5))*100#{"%"}
-    max-width: (($large-unit-module*6)+($large-gutter-module*5))*100#{"%"}
-  .col-l-7
-    flex-basis: (($large-unit-module*7)+($large-gutter-module*6))*100#{"%"}
-    max-width: (($large-unit-module*7)+($large-gutter-module*6))*100#{"%"}
-  .col-l-8
-    flex-basis: (($large-unit-module*8)+($large-gutter-module*7))*100#{"%"}
-    max-width: (($large-unit-module*8)+($large-gutter-module*7))*100#{"%"}
-  .col-l-9
-    flex-basis: (($large-unit-module*9)+($large-gutter-module*8))*100#{"%"}
-    max-width: (($large-unit-module*9)+($large-gutter-module*8))*100#{"%"}
-  .col-l-10
-    flex-basis: (($large-unit-module*10)+($large-gutter-module*9)) *100#{"%"}
-    max-width: (($large-unit-module*10)+($large-gutter-module*9)) *100#{"%"}
-  .col-l-11
-    flex-basis: (($large-unit-module*11)+($large-gutter-module*10))*100#{"%"}
-    max-width: (($large-unit-module*11)+($large-gutter-module*10))*100#{"%"}
-  .col-l-12
-    flex-basis: (($large-unit-module*12)+($large-gutter-module*11))*100#{"%"}
-    max-width: (($large-unit-module*12)+($large-gutter-module*11))*100#{"%"}
+  
+  $total: 12
+  @for $i from 1 through $total
+    .col-l-#{$i}
+      flex-basis: percent-width($i, $large-unit-module, $large-gutter-module)
+      max-width: percent-width($i, $large-unit-module, $large-gutter-module)

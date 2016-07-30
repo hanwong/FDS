@@ -1,0 +1,3 @@
+@function percent-width($n, $module, $gutter)
+  $width: percentage($module*$n+$gutter*($n - 1))
+  @return $width
