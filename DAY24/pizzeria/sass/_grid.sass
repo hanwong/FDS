@@ -1,25 +1,59 @@
 /* 그리드 시스템
 @import variable
-
-.container 
-  margin-right: auto
-  margin-left: auto
+@import media
+@import function
 
 .row
   display: flex
   flex: 1 0 auto
   flex-direction: row
   flex-wrap: wrap
+  .last
+    margin-right: 0
 
-.col-s-1
-  flex-basis: $small-unit-module*1
-.col-s-2
-  flex-basis: $small-unit-module*2 + $small-gutter-module*1
-.col-s-3
-  flex-basis: $small-unit-module*3 + $small-gutter-module*2
-.col-s-4
-  flex-basis: $small-unit-module*4 + $small-gutter-module*3
-.col-s-5
-  flex-basis: $small-unit-module*5 + $small-gutter-module*4
-.col-s-6
-  flex-basis: $small-unit-module*6 + $small-gutter-module*5
+.container-s
+  width: percentage($small-container)
+  margin-right: auto
+  margin-left: auto
+.col-s
+  flex-basis: 100%
+  max-width: 100%
+
+$total: 6
+@for $i from 1 through $total
+  .col-s-#{$i}
+    flex-basis: percent-width($i, $small-unit-module, $small-gutter-module)
+    max-width: percent-width($i, $small-unit-module, $small-gutter-module)
+    margin-right: percentage($small-gutter-module)
+
++mq-medium
+  .container-m
+    width: percentage($medium-container)
+    margin-right: auto
+    margin-left: auto
+  .col-m
+    flex-basis: 100%
+    max-width: 100%
+  
+  $total: 12
+  @for $i from 1 through $total
+    .col-m-#{$i}
+      flex-basis: percent-width($i, $medium-unit-module, $medium-gutter-module)
+      max-width: percent-width($i, $medium-unit-module, $medium-gutter-module)
+      margin-right: percentage($medium-gutter-module)
+
++mq-large
+  .container-l
+    width: percentage($large-container)
+    margin-right: auto
+    margin-left: auto
+  .col-l
+    flex-basis: 100%
+    max-width: 100%
+  
+  $total: 12
+  @for $i from 1 through $total
+    .col-l-#{$i}
+      flex-basis: percent-width($i, $large-unit-module, $large-gutter-module)
+      max-width: percent-width($i, $large-unit-module, $large-gutter-module)
+      margin-right: percentage($large-gutter-module)

@@ -1,0 +1,64 @@
+.footer
+  background: url(../img/m-bg-line.png) center 31% no-repeat, url(../img/bg-footer.png)
+  background-size: 100%
+
+  +mq-medium
+    background: url(../img/bg-line.png) 35% center no-repeat, url(../img/bg-footer.png)
+    background-size: auto 100%
+
+  .info-box
+    justify-content: center
+    font-family: $font-hv
+    a
+      color: #fff
+      text-decoration: none
+    .contact-info 
+      display: flex
+      justify-content: space-between
+      a
+        line-height: 3rem
+        font-size: rem(13px)
+    .location 
+      .map 
+        display: flex
+        // justify-content: space-between
+        align-items: center
+        font-size: rem(12px)
+        .fa
+          margin-right: rem(10px)
+          line-height: 3rem
+          height: 100%
+          font-size: rem(30px)
+    .share
+      display: flex
+      justify-content: flex-end
+      align-items: center
+      .desktop
+        display: none
+      a
+        margin-left: rem(8px)
+
+    +mq-medium
+      align-items: center
+      height: rem(100px)
+      .location
+        order: -1
+        p
+          font-size: rem(12px)
+      .contact-info 
+        justify-content: flex-end
+        a
+          margin-left: rem(20px)
+      .share
+        .mobile
+          display: none
+        .desktop
+          display: inline
+    
+  .copy
+    line-height: 3rem
+    text-align: center
+    font-size: rem(11px)
+    color: #fff
+    background: #2b2b2b
+

@@ -1,0 +1,12 @@
+@function remove-unit($unit)
+  @return $unit/($unit*0+1)
+
+@function hsla($hex, $alpha)
+  $hue: floor(remove-unit(hue($hex)))
+  // @debug $hue/($hue*0+1)
+  $saturation: floor(saturation($hex))
+  $lightness: floor(lightness($hex))
+  // @debug $hue, $saturation, $lightness
+  $result: "hsla(#{$hue}, #{$saturation}, #{$lightness}, #{$alpha})"
+  @return unquote($result)
+  // @return hsla($hue, $saturation, $lightness, $alpha)

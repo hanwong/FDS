@@ -1,0 +1,50 @@
+@import variable
+@import boxing
+@import media
+
+.slider
+  justify-content: space-between
+  align-items: center
+  height: 18rem
+  background: url("../img/m-dot.png") 50% 95% no-repeat, url("../img/m-pan.png") -13% 88% no-repeat, url("../img/m-chilli.png") 85% 14% no-repeat, url("../img/m-picea-pizza.png") 92% 125% no-repeat, url("../img/m-brocolli.png") 87% 5% no-repeat, url("../img/m-brocolli.png") 10% 29% no-repeat,  url("../img/m-pizza.png") 57% 70% no-repeat, url("../img/m-shrimp.png") 25% 85% no-repeat, url("../img/m-wine.png") 35% 130% no-repeat, linear-gradient(90deg, #f5f5f5 20px, #fff 20px, #f1f1f1 22px) 0 0 repeat
+  background-size: 47px 11px, 220px 202px, 62px 67px, 138px 108px, 41px 37px, 41px 37px, 86px 85px, 41px 39px, 100px 94px, 42px 42px
+  button
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 45px
+    height: 65px
+    font-size: 64px
+    color: #fff
+    background: #e5131b
+  .slider-pizza
+    pre
+      line-height: 2.7rem
+      font-family: $font-katy
+      font-size: rem(70px)
+      span
+        font-size: rem(47px)
+      color: #e52020
+      text-shadow: 3px 0 0 #fff, -3px 0 0 #fff, 0 3px 0 #fff, 0 -3px 0 #fff, 3px 3px #fff, -3px -3px 0 #fff, 3px -3px 0 #fff, -3px 3px 0 #fff
+
+  +mq-medium
+    height: 30rem
+    padding-bottom: 3rem
+    background: url("../img/m-dot.png") 50% 87% no-repeat, url("../img/m-pan.png") -13% 88% no-repeat, url("../img/m-chilli.png") 85% 14% no-repeat, url("../img/m-picea-pizza.png") 92% 125% no-repeat, url("../img/m-brocolli.png") 87% 5% no-repeat, url("../img/m-brocolli.png") 10% 29% no-repeat,  url("../img/m-pizza.png") 57% 70% no-repeat, url("../img/m-shrimp.png") 25% 85% no-repeat, url("../img/m-wine.png") 35% 130% no-repeat, linear-gradient(90deg, #f5f5f5 20px, #fff 20px, #f1f1f1 22px) 0 0 repeat
+    background-size: 47px 11px, 220px 202px, 62px 67px, 138px 108px, 41px 37px, 41px 37px, 86px 85px, 41px 39px, 100px 94px, 42px 42px
+    .slider-pizza
+      pre
+        line-height: 4rem
+        font-size: rem(118px)
+        span
+          font-size: rem(78px)
+  +mq-large
+    height: 32rem
+    padding-bottom: 3rem
+    .slider-pizza
+      pre
+        line-height: 5rem
+        font-size: rem(150px)
+        span
+          font-size: rem(100px)
+

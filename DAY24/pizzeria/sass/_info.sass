@@ -1,0 +1,44 @@
+.info
+  text-align: center
+  background: url("../img/bg-wood.png")
+  color: hsla(25, 50%, 40%, 0.8)
+  text-shadow: 1px 2px 3px #F6D59B, 0 0 0 #000, 1px 2px 3px #F6D59B
+  div
+    justify-content: center
+  h2 
+    // line-height: 3rem
+    text-align: center
+    font-family: $font-amazone
+    font-size: rem(22px)
+  h3, p
+    font-family: $font-hv
+  h3
+    line-height: 3rem
+    font-size: rem(18px)
+    font-weight: 400
+  p
+    font-size: rem(16px)
+    padding-bottom: 0.5rem
+  article
+    +article-box(1px, solid, #9a5f34)
+    margin-right: 2%
+    margin-left: 2%
+    margin-bottom: 1.5rem
+  .ribon
+    transform: translate(0, -5%)
+    .desktop
+      display: none
+    +mq-medium
+      .mobile
+        display: none
+      .desktop
+        display: inline
+
+  .arrow
+    display: block
+    transform: rotate(90deg)
+    font-family: $font-hv
+    font-size: rem(30px)
+
+
+

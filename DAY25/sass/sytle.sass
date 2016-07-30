@@ -1,0 +1,14 @@
+@import color_function
+
+body
+  color: hsla(#6666FF, 0.5)
+  // background: adjust-hue(#FFCC66, 30deg)
+  background: complement(#ff1199)
+  background: invert(#ff1199)
+
+$headings: (h1: 3rem 1.5, h2: 2rem 1.3, h3: 1rem 1.2)
+
+@each $heading, $info in $headings
+  // @debug $heading, $info
+  #{$heading}
+    font: #{nth($info,1)}/#{nth($info,2)}

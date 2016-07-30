@@ -1,0 +1,39 @@
+@import variable
+@import boxing
+.welcome
+  +mq-medium
+    margin-top: -3rem
+  h3
+    padding-top: 1rem
+    padding-bottom: 1rem
+    line-height: 1.5rem
+    text-align: center
+    font-family: $font-amazone
+    font-size: rem(20px)
+    color: #ed1c24
+  p
+    padding-right: 0.5rem
+    padding-left: 0.5rem
+    line-height: 1.5rem
+    font-family: $font-yd
+    font-size: rem(12px)
+    color: #717171
+  span
+    font-size: 0.8125rem
+  article
+    +article-box(null, null,null, 5px)
+    background: #fff
+    margin-bottom: 1.5rem
+  .special-menu
+    text-align: center
+  .news
+    .owner
+      width: 100%
+      text-align: right
+  .welcome-message
+    flex-direction: column
+    button
+      align-self: flex-end
+      margin-right: 0.5rem
+      +button-box(127px, 38px, 14px)
+      

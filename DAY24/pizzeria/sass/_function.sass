@@ -1,0 +1,6 @@
+@function percent-width($n, $module, $gutter)
+  $width: percentage($module*$n+$gutter*($n - 1))
+  @return $width
+
+@function rem($px, $base-font-size: 16px)
+  @return ($px/$base-font-size) * 1rem

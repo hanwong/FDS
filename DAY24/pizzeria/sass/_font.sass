@@ -1,0 +1,26 @@
+@import media
+
+@import url(http://db.onlinewebfonts.com/c/37eca625db586fe250cb8494b60fa092?family=Helvetica+Neue+LT+Pro)
+@import url(http://allfont.net/allfont.css?fonts=amazone-bt)
+
+@font-face 
+  font-family: 'Katy Berry'
+  font-style: normal
+  font-weight: normal
+  src: local('Katy Berry'), url('../font/kberry.woff') format('woff')
+@font-face 
+  font-family: 'YDIYGO110'
+  font-style: normal
+  font-weight: normal
+  src: local('YDIYGO110'), url('../font/ydiygo110.eot') format('eot')
+
+html
+  font-size: calc( 16px + (20 - 16) * (100vw - 320px) / (705 - 320) )
+
++mq-medium
+  html
+    font-size: calc( 16px + 0.5 * (100vw - 705px) / (1100 - 705) )
+
++mq-large
+  html
+    font-size: calc( 16px + 2 * (100vw - 1100px) / (1220 - 1100) )
