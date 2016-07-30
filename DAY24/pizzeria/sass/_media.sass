@@ -1,5 +1,8 @@
 @import variable
 
+@mixin mq-small
+  @media (min-width: 392px)
+    @content
 @mixin mq-medium
   @media (min-width: $medium-screen) 
     @content

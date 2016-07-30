@@ -1,24 +1,29 @@
 @import variable
 @import boxing
 .welcome
-  margin-bottom: 2rem
+  +mq-medium
+    margin-top: -3rem
   h3
-    line-height: 4rem
+    padding-top: 1rem
+    padding-bottom: 1rem
+    line-height: 1.5rem
     text-align: center
     font-family: $font-amazone
-    font-size: 1.375rem
+    font-size: rem(20px)
     color: #ed1c24
   p
-    padding-right: 1%
-    padding-left: 1%
+    padding-right: 0.5rem
+    padding-left: 0.5rem
     line-height: 1.5rem
     font-family: $font-yd
-    font-size: 0.75rem
+    font-size: rem(12px)
     color: #717171
   span
     font-size: 0.8125rem
   article
-    +article-box(0.3%, null, null,null, 5px)
+    +article-box(null, null,null, 5px)
+    background: #fff
+    margin-bottom: 1.5rem
   .special-menu
     text-align: center
   .news
@@ -29,5 +34,6 @@
     flex-direction: column
     button
       align-self: flex-end
+      margin-right: 0.5rem
       +button-box(127px, 38px, 14px)
       

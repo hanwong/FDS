@@ -13,10 +13,11 @@
   border: 1px solid #e4e4e4
   border-radius: 3px
 
-@mixin article-box($ma: 0.5%,$bd-weight:null, $bd-style:null, $bd-color:null, $bd-radius:5px)
+@mixin article-box($bd-weight:null, $bd-style:null, $bd-color:null, $bd-radius:5px)
   width: 100%
   height: auto
-  margin: $ma
+  padding-right: rem(10px)
+  padding-left: rem(10px)
   border: $bd-weight $bd-style $bd-color
   border-radius: $bd-radius
 

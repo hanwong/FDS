@@ -25,26 +25,78 @@
     .title
       font-size: .75rem
 
-.menu-mobile
+.menu
   position: relative
   padding-right: 3%
   padding-left: 3%
   font-size: 0.625rem
   background: #fff
   border-bottom: 1px solid #c6c6c6
+  .menu-mobile
+    justify-content: space-between
+  .menu-tablet
+    display: none
   .logo-oval
     +center-box(-50%, -18%)
     flex: 0 1 auto
     flex-flow: column wrap
     align-items: center
-    padding-bottom: 3%
+    width: 10rem
+    padding-bottom: 1%
     background: #fff
     border-radius: 50%
     border-bottom: 1px solid #c6c6c6
-  .menu-row 
-    justify-content: space-between
-    align-items: flex-start
+    .tablet, .desktop
+      display: none
+
+  +mq-medium
+    .menu-mobile
+      display: none
+    .menu-tablet
+      display: flex
+      justify-content: space-between
+      align-items: flex-end
+      height: 4rem
+      padding-bottom: 0.5rem
+      a 
+        display: block
+        margin-left: 1rem
+        text-align: center
+        color: #ed1c24
+        text-decoration: none
+      .menu-group
+        flex: 0 0 auto
+        .desktop
+          display: none
+    .logo-oval
+      width: 15rem
+      .mobile, .desktop
+        display: none
+      .tablet
+        display: inline
+
+  +mq-large
+    .menu-tablet
+      height: 5rem
+      padding-bottom: 1rem
+      .menu-group
+        .tablet
+          display: none
+        .desktop
+          display: inline
+    .logo-oval
+      width: 18rem
+      .mobile, .tablet
+        display: none
+      .desktop
+        display: inline
+
+  // .menu-row 
+  //   justify-content: space-between
+  //   align-items: flex-start
   button
     margin-top: 1rem
     margin-bottom: 1rem
     +button-box
+
+

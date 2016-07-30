@@ -8,9 +8,11 @@
   flex: 1 0 auto
   flex-direction: row
   flex-wrap: wrap
+  .last
+    margin-right: 0
 
 .container-s
-  width: $small-container*100#{"%"}
+  width: percentage($small-container)
   margin-right: auto
   margin-left: auto
 .col-s
@@ -22,10 +24,11 @@ $total: 6
   .col-s-#{$i}
     flex-basis: percent-width($i, $small-unit-module, $small-gutter-module)
     max-width: percent-width($i, $small-unit-module, $small-gutter-module)
+    margin-right: percentage($small-gutter-module)
 
 +mq-medium
   .container-m
-    width: $medium-container*100#{"%"}
+    width: percentage($medium-container)
     margin-right: auto
     margin-left: auto
   .col-m
@@ -37,10 +40,11 @@ $total: 6
     .col-m-#{$i}
       flex-basis: percent-width($i, $medium-unit-module, $medium-gutter-module)
       max-width: percent-width($i, $medium-unit-module, $medium-gutter-module)
+      margin-right: percentage($medium-gutter-module)
 
 +mq-large
   .container-l
-    width: $large-container*100#{"%"}
+    width: percentage($large-container)
     margin-right: auto
     margin-left: auto
   .col-l
@@ -52,3 +56,4 @@ $total: 6
     .col-l-#{$i}
       flex-basis: percent-width($i, $large-unit-module, $large-gutter-module)
       max-width: percent-width($i, $large-unit-module, $large-gutter-module)
+      margin-right: percentage($large-gutter-module)

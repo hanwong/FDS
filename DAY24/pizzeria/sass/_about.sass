@@ -1,0 +1,35 @@
+@import function
+@import media
+
+.about
+  padding: rem(25px)
+  text-align: center
+  text-shadow: 0 0 3px #999999
+  color: #fff
+  background: url(../img/m-bg-about.png)no-repeat
+  background-size: auto 100%
+  +mq-small
+    background-size: 100% auto
+  background-position: center center
+  div
+    margin-right: auto
+    margin-left: auto
+  h2, h3
+    font-size: rem(25px)
+  h2
+    font-family: $font-hv
+  h3
+    margin-bottom: rem(20px)
+    font-family: $font-amazone
+    font-weight: 200
+  p
+    font-size: rem(13px)
+    line-height: 1.3rem
+
+  +mq-medium
+    background: url(../img/bg-about.png)
+    background-size: 100%
+    h2
+      margin-top: rem(30px)
+    h3
+      margin-bottom: rem(30px)
