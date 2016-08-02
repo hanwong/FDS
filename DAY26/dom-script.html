@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta charset="UTF-8">
+  <title>돔스크립트(DOM Script) - 자바스크립트 사용한 문서 동작 제어</title>
+  <script>
+  var standard_mode = document.compatMode == 'CSS1Compat';
+  var html = document.documentElement;
+  if(standard_mode) {
+    html.setAttribute('class', 'standard');
+    document.write('<link rel="stylesheet" href="style.css">');
+  } else {
+    html.setAttribute('class', 'non-standard');
+  }
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
