@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta charset="UTF-8">
+  <title>Box Animation - using interval</title>
+  <style>
+    .box {
+      width: 100px;
+      height: 100px;
+      background: #000;
+    }
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+  <script>
+    // moveBox 함수 정의
+    // .box 객체를 화면에서 위치 이동 시킨다.
+    function moveBox() {
+      // left  포지션 이동은 gpu를 쓰는 것이 아니라 매번 화면을 리로드 하기 때문에 부하를 가져온다.
+      // transform: translateX()쓰는 것을 권장 // 이건 GPU를 사용
+      // var box = document.getElementById('box');
+      
+    }
+    // setInterval()
+    // 주기 (일정한 시간)마다 할 일(함수)를 수행시킨다.
+    // 1000밀리초 = 1초
+    // setInterval(moveBox, 200);
+  </script>
+</body>
+</html>
