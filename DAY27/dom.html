@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta charset="UTF-8">
+  <title>DOM Script Basic</title>
+  <style>
+    #button-group {
+      display: flex;
+      flex-flow: wrap;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
+    #button-group button {
+      flex: 1 0 auto;
+      border: none;
+      padding: 1em;
+      background: #000;
+      color: #fff;
+      cursor: pointer;
+    }
+    #button-group button:focus { outline: none; }
+    #button-group button:nth-child(1){ background: #FF6666; }
+    #button-group button:nth-child(2){ background: #FFCC66; }
+    #button-group button:nth-child(3){ background: #66CCFF; }
+    #button-group button:nth-child(4){ background: #CC66FF; }
+    #button-group button:nth-child(5){ background: #FF6FCF; }
+
+    #button-group button:nth-child(1):hover,
+    #button-group button:nth-child(1):focus { background: #AB363C; }
+    #button-group button:nth-child(2):hover,
+    #button-group button:nth-child(2):focus { background: #B88D3E; }
+    #button-group button:nth-child(3):hover,
+    #button-group button:nth-child(3):focus { background: #408AB7; }
+    #button-group button:nth-child(4):hover,
+    #button-group button:nth-child(4):focus { background: #8732B3; }
+    #button-group button:nth-child(5):hover,
+    #button-group button:nth-child(5):focus { background: #AA3885; }
+  </style>
+</head>
+<body>
+  <div id="button-group" role="group">
+    <button type="button">#FF6666</button>
+    <button type="button">#FFCC66</button>
+    <button type="button">#66CCFF</button>
+    <button type="button">#CC66FF</button>
+    <button type="button">#FF6FCF</button>
+  </div>
+
+  <div>
+    <button class="red" type="button">red</button>
+    <button class="white" type="button">white</button>
+    <p title="time is gold.">오늘 잠시 좋은 시간은 더 이상 오지 않는다.</p>  
+    <p id="notification">보충은 다음 주부터 시작한다.</p>
+  </div>
+
+
+  <div>
+    <h2 id="heading-01">headline</h2>
+    <ul>
+      <li><a href="">item-01</a></li>
+      <li><a href="">item-02</a></li>
+      <li><a href="">item-03</a></li>
+      <li><a href="">item-04</a></li>
+      <li><a href="">item-05</a></li>
+    </ul>
+  </div>
+  <div>
+    <h2 id="heading-02">headline</h2>
+    <ul>
+      <li><a href="">item-01</a></li>
+      <li><a href="">item-02</a></li>
+      <li><a href="">item-03</a></li>
+      <li><a href="">item-04</a></li>
+      <li><a href="">item-05</a></li>
+    </ul>
+  </div>
+  <div>
+    <h2 id="heading-03">headline</h2>
+    <ul>
+      <li><a href="">item-01</a></li>
+      <li><a href="">item-02</a></li>
+      <li><a href="">item-03</a></li>
+      <li><a href="">item-04</a></li>
+      <li><a href="">item-05</a></li>
+    </ul>
+  </div>
+  <div>
+    <h2 id="heading-04">headline</h2>
+    <ul>
+      <li><a href="">item-01</a></li>
+      <li><a href="">item-02</a></li>
+      <li><a href="">item-03</a></li>
+      <li><a href="">item-04</a></li>
+      <li><a href="">item-05</a></li>
+    </ul>
+  </div>
+
+  <script>
+    // 문서에서 단락 요소에 접근(선택, Selecting)한다.
+    // 유사 배열(like array) : NodeList or HTMLCollection
+    // console.log('문서에서 단락 요소의 개수: ', document.getElementsByTagName('p').length );
+    // console.log('수집된 문서의 단락 요소 중 첫번째 요소: ', document.getElementsByTagName('p').item(0) );
+    // console.log('수집된 문서의 단락 요소 중 두번째 요소: ', document.getElementsByTagName('p')[1] );
+    
+    // // 접근한 단락 요소의 노드 유형을 콘솔(console) 패널에 기록(log)한다. 
+    // console.log('단락 요소의 노드 유형: ', document.getElementsByTagName('p')[0].nodeType );
+
+    // 문서에서 이미 찾은 대상 요소를 다시금 또 찾는 바보 같은 짓을 안하고 싶다.
+    // 우리에게 필요한 것은 메모리할 수 있는 공간이 필요하다.
+
+
+    // 함수
+    function log(msg) {
+      console.log(msg);
+    }
+
+    function tag(name) {
+      return document.getElementsByTagName(name);
+    }
+
+    function id(id) {
+      return document.getElementById(id);
+    }
+
+    function cls(name) {
+      return document.getElementsByClassName(name);
+    }
+
+    // log(param.length );
+    // log(param.item(0) );
+    // log(param[1] );
+    // log(param[0].nodeType );
+    
+
+    // 자바스크립트의 변수
+    // 선언된 메모리 공간(변수)에 레이블(이름 주기표)을 달다.
+    // var param;
+
+    // //  레이블이 달린 메모리 공간(변수)에 사물(데이터)를 담는다.
+    // var divs, head_2, u_list, list_item;
+
+    // param = tag('p');
+    // divs = tag('div');
+    // head_2 = tag('h2');
+    // u_list = tag('ul');
+    // list_item = tag('li');
+
+    // log(param);
+    // log(divs);
+    // log(head_2);
+    // log(u_list);
+    // log(list_item);
+
+    // var heading01 = id('heading-01');
+    // var heading02 = id('heading-02');
+    // var heading03 = id('heading-03');
+    // var heading04 = id('heading-04');
+
+    // log(heading01);
+    // log(heading02);
+    // log(heading03);
+    // log(heading04);
+
+    // var body = document.body;
+    // var red = cls('red')[0];
+    // red.onclick = function() {
+    //     body.style.backgroundColor = 'red';
+    //     body.style.color = 'white';
+    // }
+
+    // var white = cls('white')[0];
+    // white.onclick = function() {
+    //     body.style.backgroundColor = 'white';
+    //     body.style.color = 'black';
+    // }
+    var doc = document.body;
+    var btn_group = document.getElementById('button-group');
+    console.log(btn_group);
+    var btn1 = btn_group.children[0];
+    var btn2 = btn_group.children[1];
+    var btn3 = btn_group.children[2];
+    var btn4 = btn_group.children[3];
+    var btn5 = btn_group.children[4];
+
+    var changeColor = function() {
+      var color = this.firstChild.nodeValue;
+      doc.style.backgroundColor = color;
+      doc.style.color = 'white';
+    };
+    
+    var backColor = function() {
+      doc.style.backgroundColor = 'white';
+      doc.style.color = 'black';
+    }; 
+
+
+    //무명함수;
+    // function() {
+    //   var color = this.firstChild.nodeValue;
+    //   doc.style.backgroundColor = color;
+    //   doc.style.color = 'white';
+    //   }
+     btn1.onmouseenter =
+     btn2.onmouseenter =
+     btn3.onmouseenter =
+     btn4.onmouseenter =
+     btn5.onmouseenter = changeColor;
+     
+     btn1.onmouseleave =
+     btn2.onmouseleave =
+     btn3.onmouseleave =
+     btn4.onmouseleave =
+     btn5.onmouseleave = backColor;
+
+
+  </script>
+</body>
+</html>

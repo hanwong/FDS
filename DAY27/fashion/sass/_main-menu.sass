@@ -1,0 +1,41 @@
+
+.container
+  @extend %sans
+
+.header
+  +flex-vert-center
+  justify-content: space-between
+  +header(146px)
+  background: $white-bg
+  h2
+    flex: 1
+    +flex-hor-center
+    font-size: (28px/$screen-width)*100#{'vw'}
+    font-weight: 400
+  .header-left
+    flex: 1
+    +flex-hor-left
+    order: -1
+  .header-right
+    flex: 1
+    +flex-hor-right
+.btn-menu, .btn-fav, .btn-cart
+  +image(32px,30px)
+
+.menu
+  .spring, .summer, .autumn, .winter
+    display: block
+    +image(750px)
+    margin-bottom: 1px
+    background-color: #1A1A1A
+  a
+    display: block
+    position: relative
+    @extend %serif
+    color: #fff
+    text-transform: uppercase
+  p
+    +pos-center
+    font-size: (26px/$screen-width)*100#{'vw'}
+    letter-spacing: (4px/$screen-width)*100#{'vw'}
+    font-weight: 400

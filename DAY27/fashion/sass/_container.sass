@@ -1,0 +1,27 @@
+$screen-width: 750px
+$screen-height: 1334px
+
+%container
+  width: $screen-width
+  height: $screen-height
+
+
+=pos-center
+  position: absolute
+  left: 50%
+  top: 50%
+  transform: translate(-50%,-50%)
+
+=header($height)
+  width: 100vw
+  max-width: $screen-width
+  height: ($height/$screen-width)*100#{'vw'}
+  max-height: $height
+
+=image($width, $margin: null)
+  @if($margin != null)
+    margin-left: ($margin/$screen-width)*100#{'vw'}
+    margin-right: ($margin/$screen-width)*100#{'vw'}
+  width: ($width/$screen-width)*100#{'vw'}
+  max-width: $width
+  height: auto
