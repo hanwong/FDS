@@ -4,6 +4,7 @@
 @import helpers/layout-flex
 @import helpers/font
 @import helpers/status
+@import helpers/animation
 
 .container
   @extend %sans
@@ -41,6 +42,7 @@
   position: absolute
   bottom: 0
   left: 0
+  @include down-up
   div
     +flex-box
   .box-color
@@ -55,3 +57,4 @@
     font-size: fluid-size(24px)
     text-align: center
     color: #fff 
+
