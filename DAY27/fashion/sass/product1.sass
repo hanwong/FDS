@@ -1,0 +1,85 @@
+@import ../../../Resources/init/ress.css
+@import helpers/config
+@import helpers/container
+@import helpers/layout-flex
+@import helpers/font
+@import helpers/status
+
+.container
+  @extend %sans
+
+.header
+  +flex-vert-center
+  justify-content: space-between
+  +boxing(146px, 750px, transparent)
+  .header-left
+    flex: 1
+    +flex-hor-left
+    order: -1
+  .header-right
+    flex: 1
+    +flex-hor-right
+  .btn-fav, .btn-cart, .btn-back
+    +image(32px,30px)
+  .btn-fav
+    +hover-svg($sand, #favorite)
+  .btn-cart
+    +hover-svg($sand, #shopping)
+  .btn-back
+    +hover-svg($sand, "#back")
+
+.product-img
+  +boxing(710px, 750px)
+  img 
+    +boxing(856px, 750px, null, (top: fluid-size(-146px)) )
+    position: relative
+    z-index: -1
+
+.product-info
+  +flex-vert-center
+  +boxing(120px, 750px, $black )
+  color: #fff
+  .product-name, .product-price
+    flex: 1
+    font-weight: 300
+  .product-name
+    +flex-hor-left
+    margin-left: fluid-size(40px)
+    font-size: fluid-size(28px)
+  .product-price
+    +flex-hor-right
+    margin-right: fluid-size(40px)
+    font-size: fluid-size(30px)
+
+.product-option
+  +flex-vert-center
+  +boxing(238px, 750px, $white-bg)
+  div
+    @extend %serif
+    font-size: fluid-size(50px)
+    line-height: fluid-size(55px)
+    color: $sand
+  p
+    font-size: fluid-size(26px)
+    @extend %serif
+    font-style: italic
+    font-weight: 300
+    text-transform: capitalize
+    color: $gray-bg
+  .size, .quantity, .color
+    +flex-vert-center
+    flex: 1
+    flex-flow: column
+    .btn-color
+       width: fluid-size(36px)
+       height: fluid-size(36px)
+       margin-bottom: fluid-size(25px)
+       border: 6px solid $gray-bg
+       border-radius: 50%
+       background: $black
+
+.add-basket
+  +flex-center
+  +boxing(120px, 750px, $sand )
+  font-size: fluid-size(24px)
+  color: #fff
