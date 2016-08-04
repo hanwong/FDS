@@ -2,7 +2,7 @@ $screen-width: 1080px
 $screen-height: 1920px
 
 @function fluid-size($size)
-  @return ($size/$screen-width)*100#{'vw'}
+  @return ($size*1.44/$screen-width)*100#{'vw'}
 
 %container
   width: $screen-width
@@ -21,9 +21,9 @@ $screen-height: 1920px
 
 =boxing($height, $width: $screen-width, $bg: null, $margin: null, $padding: null)
   height:  fluid-size($height)
-  max-height: $height
+  max-height: $height*1.44
   width:  fluid-size($width)
-  max-width: $width
+  max-width: $width*1.44
   background: $bg
   // 마진 값 추출 
   @if type-of($margin) == map
@@ -80,8 +80,8 @@ $screen-height: 1920px
 
 =image($width, $margin: null)
   @if $margin != null
-    margin-left: ($margin/$screen-width)*100#{'vw'}
-    margin-right: ($margin/$screen-width)*100#{'vw'}
-  width: ($width/$screen-width)*100#{'vw'}
-  max-width: $width
+    margin-left: fluid-size($margin)
+    margin-right: fluid-size($margin)
+  width: fluid-size($width)
+  max-width: $width*1.44
   height: auto
