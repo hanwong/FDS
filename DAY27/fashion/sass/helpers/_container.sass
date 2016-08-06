@@ -51,6 +51,9 @@ $screen-height: 1920px
         left: nth($margin, 2)
         right: nth($margin, 3)
         bottom: nth($margin, 4)
+  @else if type-of($margin) == number
+    margin: $margin
+
   // 패딩 값 추출 과정
   @if type-of($padding) == map
     // @debug $padding
