@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta charset="UTF-8">
+  <title>DOM Scripting with JavaScript</title>
+</head>
+<body>
+  
+  <p><strong>Hello</strong><em> How </em>are you doing?</p>
+
+  <form name="primary_form" action="#" method="GET">
+    <p>
+      <label for="c_id">ID</label>
+      <input type="text" name="c_id" id="c_id" placeholder="hanwong">
+      <button type="submit">전송</button>
+    </p>
+  </form>
+  <form name="secondary-form" action="#" method="GET">
+    <p>
+      <label for="c_email">E-mail</label>
+      <input type="text" name="c_email" id="c_email" placeholder="hanwong@email.com">
+      <button type="submit">전송</button>
+    </p>
+    <script>
+      // // DOM Level 0 
+      // var forms = document.forms;
+      // console.log(forms);
+
+      // /*
+      //   * ----------------------------------------
+      //   * DOM Level 1
+      //   * document.documentElement
+      //   * document.getElementsByTagName()
+      //   * document.getElementById()
+      //   * ---------------------------------------- */
+
+      //   var root_element = document.documentElement; // HTMl 선택, HTML 문서에서만 가능, 
+      //   // doctype이 없는 상태에서 IE는 body를 documentElement로 인식함. doc....
+      //   var root_element = document.getElementsByTagName('html')[0]; // HTML, XML 문서에서 가능, 이것도 옛날 방법임...
+      //   console.log('root_element: ', root_element);
+
+      //   var head = document.head; // HTML 에서만 사용 가능
+      //   var body = document.body; // HTML 에서만 사용 가능
+
+      //   var inputs = document.getElementsByTagName('input');
+      //   var buttons = document.getElementsByTagName('button');
+      //   console.log('inputs: ', inputs);
+      //   console.log('buttons: ', buttons);
+
+      //   // ID 속성을 통한 접근 방법(Interface: Selecting)
+      //   var c_id = document.getElementById('c_id');
+      //   var c_email = document.getElementById('c_email');
+      //   console.log('c_id: ', c_id);
+      //   console.log('c_email: ', c_email);
+
+        var first_para = document.getElementsByTagName('p')[0];
+        var first_para_nodes = first_para.childNodes;
+
+        console.log(first_para_nodes[0].nodeType === 1);
+        console.log(first_para_nodes[1].nodeType === 1);
+        console.log(first_para_nodes[2].nodeType === 2);
+
+
+    </script>
+  </form>
+</body>
+</html>
