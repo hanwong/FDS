@@ -5,6 +5,7 @@
 @import helpers/font
 @import helpers/status
 @import helpers/animation
+@import helpers/radio
 
 .container
   @extend %sans
@@ -42,19 +43,42 @@
   position: absolute
   bottom: 0
   left: 0
-  @include down-up
-  div
+  //@include down-up
+  .box-color, .btn-group
     +flex-box
   .box-color
-    +boxing(513px, 710px, $white-bg, (bottom: fluid-size(20px)) )
-  .btn-sizencolor
-    +boxing(120px, 345px, $white-bg, (right: fluid-size(20px)) )
+    flex-wrap: wrap
+    +boxing(513px, 710px, $white-bg, (bottom: fluid-size(20px)), (top: fluid-size(53px)))
+    @extend %serif
+    text-transform: uppercase
+    
+    label
+      +flex-vert-center
+      +boxing(70px, 305px, transparent, (bottom: fluid-size(40px),left: fluid-size(50px)))
+      font-size: fluid-size(24px)
+      font-weight: 300 
+      color: $gray-unit
+    .tab-group
+      +flex-vert-center
+      justify-content: space-between
+      +boxing(100px, 670px, $tab-bg, (left: fluid-size(20px), right: fluid-size(20px),bottom: fluid-size(20px)))
+      .tab-size, .tab-color
+        @extend %sans
+        font-size: fluid-size(21px)
+        text-align: center
+        color: $gray-unit
+      .tab-size
+        +boxing(90px, 330px, transparent)
+      .tab-color
+        +boxing(90px, 330px, $white-bg,  (left: fluid-size(5px), right: fluid-size(5px)) )
+
+  .btn-sizencolor, .btn-cart
     font-size: fluid-size(24px)
     text-align: center
+  .btn-sizencolor
+    +boxing(120px, 345px, $white-bg, (right: fluid-size(20px)) )
     color: $gray-unit
   .btn-cart
     +boxing(120px, 345px, $sand )
-    font-size: fluid-size(24px)
-    text-align: center
     color: #fff 
 
