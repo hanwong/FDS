@@ -6,6 +6,7 @@
 @import helpers/status
 @import helpers/animation
 @import helpers/radio
+@import helpers/button-hover
 
 .container
   @extend %sans
@@ -78,7 +79,9 @@
   .btn-sizencolor
     +boxing(120px, 345px, $white-bg, (right: fluid-size(20px)) )
     color: $gray-unit
+    +btn-hover($white-bg)
   .btn-cart
     +boxing(120px, 345px, $sand )
     color: #fff 
+    +btn-hover($sand)
 
