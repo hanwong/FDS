@@ -13,18 +13,11 @@ $screen-height: 1920px
   left: 50%
   top: 50%
   transform: translate(-50%,-50%)
-
 //
   * ----------------------------------------
-  * <box mixin>
-  * margin: top left right bottom
+  * margin 함수
 
-=boxing($height, $width: $screen-width, $bg: null, $margin: null, $padding: null)
-  height:  fluid-size($height)
-  max-height: $height*1.44
-  width:  fluid-size($width)
-  max-width: $width*1.44
-  background: $bg
+=margin($margin)
   // 마진 값 추출 
   @if type-of($margin) == map
     // @debug $margin
@@ -54,6 +47,8 @@ $screen-height: 1920px
   @else if type-of($margin) == number
     margin: $margin
 
+
+=padding($padding)
   // 패딩 값 추출 과정
   @if type-of($padding) == map
     // @debug $padding
@@ -80,6 +75,23 @@ $screen-height: 1920px
         left: nth($padding, 2)
         right: nth($padding, 3)
         bottom: nth($padding, 4)
+
+
+//
+  * ----------------------------------------
+  * <box mixin>
+  * margin: top left right bottom
+
+=boxing($height, $width: $screen-width, $bg: null, $margin: null, $padding: null)
+  height:  fluid-size($height)
+  max-height: $height*1.44
+  width:  fluid-size($width)
+  max-width: $width*1.44
+  background: $bg
+  +margin($margin)
+  +padding($padding)
+
+
 
 =image($width, $margin: null)
   @if $margin != null

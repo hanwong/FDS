@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta charset="UTF-8">
+  <title>DOM + JavaScript</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="parent" data-container='true' aria-hidden='false'>
+    <div class="child">
+      <!-- First Child -->
+      <div class="children">Children01</div>
+      <div class="children">Children02</div>
+      <div class="children"></div>
+      <div class="children">Children04</div>
+      <div class="children"></div>
+    </div>
+    <div class="child">
+      <div class="children"></div>
+      <div class="children">Children02</div>
+      <div class="children"></div>
+      <div class="children">Children04</div>
+      <div class="children">Children05</div>
+    </div>
+    <div class="child">
+      <div class="children">Children01</div>
+      <div class="children"></div>
+      <div class="children"></div>
+      <div class="children"></div>
+      <div class="children">Children05</div>
+    </div>
+    <div class="child">
+      <!-- Last Child -->
+      <div class="children"></div>
+      <div class="children"></div>
+      <div class="children"></div>
+      <div class="children">Children04</div>
+      <div class="children">Children05</div>
+    </div>
+  </div>
+<script src="js/make-dom.js"></script>
+</body>
+</html>
