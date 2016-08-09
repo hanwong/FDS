@@ -41,8 +41,21 @@ target_container.appendChild(maked_unordered_list);
 
 var _target = document.body;
 // _target.parentNode.insertBefore(target_container, _target);
+
+prependChild(target_container, _target);
+
+
+
+
 function prependChild( target_node, parent_node ) {
   parent_node.insertBefore(target_node, parent_node.firstChild);
 }
 
-prependChild(target_container, _target);
+function set_element (el, content) {
+   var cont = document.createElement(el);
+   console.log('cont: ', cont);
+   var text_content = document.createTextNode(content);
+   console.log('text: ', text_content);
+   cont.appendChild(text_content); 
+   return cont;
+}
