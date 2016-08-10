@@ -1,0 +1,106 @@
+@mixin append-attr($x) 
+  $sel: &
+  $last: ()
+  $last-collector: unquote("~")
+  $collector: ()
+  @for $i from 1 through length($sel) 
+    $s: nth($sel, $i)
+    $last: nth($s, -1)
+  // @debug "sel: " $sel
+  // @debug "last: " $last
+  $last-collector: append($last-collector, $last)
+  $collector: selector-replace($sel, div, $x)
+  $collector: selector-nest($collector, $last-collector)
+  // @debug "collector: " $collector
+  // @debug "x: " $x
+  $color-name: str-slice($x, 2)
+  // @debug "color-name: " $color-name
+  @at-root #{$collector} 
+    background: color($color-name)
+    @content
+
+@mixin input-attr($x) 
+  $sel: &
+  $input: selector-append($x,":checked")
+  $collector: selector-replace($sel, "input:checked", $input)
+  $color-name: str-slice($x, 2)
+  @at-root #{$collector} 
+    background: color($color-name)
+    @content
+
+@mixin hover-attr($x) 
+  $sel: &
+  $collector: selector-replace($sel, "input", $x)
+  $color-name: str-slice($x, 2)
+  @at-root #{$collector} 
+    background: darken(color($color-name), 15)
+    @content
+  
+.control
+  position: relative
+  display: block
+  padding-left: fluid-size(104px)
+  cursor: pointer
+
+.control input
+  display: none
+
+.control div
+  display: block 
+  position: absolute
+  top: 2px
+  left: 0
+  +boxing(70px, 70px, #000, (right: fluid-size(34px) ) )
+  background: #000
+  +append-attr(".steel")
+  +append-attr(".dark-taupe")
+  +append-attr(".dark-slate-blue")
+  +append-attr(".silver-bg")
+  +append-attr(".dark")
+  +append-attr(".bluey-grey")
+    // background: color(steel)
+    
+
+/* Hover and focus states */
+.control:hover input + div
+  background: #ccc
+  +hover-attr(".steel")
+  +hover-attr(".dark-taupe")
+  +hover-attr(".dark-slate-blue")
+  +hover-attr(".silver-bg")
+  +hover-attr(".dark")
+  +hover-attr(".bluey-grey")
+
+
+.control input:focus + div
+  background: #ccc
+
+  /* Checked state */
+.control input:checked + div
+  background: #2aa1c0
+  +input-attr(".steel")
+  +input-attr(".dark-taupe")
+  +input-attr(".dark-slate-blue")
+  +input-attr(".silver-bg")
+  +input-attr(".dark")
+  +input-attr(".bluey-grey")
+
+/* Check mark */
+.control div::after 
+  position: absolute
+  display: none
+  content: ''
+
+/* Show check mark */
+.control input:checked + div::after 
+  display: block
+
+/* Checkbox tick */
+.control.radio div::after 
+  top: fluid-size(20px)
+  left: fluid-size(30px)
+  width: fluid-size(13px)
+  height: fluid-size(23px)
+  transform: rotate(45deg)
+  border: solid #fff
+  border-width: 0 fluid-size(5px) fluid-size(5px) 0

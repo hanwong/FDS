@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta charset="UTF-8">
+  <title>gallery</title>
+  <style>
+    .square {
+      position: relative;
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      align-items: flex-end;
+      width: 500px;
+      height: 500px;
+      background: #A8FBEC;
+    }
+    .square .view {
+      position: absolute;
+      transition: 0.5s;
+    }
+    .circle  img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="square">
+    <div class="circle image01">
+      <img src="img/image01.jpg">
+    </div>
+    <div class="circle image02">
+      <img src="img/image02.jpg">
+    </div>
+    <div class="circle image03">
+      <img src="img/image03.jpg">
+    </div>
+    <div class="view"></div>
+  </div>
+  <script src="../Resources/DOMhelpers/index.js"></script>
+  <script>
+    function galleryView () {
+      var target = query('.square .view');
+      var clone = this.cloneNode();
+      target.appendChild(clone);
+      target.style.zIndex = '1';
+      clone.style.width = '500px';
+      clone.style.height = '500px';
+      clone.onclick = galleryClose;
+    }
+
+    function galleryClose () {
+      this.style.width = '0px';
+      this.style.height = '0px';
+    }
+
+    var image01 = query('.image01 img');
+    var image02 = query('.image02 img');
+    var image03 = query('.image03 img');
+
+    var view = 
+    image01.onclick = 
+    image02.onclick = 
+    image03.onclick = galleryView;
+
+  </script>
+</body>
+</html>

@@ -1,3 +1,17 @@
+
+var close_modal = function() {
+  removeNode(div_modal);
+};
+
+var make_modal = function() {
+  var body = document.body;
+  var t_node = query('.make');
+  insertAfter(div_modal, t_node);  
+  //this.setAttribute('disabled', true);
+  var btn_x = query('.modal-close');
+  btn_x.onclick = close_modal;
+};
+
 var div_modal = document.createElement('div');
 div_modal.setAttribute('class', 'modal');
 
@@ -21,23 +35,10 @@ div_modal.appendChild(btn_close);
 
 var btn_modal = query('.make');
 
-var make_modal = function() {
-  var body = document.body;
-  var t_node = query('.make');
-  insertAfter(div_modal, t_node);  
-  //this.setAttribute('disabled', true);
-  var btn_x = query('.modal-close');
-  btn_x.onclick = close_modal;
-};
 btn_modal.onclick = make_modal;
 
 
-var close_modal = function() {
-  div_modal.parentNode.removeChild(div_modal);
-};
 
-var res = square(5); // TypeError: square is not a function
 
-var square = function(number) {
-  return number * number;
-}
+// prependChild(body, deep_clone_p);
+

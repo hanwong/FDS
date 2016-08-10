@@ -1,0 +1,5 @@
+=btn-hover($color, $darken: 10)
+  transition: 0.3s
+  &:hover, &:focus
+    background: darken($color, $darken)
+    border: 3px solid darken($color, $darken*3)

@@ -15,10 +15,12 @@ function insertAfter( insert_node, target_node ) {
 }
 
 function set_element (el, content) {
-   var cont = document.createElement(el);
-   var text_content = document.createTextNode(content);
-   cont.appendChild(text_content); 
-   return cont;
+   var el_node = document.createElement(el);
+   if ( typeof content !== 'undefined' && typeof content === 'string'){
+     var text_node = document.createTextNode(content);
+     el_node.appendChild(text_node); 
+   }
+   return el_node;
 }
 
 function queryAll ( sel, con ) {
@@ -43,3 +45,25 @@ function query ( sel, con ) {
 //   }
 // }
 
+function removeNode(arg) {
+   arg.parentNode.removeChild(arg);
+}
+
+/**
+ * choangeNodes(node1, node2)
+ * ---------------------------------------------
+ * @작성자    this
+ * @버전     this
+ * @param  {this} this
+ * @return {this}
+ */
+// 
+function changeNodes ( moving_node, target_node  ) {
+  var moving_clone = moving_node.cloneNode(true);
+  prependChild( moving_clone, moving_node.parentNode );
+  var target_clone = target_node.cloneNode(true);
+  target_node.parentNode.replaceChild(moving_node , target_node);
+  moving_clone.parentNode.replaceChild(target_clone , moving_clone);
+  // insertBefore(target_node, moving_node);
+  // return target_node.parentNode.replaceChild(moving_node, target_node);
+}

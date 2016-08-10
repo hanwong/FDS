@@ -1,0 +1,104 @@
+$screen-width: 1080px
+$screen-height: 1920px
+
+@function fluid-size($size)
+  @return ($size*1.44/$screen-width)*100#{'vw'}
+
+%container
+  width: $screen-width
+  height: $screen-height
+
+=pos-center($left: 50%, $top: 50%, $index: null)
+  position: absolute
+  left: $left
+  top: $top
+  z-index: $index
+  transform: translate(-50%,-50%)
+//
+  * ----------------------------------------
+  * margin 함수
+
+=margin($margin)
+  // 마진 값 추출 
+  @if type-of($margin) == map
+    // @debug $margin
+    @each $dir, $value in $margin
+      margin: 
+        #{$dir}: $value
+  // 리스트일 경우
+  @if type-of($margin) == list
+    @if length($margin) == 2
+      margin:
+        top: nth($margin, 1)
+        left: nth($margin, 2)
+        right: nth($margin, 2)
+        bottom: nth($margin, 1)
+    @else if length($margin) == 3
+      margin:
+        top: nth($margin, 1)
+        left: nth($margin, 2)
+        right: nth($margin, 3)
+        bottom: nth($margin, 1)
+    @else if length($margin) == 4
+      margin:
+        top: nth($margin, 1)
+        left: nth($margin, 2)
+        right: nth($margin, 3)
+        bottom: nth($margin, 4)
+  @else if type-of($margin) == number
+    margin: $margin
+
+
+=padding($padding)
+  // 패딩 값 추출 과정
+  @if type-of($padding) == map
+    // @debug $padding
+    @each $dir, $value in $padding
+      padding: 
+        #{$dir}: $value
+  // 리스트일 경우
+  @if type-of($padding) == list
+    @if length($padding) == 2
+      padding:
+        top: nth($padding, 1)
+        left: nth($padding, 2)
+        right: nth($padding, 2)
+        bottom: nth($padding, 1)
+    @else if length($padding) == 3
+      padding:
+        top: nth($padding, 1)
+        left: nth($padding, 2)
+        right: nth($padding, 3)
+        bottom: nth($padding, 1)
+    @else if length($padding) == 4
+      padding:
+        top: nth($padding, 1)
+        left: nth($padding, 2)
+        right: nth($padding, 3)
+        bottom: nth($padding, 4)
+
+
+//
+  * ----------------------------------------
+  * <box mixin>
+  * margin: top left right bottom
+
+=boxing($height, $width: $screen-width, $bg: null, $margin: null, $padding: null)
+  // @debug type-of($height)
+  @if type-of($height) == string
+    height:  $height
+  @else
+    height:  fluid-size($height)
+    max-height: $height*1.44
+  width:  fluid-size($width)
+  max-width: $width*1.44
+  background: $bg
+  +margin($margin)
+  +padding($padding)
+
+
+=image($width, $margin: null)
+  +margin($margin)
+  width: fluid-size($width)
+  max-width: $width*1.44
+  height: auto
