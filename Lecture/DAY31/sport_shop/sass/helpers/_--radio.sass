@@ -1,0 +1,115 @@
+@mixin append-attr($x) 
+  $sel: &
+  $collector: ()
+  @for $i from 1 through length($sel) 
+    $s: nth($sel, $i)
+    // @debug "s: " $s
+    $last: nth($s, -1)
+    // @debug "last: " $last
+    @if str-slice($last, -1) == "]"
+      $offset: -1
+      $current-x: $x
+      @if str-slice($last, -2) == '"]' 
+        $offset: -2
+      @else 
+        $current-x: '="' + $x + '"'
+      $index: index($s, #{"[type=\"radio\"]"})
+      // @debug "index: " $index
+      $last: str-slice($last, 1, $offset - 1) + $current-x + str-slice($last, $offset)
+      // @debug "last-last: " $last
+      $s: set-nth($s, -1, unquote(""))
+      // @debug $s
+      $collector: set-nth($s, $index, $last)//append($collector, set-nth($s, -1, $last), comma)
+      // @debug "collector: " $collector
+    @else 
+      $collector: append($collector, selector-append($s, $x), comma)
+      // @debug "collector: " $collector
+  @at-root #{$collector} 
+    @content
+  
+=radio($color...)
+  [type="radio"]
+    display: none
+  label
+    display: block
+    cursor: pointer
+    line-height: fluid-size(48px)
+    font-size: fluid-size(24px)
+    font-weight: 300 
+    color: $grey-unit
+  [type="radio"] + span 
+    display: block
+  [type="radio"] + span::before
+    content: ''
+    display: inline-block
+    +boxing(70px, 70px, #000, (right: fluid-size(34px) ) )
+    transition: 0.5s ease all
+    
+    [name] 
+      +append-attr("steel")
+       background: $steel
+    [name] 
+      +append-attr("dark-slate-blue")
+       background: $dark-slate-blue
+    [name] 
+      +append-attr("dark")
+       background: $dark
+    [name] 
+      +append-attr("dark-taupe")
+       background: $dark-taupe
+    [name] 
+      +append-attr("silver")
+       background: $silver
+    [name] 
+      +append-attr("bluey-grey")
+       background: $bluey-grey
+
+  [type="radio"]:checked + span::before
+
+
+.control
+  position: relative
+  display: block
+  padding-left: fluid-size(104px)
+  cursor: pointer
+
+.control input
+  display: none
+
+.control div
+  display: block 
+  position: absolute
+  top: 2px
+  left: 0
+  +boxing(70px, 70px, #000, (right: fluid-size(34px) ) )
+  background: #e6e6e6
+
+
+/* Hover and focus states */
+.control:hover input + div,
+.control input:focus + div
+  background: #ccc
+
+  /* Checked state */
+.control input:checked + div
+  background: #2aa1c0
+
+/* Check mark */
+.control div::after 
+  position: absolute
+  display: none
+  content: ''
+
+/* Show check mark */
+.control input:checked + div::after 
+  display: block
+
+/* Checkbox tick */
+.control.radio div::after 
+  top: fluid-size(20px)
+  left: fluid-size(30px)
+  width: fluid-size(13px)
+  height: fluid-size(23px)
+  transform: rotate(45deg)
+  border: solid #fff
+  border-width: 0 fluid-size(5px) fluid-size(5px) 0

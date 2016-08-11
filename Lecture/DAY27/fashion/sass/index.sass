@@ -1,0 +1,56 @@
+@import ../../../../Resources/init/ress.css
+@import helpers/config
+@import helpers/container
+@import helpers/layout-flex
+@import helpers/font
+@import helpers/status
+
+.container
+  @extend %sans
+
+.header
+  +flex-vert-center
+  justify-content: space-between
+  +boxing(146px, 750px, $white-bg)
+  h2
+    flex: 1
+    +flex-hor-center
+    font-size: fluid-size(28px)
+    font-weight: 400
+  .header-left
+    flex: 1
+    +flex-hor-left
+    order: -1
+  .header-right
+    flex: 1
+    +flex-hor-right
+  .btn-menu, .btn-fav, .btn-cart, .btn-back
+    +image(32px,30px)
+  .btn-menu
+    +hover-svg($sand, #dialpad)
+  .btn-fav
+    +hover-svg($sand, #favorite)
+  .btn-cart
+    +hover-svg($sand, #shopping)
+  .btn-back
+    +hover-svg($sand, "#back")
+
+.menu
+  .spring, .summer, .autumn, .winter
+    display: block
+    +image(750px)
+    margin-bottom: 1px
+  a
+    +image(750px)
+    display: block
+    position: relative
+    @extend %serif
+    color: #fff
+    text-transform: uppercase
+    background-color: $masking-black
+    +hover-bg(#fff)
+  p
+    +pos-center
+    font-size: fluid-size(26px)
+    letter-spacing: fluid-size(4px)
+    font-weight: 400

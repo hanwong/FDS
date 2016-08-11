@@ -1,0 +1,30 @@
+$cobalt: #225b99
+$black: #333333
+$sand: #ddba76
+$greyish: #a4a4a4
+$black-two: #222222
+$grey-bg: #d8d8d8
+$beige: #e4cabc
+$grey-box: #efefef
+$cerise: #ed145b
+$white-bg: #fcfcfc
+$white-tab: #f9f9f9
+$black-three: #030303
+$disable-grey: #828282
+$masking-black: #1A1A1A
+$grey-unit: #AFAFAF
+$dark-taupe: #78604b
+$steel: #70768b
+$silver-bg: #babfc5
+$dark-slate-blue: #23466c
+$bluey-grey: #8c92a6
+$dark: #242732
+$tab-bg: #eaeaea
+
+$colors: (cobalt: #225b99,black: #333333,sand: #ddba76,greyish: #a4a4a4,black-two: #222222,grey-bg: #d8d8d8,beige: #e4cabc,grey-box: #efefef,cerise: #ed145b,white-bg: #fcfcfc,white-tab: #f9f9f9,black-three: #030303,disable-grey: #828282,masking-black: #1A1A1A,grey-unit: #AFAFAF,dark-taupe: #78604b,steel: #70768b,silver-bg: #babfc5,dark-slate-blue: #23466c,bluey-grey: #8c92a6,dark: #242732,tab-bg: #eaeaea)
+
+
+@function color($key) 
+    @if not map-has-key($colors, $key)
+        @warn "Key `#{$key}` not found in $colors map."
+    @return map-get($colors, $key)
