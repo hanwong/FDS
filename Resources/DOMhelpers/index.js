@@ -67,3 +67,30 @@ function changeNodes ( moving_node, target_node  ) {
   // insertBefore(target_node, moving_node);
   // return target_node.parentNode.replaceChild(moving_node, target_node);
 }
+
+function getStyle(el, property, pseudo) {
+  var  value;
+  // 유효성 검사
+  if (el.nodeType !== 1) {
+    console.log('el 인자는 노드를 입력하셔야 합니다.');
+  }
+  if (typeof property !== 'string') {
+    console.error('property 인자는 문자열을 입력하셔야 합니다.');
+  }
+    if (typeof pseudo !== 'string' && pseudo) {
+    console.error('pseudo 인자는 문자열을 입력하셔야 합니다.');
+  }
+  if (getComputedStyle) {
+    value = getComputedStyle(el, pseudo)[property];
+  } else {
+    value = el.currentStyle[property];
+  }
+
+  return value;
+}
+
+function camelCase(css_prop) {
+  return css_prop.replace(/-./g, function($1) {
+    return $1.replace('-','').toUpperCase();
+  });
+}
