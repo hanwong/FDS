@@ -12,6 +12,24 @@ var make_modal = function() {
   btn_x.onclick = close_modal;
 };
 
+var modal_class = 'modal';
+var modal_title_class = 'modal-title';
+var modal_title_content = 'Modal Window';
+var modal_desc_class = 'modal-desc';
+
+var html_code = [
+  '<div class="' + modal_class +'">',
+  '<h2 class="' + modal_title_class +'">' + modal_title_content +'</h2>',
+  '<p class="' + modal_desc_class +'">Madal Window Content ...</p>',
+  '<button class="modal-cta">send message</button>',
+  '<button class="modal-close" aria-label="close modal window">x</button>',
+  '</div>'
+].join('');
+
+document.body.innerHTML += html_code;
+
+
+
 var div_modal = document.createElement('div');
 div_modal.setAttribute('class', 'modal');
 

@@ -94,3 +94,25 @@ function camelCase(css_prop) {
     return $1.replace('-','').toUpperCase();
   });
 }
+
+// JavaScript의 모든 데이터 유형을 올바르게 감지할 수 있는 헬퍼 함수
+function isType(data) {
+  return Object.prototype.toString.call( data ).slice(8,-1).toLowerCase();
+}
+
+function throwError (type1, type2, err_msg) {
+  err_msg = err_msg || '기본 오류 메세지';
+  if ( isType(type1) !== type2 ) { throw new Error(err_msg);}
+}
+
+function validData( data, type ) {
+  return strictEqual( isType(data), type);
+}
+
+function equal (data1, data2) {
+  return data1 == data2;
+}
+
+function strictEqual (data1, data2) {
+  return data1 === data2;
+}
