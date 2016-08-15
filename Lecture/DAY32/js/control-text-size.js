@@ -93,12 +93,13 @@ var add_handlers = function (nodes) {
   }
 };
 
-String.method('deentityify', function() {
+String.prototype.deentityify = function () {
   var entity = {
     quot: '"',
     lt: '<',
     gt: '>'
   };
+
   return function() {
     return this.replace( /&([^&;]+);/g,
       function (a, b) {
@@ -109,4 +110,5 @@ String.method('deentityify', function() {
       }
     );
   };
-} () );
+
+}();
