@@ -67,23 +67,76 @@ body
       padding-left: fluid-size(25px)
       padding-right: fluid-size(25px)
       color: #fff
+  .product-desc, ul
+    margin-top: fluid-size(30px)
+    font-size: fluid-size(30px)
+  ul
+    list-style-type: none
+    list-style-image: url(../img/list.png)
+    list-style-position: inside
+    font-weight: 600
+    
 
 .product-option
   font-size: fluid-size(28px)
   .selector
     +flex-vert-center
     +boxing(120px, 630px, null, (top: fluid-size(55px)))
+    position: relative
     border-radius: fluid-size(55px)
     border: 1px solid #22e4fc
-    select, label
+    .select
+      +flex-box
       flex: 1
+      position: relative
+      width: 100%
+      display: inline-block
+    .select label
+      +pos-center(30%, 50%)
+    .select select
+      display: inline-block
+      cursor: pointer
+      width: 100%
+      padding-left: 50%
+    .size
+      color: #22e4fc
+    .select-arrow
+      +pos-center(75%)
+      pointer-events: none
+      +boxing(57px, 57px)
+    .color
+      color: #000
+    .color ~ .select-arrow
+      border-radius: 50%
+      background: #B2E90F
+    .color ~ .select-arrow::after
+      border: solid #000
+      border-width: 0 fluid-size(5px) fluid-size(5px) 0
+    .color ~ .select-arrow.white
+      background: #fff
+    .color ~ .select-arrow.dark
+      background: #4e4e4e
+    .select-arrow::after
+      content: ''
+      +pos-center(35%, 25%)
+      width: fluid-size(20px)
+      height: fluid-size(20px)
+      transform: rotate(45deg)
+      border: solid #4e4e4e
+      border-width: 0 fluid-size(5px) fluid-size(5px) 0
+
     label
       text-align: center
       text-transform: uppercase
       //+flex-hor-center
-
+  .selector::before
+    content: ''
+    +pos-center
+    +boxing(118px, 0px)
+    border-left: 1px solid #22e4fc
   .add-cart
     +boxing(120px, 630px, #22e4fc, (top: fluid-size(55px), bottom: fluid-size(55px)) )
     border-radius: fluid-size(55px)
     text-transform: uppercase
     color: #000
+

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta charset="UTF-8">
+  <title>JavaScript Core</title>
+  <style>
+    button {
+      font-size: 20px;
+      color: #fff;
+      border: none;
+      padding-right: 10px;
+      padding-left: 10px;
+    }
+    .btn-increase-text{
+      background: #6666FF;
+    }
+    .btn-decrease-text{
+      background: #FF6666;
+    }
+    
+    .page-header {
+      font-size: 22px;
+    }
+    .page-header::after {
+      content: '';
+      margin: auto;
+      font-size: 25px;
+    }
+
+    .textbox {
+      width: 300px;
+      height: 200px;
+      border: 1px solid black;
+    }
+
+    .textbox.test {
+      border: 3px solid #f00;
+    }
+
+
+  </style>
+</head>
+<body>
+  <div class="btn-group">
+    <button type="button" aria-label="텍스트 크게" class="btn-increase-text">+</button>
+    <button type="button" aria-label="텍스트 작게" class="btn-decrease-text">-</button>
+    <button type="button" aria-label="텍스트 복귀" class="btn-origin-text">O</button>
+  </div>
+  <header class="page-header">
+    <input class="textbox" type="text-box">
+  </header>
+
+  <button class="test" type="button">test</button>
+    <button class="test2" type="button">test2</button>
+
+  <script src="../../Resources/DOMhelpers/index.js"></script>
+  <!-- <script src="js/compare-value.js"></script> -->
+  <script src="js/control-text-size.js"></script>
+</body>
+</html>
