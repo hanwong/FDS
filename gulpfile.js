@@ -25,17 +25,17 @@
    // .pipe(sourcemaps.write())
    // .pipe(gulp.dest('DAY27/fashion/css'));
 
-    return gulp.src('DAY31/sport_shop/sass/**/*.{sass,scss}')
+    return gulp.src('Lecture/DAY31/sport_shop/sass/**/*.{sass,scss}')
    .pipe(sourcemaps.init())
    .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
    .pipe(sourcemaps.write())
-   .pipe(gulp.dest('DAY31/sport_shop/css'));
+   .pipe(gulp.dest('Lecture/DAY31/sport_shop/css'));
  });
   
  gulp.task('sass:watch', function () {
    // gulp.watch('sass/**/*.{sass,scss}', ['sass']);
    // gulp.watch('DAY27/fashion/sass/**/*.{sass,scss}', ['sass']);
-   gulp.watch('DAY31/sport_shop/sass/**/*.{sass,scss}', ['sass']);
+   gulp.watch('Lecture/DAY31/sport_shop/sass/**/*.{sass,scss}', ['sass']);
 
  });
  
