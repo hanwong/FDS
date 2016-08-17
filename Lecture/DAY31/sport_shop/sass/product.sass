@@ -72,9 +72,11 @@ body
     font-size: fluid-size(30px)
   ul
     list-style-type: none
-    list-style-image: url(../img/list.png)
     list-style-position: inside
     font-weight: 600
+    li::before
+      content: '- '
+      color: #22e4fc
     
 
 .product-option
@@ -109,6 +111,7 @@ body
     .color ~ .select-arrow
       border-radius: 50%
       background: #B2E90F
+      transition: 0.7s
     .color ~ .select-arrow::after
       border: solid #000
       border-width: 0 fluid-size(5px) fluid-size(5px) 0
@@ -118,9 +121,10 @@ body
       background: #4e4e4e
     .select-arrow::after
       content: ''
-      +pos-center(35%, 25%)
+      +pos-center(32%, 25%)
       width: fluid-size(20px)
       height: fluid-size(20px)
+      transform-orgin: 50% 50%
       transform: rotate(45deg)
       border: solid #4e4e4e
       border-width: 0 fluid-size(5px) fluid-size(5px) 0
