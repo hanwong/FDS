@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta charset="UTF-8">
+  <title>Carousel UI Component</title>
+</head>
+<style>
+  .wrapper {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin-top: 100px;
+    margin-right: auto;
+    margin-left: auto;
+    border: 3px solid #999999;
+    /*overflow: hidden;*/
+  }
+
+  .box {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    transition: all 0.5s
+  }
+
+  .box:nth-child(1) { top: 0; left: -200px; }
+  .box:nth-child(2) { top: 0; left: -100px; }
+  .box:nth-child(3) { top: 0; left: 0; }
+  .box:nth-child(4) { top: 0; left: 100px; }
+  .box:nth-child(5) { top: 0; left: 200px; }
+
+  .num01 { background: #FFCC66;  }
+  .num02 { background: #FF6666;  }
+  .num03 { background: #FF6FCF;  }
+  .num04 { background: #66CCFF;  }
+  .num05 { background: #66FFCC;  }
+
+  .arrow {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #FFFFFF;
+    border-radius: 50%;
+  }
+  .btn-left, .btn-right { top: 45%; }
+  .btn-right { right: 0; }
+
+</style>
+<body>
+  <div class="wrapper">
+    <div class="box num01">BOX01</div>
+    <div class="box num02">BOX02</div>
+    <div class="box num03">BOX03</div>
+    <div class="box num04">BOX04</div>
+    <div class="box num05">BOX05</div>
+    <button type="button" class="arrow btn-left">&lt;</button>
+    <button type="button" class="arrow btn-right">&gt;</button>
+  </div>
+
+  <script src="../../../Resources/DOMhelpers/index.js"></script>
+  <script src="carousel.js"></script>
+</body>
+</html>

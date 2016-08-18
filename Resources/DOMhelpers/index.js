@@ -229,3 +229,42 @@ removeUnit.unit = null;
 function hasUnit(value) {
   return !!getUnit(value);
 }
+
+function makeArray (data) {
+   var check_data = isType(data), result_arr = [], len = data.length;
+
+   if (check_data==='array') {
+    return data;
+   }
+   else if ( len && check_data !== 'string' ) {
+      while ( len-- ) {
+        result_arr.push(data[len]);
+      }
+   }
+   return result_arr.reverse();
+}
+
+
+/* Array를 계속 호출하기 때문에 비효율적인 함수 개선 해야 한다.
+function convertArray (data) {
+  if ( Array.from ){
+    return Array.from(data);
+  } else {
+    return Array.prototype.slice.call(data);
+  }
+}
+*/
+
+// Array를 한번만 물어보자.
+var convertArray = (function(){
+  if ( Array.from ){
+    return function (data) {
+      return Array.from(data);
+    }
+  } else {
+    return function (data) {
+      return Array.prototype.slice.call(data);
+    }
+  }
+}());
+
