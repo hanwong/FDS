@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko-KR" class="no-js">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta charset="UTF-8">
+  <title>jQuery</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <!-- <script src="../../Resources/Library/jquery/jquery-3.1.0.min.js"></script> -->
+  <script>
+    this.jQuery || document.write('<script src="../../Resources/Library/jquery/jquery-3.1.0.min.js"><\/script>');
+  </script>
+</head>
+<body>
+  
+
+<script>
+(function(global, $){
+  'use strict';
+  // 자바스크립트 지원환경 유무 파악 class 식별자 처리
+  $('html').removeClass('no-js').addClass('js');
+
+//END IIFE PATTERN
+})(this, this.jQuery);
+
+
+</script>
+</body>
+</html>
