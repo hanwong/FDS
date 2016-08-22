@@ -1,0 +1,84 @@
+@import helpers/normalize
+@import helpers/config
+@import helpers/container
+@import helpers/layout-flex
+@import helpers/font
+@import helpers/status
+
+body
+  background-color: #eff3f6
+  @extend %sans
+.header
+  +flex-align-center(v)
+  justify-content: space-between
+  +boxing(unquote('70px'), unquote('100%'), linear-gradient(to top, #1991eb 0%, #2ea1f8 100%), null, (left: 30px, right: 30px))
+  box-sizing: border-box
+  .logo
+    +image(44px)
+  .menu
+    +flex-align-center(v)
+  .menu a
+    margin-right: 30px
+    font-size: 14px
+    color: #fff
+    text-decoration: none
+  .menu .menu-project 
+    +flex-align-center(v)
+    img
+      padding-left: 14px
+    // line-height: 44px
+  .profile
+    +flex-align-center(v)
+    img
+      padding-left: 10px
+
+.summary
+  +flex-align-center
+  +boxing(unquote('120px'), unquote('auto'), #fff, (left: auto, right: auto))
+  box-shadow: 0px 1px 1px #888888
+  article
+    +boxing(unquote('120px'), unquote('220px'))
+    text-align: center
+  h3
+    margin-top: 19px
+    margin-bottom: 0
+    color: #9fa9ba
+    font-size: 14px
+    font-weight: 600
+    text-transform: uppercase
+  p
+    margin-top: 20px
+    margin-bottom: 0
+    color: #1d2531
+    font-size: 36px
+    font-weight: 400
+    line-height: 40px
+
+.boards 
+  width: 870px
+  margin-top: 30px
+  margin-left: auto
+  margin-right: auto
+  .row-1, .row-2
+    +flex-align-center(v)
+    justify-content: space-between
+    margin-bottom: 30px
+  .world, .product-sales
+    +boxing(unquote('360px'), unquote('420px'), #fff)
+    box-sizing: border-box
+    // padding: 30px
+    border: 1px solid #e6eaee
+    border-top: 4px solid #1992eb
+    border-radius: 4px
+    h3
+      color: #1d2531
+      font-size: 24px
+  .daily-sales, .customers, .profit
+    +boxing(unquote('377px'), unquote('270px'), #fff)
+    box-sizing: border-box
+    // padding: 30px
+    border: 1px solid #e6eaee
+    border-radius: 4px
+    
+
+

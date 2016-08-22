@@ -1,0 +1,15 @@
+=flex-box
+  display: flex
+  @content
+
+=flex-align-center($orientation: both, $flow: row nowrap)
+  display: flex
+  flex-flow: $flow
+  @if $orientation == both
+    justify-content: center
+    align-items: center
+  @if $orientation == h
+    justify-content: center
+  @if $orientation == v
+    align-items: center
+

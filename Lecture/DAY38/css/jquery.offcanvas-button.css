@@ -1,0 +1,24 @@
+.offcanvas-wrapper {
+  position: relative;
+  left: -202px;
+  float: left;
+}
+
+.toggle-menu-button {
+  position: absolute;
+  top: 0;
+  right: -29.84375px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  cursor: pointer;
+}
+.toggle-menu-button span {
+  display: block;
+  line-height: 0.4;
+}
+.offcanvas-menu {
+  width: 200px;
+  height: 100vh;
+  border: 1px solid #FFCC66;
+  background: #FEC254;
+}

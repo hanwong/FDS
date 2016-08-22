@@ -1,0 +1,15 @@
+=hover-bg($color: null)
+  transition: 0.3s
+  &:hover, &:focus
+      background-color: $color
+
+=hover-svg($color: null, $id: null)
+  & #{$id} path, & #{$id} path
+    transition: 0.3s
+  // @if type-of($id) == list
+  //   @each $i in $id
+  //     &:hover #{$i} path, &:focus #{$i} path
+  //       fill: $color
+  // @else
+  &:hover #{$id} path, &:focus #{$id} path
+    fill: $color 

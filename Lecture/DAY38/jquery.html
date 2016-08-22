@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko-KR" class="no-js">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta charset="UTF-8">
+  <title>jQuery</title>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> -->
+  <script src="js/modernizr.custom.min.js"></script>
+  <!-- <script src="../../Resources/Library/detectizr.js"></script> -->
+  <script src="../../Resources/Library/jquery/jquery-3.1.0.min.js"></script>
+  <script src="js/jquery-study.js"></script>
+  <style>
+    .menu {
+
+    }
+    .list-menu {
+      display: none;
+      float: left;
+      width: 200px;
+      height: 100vh;
+      background: #FFCC66;
+    }
+    .btn-menu{
+      float: left;
+    }
+  </style>
+</head>
+<body>
+  
+  <!-- <div class="demo">
+    <button type="button" class="change-text-button">아래 단락 내용 변경</button>
+    <p>문서 객체의 로드가 완료 되지 않았습니다.</p>
+  </div> -->
+
+  <div class="menu">
+    <div class="list-menu">
+      <ul>
+        <li>item01</li>
+        <li>item02</li>
+        <li>item03</li>
+      </ul>
+    </div>
+    <button type="button" class="btn-menu">=</button>
+  </div>
+
+<script>
+  // jQuery 라이브러리 로드에 성공했는가?
+  // window.jQuery ?
+  //   document.write('<p>jQuery 로딩에 성공했습니다.</p>') :
+  //   document.write('<p>jQuery 로딩에 성공하지 못했습니다.</p>');
+
+  // (function(global, $){
+  //   'use strict';
+
+  //   var $ctb = $('.change-text-button');
+
+  //   //$ctb.click (function() {  //속기형을 쓰게 되면 원본 방식이 결국 다시 호출되기 때문에 좋지 않다. 
+  //   $ctb.on('click', function() {
+  //     $(this).next().text('문서 객체의 로드가 완료 되었습니다.');
+  //     // $(this).attr('disabled', true);  // xml 방식으로 속성이 적용됨. disabled = "disabled"
+  //     $(this).prop('disabled', true);  // html5 방식으로 속성이 적용됨. disabled
+  //   });
+  
+  // //END IIFE PATTERN
+  // })(this, this.jQuery);
+
+(function(global, $){
+  'use strict';
+  
+  var $btn_menu = $('.btn-menu');
+  console.log($btn_menu);
+  var $list_menu = $('.list-menu');
+  console.log($list_menu);
+
+  $btn_menu.on('click', function(){
+    $list_menu.css('display', 'none');
+    console.log('start click');
+  });
+
+//END IIFE PATTERN
+})(this, this.jQuery);
+
+
+</script>
+</body>
+</html>
