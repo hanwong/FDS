@@ -16,7 +16,7 @@ var boo = true; //전역 변수
 var isScope = function(){
   
 }
-
+```
 
 ### 반복문
 
