@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta charset="UTF-8">
+  <title>REVIEW</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+</head>
+<body>
+  <section class="demo1">demo1</section>
+  <script>
+    (function(global, $){
+      'use strict';
+      
+      console.log('jQuery 팩토리 함수에 전달된 함수 내부에서의 this: ', this);
+      var $demo1 = $('.demo1');
+      $demo1.on('mousedown', {'$this': $demo1}, function(evt){
+        console.log('$this', evt.data);
+        console.log('$this', evt.data.$this);
+      });
+    
+    //END IIFE PATTERN
+    })(this, this.jQuery);
+  </script>
+</body>
+</html>

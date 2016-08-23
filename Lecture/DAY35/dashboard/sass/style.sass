@@ -71,14 +71,80 @@ body
     border-top: 4px solid #1992eb
     border-radius: 4px
     h3
+      margin-left: 30px
       color: #1d2531
       font-size: 24px
   .daily-sales, .customers, .profit
     +boxing(unquote('377px'), unquote('270px'), #fff)
     box-sizing: border-box
-    // padding: 30px
     border: 1px solid #e6eaee
     border-radius: 4px
-    
+    h3
+      margin-left: 30px
+      color: #354052
+      font-size: 20px
+
+.product-sales
+  display: flex
+  flex-flow: column wrap
+  justify-content: flex-start
+  align-items: center
+  // display: flex
+  // flex-flow: cloumn wrap
+  h3
+    align-self: flex-start
+    margin-bottom: 20px
+// .woong-bar div
+.woong-bar 
+  .name
+    +flex-align-center(v)
+    justify-content: space-between
+    span
+      +flex-align-center(v)
+      font-size: 14px
+      line-height: 36px
+      &:first-child
+        color: #333c48
+      &:last-child
+        color: #9fa9ba
+  .bar
+    position: relative
+    width: 360px
+    height: 18px
+    margin-bottom: 8px
+    border-radius: 9px
+    background-color: #e2e7ee
+  .value
+    position: absolute
+    height: 18px
+    border-radius: 9px
+  .name span:first-child::before
+    display: inline-block
+    content: ''
+    width: 10px
+    height: 10px
+    margin-right: 9px
+    border: 2px solid #0ea1d4
+    border-radius: 50%
+  &.blue span:first-child::before
+    border: 2px solid #0ea1d4
+  &.blue .value
+    width: 292px
+    background-image: linear-gradient(to top, #1991eb 0%, #2ea1f8 100%)
+  &.purple span:first-child::before
+    border: 2px solid #8e76e4
+  &.purple .value
+    width: 222px
+    background-image: linear-gradient(to top, #7f5be6 0%, #7f5be6 1%, #9d8fe3 100%)
+  &.green span:first-child::before
+    border: 2px solid #3fc529
+  &.green .value
+    width: 144px
+    background-image: linear-gradient(to top, #24b00d 0%, #59da44 100%)
+  &.yellow span:first-child::before
+    border: 2px solid #fac942
+  &.yellow .value
+    width: 92px
+    background-image: linear-gradient(to top, #fdba00 0%, #f8cf5d 100%)
 
 

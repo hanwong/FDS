@@ -28,22 +28,19 @@
   <script>
     jQuery(function($){
       
-      
-      $('.demo').each(function(){
+      var $demo = $('.demo');
+      $demo.each(function(index, item){
         var cnt = 0;
-        
-        $(this).on('click', function(){
+        var $this = $demo.eq(index);
+        $this.on('click', function(){
           if (cnt === 0){
-          var $this = $(this);
             $this.addClass('primary');
             cnt++;
           } else if (cnt === 1){
-            var $this = $(this);
             $this.removeClass('primary');
             $this.addClass('secondary');
             cnt++;
           } else if (cnt === 2){
-            var $this = $(this);
             $this.removeClass('secondary');
             cnt = 0;
           }

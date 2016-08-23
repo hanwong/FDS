@@ -18,12 +18,12 @@
 * `$` 와 `$()` 는 다르다.
   * `$` - 함수
   * `$()` - 함수 실행 결과가 jQuery 인스턴스 객체가 된다., jQuery instance object
-    * `jQuery.prototype.init` 이 실행 되면 객체를 반환함
+    * `jQuery.prototype.init` 이 실행 되면서 객체를 반환함
 
 * `this`, `$(this)` 
-  * this는 이벤트가 연결된 button 문서 객체이다.
+  * this는 이벤트가 연결된 문서 객체이다.
   * this가 참조하는 button 객체를 jQuery 객체화 시키는 방법은
-  * jQuery() 팩토리 함수 내부에 this 참조 변수를 전달하여 jQuery 객체를 생성한다.
+    * jQuery() 팩토리 함수 내부에 this 참조 변수를 전달하여 jQuery 객체를 생성한다.
   * 생성된  jQuery 객체는 jQuery.prototype 객체가 가진 능력을 맘껏 사용가능하다.
   * `var $this = $(this);` - 이런 기능은 성능을 저하시킨다. 이벤트를 발생시킬 때 마다 객체를 생성하는 형태가 된다.
 
@@ -64,5 +64,4 @@ $('nav').hide(2000, function() {
 * css map - `css({ 'font-size': '+=10px', 'margin-left': '1em'})`
 * callback - `css('key': function(){  return  })`
 
-document.
 

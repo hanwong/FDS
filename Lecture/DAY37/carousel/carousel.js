@@ -178,8 +178,11 @@
     this.init();
   }
 
+   // 생성자 함수의 프로토타입 객체 정의
   Carousel.prototype = {
+
     'constructor': Carousel,
+
     'init': function() {
       var carousel = this.carousel;
       carousel.origin_class = carousel.getAttribute('class') || '';
@@ -200,44 +203,20 @@
       prependChild(carousel, carousel_contents_wrapper);
       var content = firstEl(carousel_contents_wrapper);
       this.content_height = removeUnit(css(content, 'height'));
-
-     // 버튼 그룹과 버튼 요소들을 동적으로 생성
-     var button_group = createNode('div');
-     // 버튼 그룹 속성 설정
-     button_group.setAttribute('class', 'ui-carousel--navigation__buttons');
-     button_group.setAttribute('role', 'group');
-
-     // 버튼 생성
-     var prev_button = createNode('button');
-     prev_button.setAttribute('type', 'button');
-     var next_button = prev_button.cloneNode();
-
-     // 각 버튼에 class 식별자를 생성
-     prev_button.setAttribute('class', 'ui-carousel--navigation__prev_button');
-     prev_button.setAttribute('aira-label', 'previous content');
-     prev_button.innerHTML = '<span class="fa fa-angle-up" aria-hidden="true"></span>';
-     next_button.setAttribute('class', 'ui-carousel--navigation__next_button');
-     next_button.setAttribute('aira-label', 'nextious content');
-     next_button.innerHTML = '<span class="fa fa-angle-down" aria-hidden="true"></span>';
-
-     // 버튼 그룹에 버튼을 자식 요소로 삽입
-     button_group.appendChild(prev_button);
-     button_group.appendChild(next_button);
-     //Carousel 콘텐츠 밑에 버튼 그룹 삽입
-     carousel.appendChild(button_group);
-
-      // var button_group_html_code = [
-      //   '<div class="ui-carousel--navigation__buttons" role="group">',
-      //     '<button aria-label="previous content" type="button" class="ui-carousel--navigation__prev_button">',
-      //       '<span class="fa fa-angle-up" aria-hidden="true"></span>',
-      //     '</button>',
-      //     '<button aria-label="next content"type="button"class="ui-carousel--navigation__next_button">',
-      //       '<span class="fa fa-angle-down" aria-hidden="true"></span>',
-      //     '</button>',
-      //   '</div>'
-      // ].join('');
-      // carousel.innerHTML += button_group_html_code;
+      var button_group_html_code = [
+        '<div class="ui-carousel--navigation__buttons" role="group">',
+          '<button aria-label="previous content" type="button" class="ui-carousel--navigation__prev_button">',
+            '<span class="fa fa-angle-up" aria-hidden="true"></span>',
+          '</button>',
+          '<button aria-label="next content"type="button"class="ui-carousel--navigation__next_button">',
+            '<span class="fa fa-angle-down" aria-hidden="true"></span>',
+          '</button>',
+        '</div>'
+      ].join('');
+      carousel.innerHTML += button_group_html_code;
       this.bindEvent();
+      // 메소드 체이닝의 핵심
+      // return this;
     },
     'bindEvent': function() {
       var buttons = this.carousel.querySelectorAll('.ui-carousel--navigation__buttons button');
