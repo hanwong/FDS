@@ -57,6 +57,7 @@
           // 초기 실행이될 때 <html> 요소의 class 속성 값을 가져와 메모리 한다.
           screen.data('original-class', current_class);
         }
+        // console.log(breakpoints_keys.join(' '));
         return breakpoints_keys.join(' ');
       });
       if ( !screen.hasClass( screen.data('original-class') ) ) {
@@ -83,7 +84,9 @@
     // -----------------------------------------------------------------
     $(window).on('load resize', {'i': 0}, function(event) {
       changeDeviceMode($html, event.data.i++ === 0 ? true : false);
+      // console.log(event);
     });
+    
   })(this, this.jQuery);
   </script>
 </head>

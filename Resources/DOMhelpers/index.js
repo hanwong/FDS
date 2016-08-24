@@ -381,3 +381,19 @@ var convertArray = (function(){
 
 
 })();
+
+ var hasClass = (function(){
+    var _hasClass;
+    if ( 'classList' in HTMLElement.prototype ) {
+      _hasClass = function(el, class_name) {
+        return el.classList.contains(class_name);
+      };
+    } else {
+      _hasClass = function(el, class_name) {
+        var _check_class_name = new RegExp('(^| )'+class_name+'( |)');
+        var el_class_name = el.getAttribute('class');
+        return _check_class_name.test(el_class_name);
+      };
+    }
+    return _hasClass;
+  })();

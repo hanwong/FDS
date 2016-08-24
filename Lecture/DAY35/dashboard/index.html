@@ -45,45 +45,43 @@
   <section class="boards">
     <div class="row-1">
       <article class="world">
-        <h3>Worldwide</h3>
+        <section class="header-world">
+          <h3>Worldwide</h3>
+          <p>6 Countries</p>
+        </section class="header-world">
+        <img src="img/map.png" alt="">
+        <div class="data"><span>USA</span> <span>$1,397</span></div>
+        <div class="data"><span>Brazil</span> <span>$430</span></div>
+        <div class="data"><span>Australia</span> <span>$501</span></div>
+        <div class="data"><span>China</span> <span>$215</span></div>
+        <div class="data"><span>France</span> <span>$465</span></div>
+        <div class="data"><span>Thailand</span> <span>$201</span></div>
       </article>
       
       <article class="product-sales">
         <h3>Product Sales</h3>
         <div class="woong-bar blue">
           <div class="name">
-            <span>Business for Newbies</span>
-            <span>332</span>
-          </div>
-          <div class="bar">
-            <div class="value"></div>
+            <span class="sales-catagory">Business for Newbies</span>
+            <span class="sales-value">332</span>
           </div>
         </div>
         <div class="woong-bar purple">
           <div class="name">
             <span>Graph UI Kit</span>
-            <span>252</span>
-          </div>
-          <div class="bar">
-            <div class="value"></div>
+            <span class="sales-value">252</span>
           </div>
         </div>
         <div class="woong-bar green">
           <div class="name">
             <span>iOS UI Kit</span>
-            <span>149</span>
-          </div>
-          <div class="bar">
-            <div class="value"></div>
+            <span class="sales-value">149</span>
           </div>
         </div>
         <div class="woong-bar yellow">
           <div class="name">
             <span>English Webinar</span>
-            <span>98</span>
-          </div>
-          <div class="bar">
-            <div class="value"></div>
+            <span class="sales-value">98</span>
           </div>
         </div>
       </article>
@@ -103,5 +101,10 @@
       </article>
     </div>
   </section>
+  <script src="../../../Resources/DOMhelpers/index.js"></script>
+  <script src="js/dashboard.js"></script>
+  <script>
+    var product_sales = new Wbar('.product-sales');
+  </script>
 </body>
 </html>
