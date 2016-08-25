@@ -9,6 +9,9 @@
         }
 
         var  $activated = this.siblings('.'+class_name);
+        if ($activated.length === 0) {
+          console.info('전달한 ${class_name}에 해당하는 형제가 없습니다 확인해보세요.');
+        }
         $activated.removeClass(class_name);
         this.addClass(class_name);
 

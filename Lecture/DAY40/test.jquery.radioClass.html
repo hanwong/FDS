@@ -6,6 +6,7 @@
   <title>jQuery RadioClass</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   <script src="plugins/radioClass/jquery.radioClass.js"></script>
+  <script src="plugins/memory/jquery.memory.js"></script>
   <style>
     .active {
       background: #ff0;
@@ -28,11 +29,20 @@
     'use strict';
     var $test = $('.test');
     
-    $test.on('click', 'a', function (ev) {
-       ev.preventDefault();
-       var $this = $(this) 
-       $this.parent().radioClass('active');
-    });
+    // $test.on('click', 'a', function (ev) {
+    //    ev.preventDefault();
+    //    var $this = $(this) 
+    //    $this.parent().radioClass('active');
+    // });
+
+  $test.find('a').on('click', function(e) {
+    e.preventDefault();
+    // var href = $(this).attr('href');
+    console.log( '객체 생성 전:', $.data(this, '$this') );
+    var href = $.$(this).attr('href');
+    console.log( '객체 생성 후:', $.data(this, '$this') );
+    console.log(href);
+  });
   //END IIFE PATTERN
   })(this, this.jQuery);
 </script>
