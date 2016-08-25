@@ -15,7 +15,7 @@
     'init': function () {
         var wbar = this.wbar;
         wbar.origin_class = wbar.getAttribute('class');
-        var sales = wbar.querySelectorAll('.woong-bar');
+        var sales = wbar.querySelectorAll('.wbar');
         var total_bar = createNode('div');
         total_bar.setAttribute('class', 'bar');
         var value_bar = createNode('div');
