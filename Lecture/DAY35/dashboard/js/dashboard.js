@@ -42,21 +42,20 @@
           sales[i].appendChild(total_clone);
         }
 
-          var value_bar = sales[0].querySelector('.value');
+        for( var i = 0; i < len ; i++ ){
+          var value_bar = sales[i].querySelector('.value');
           console.dir(value_bar);
-          value_bar.onloadstart = startAnimation;
+          startAnimation(value_bar);
+        }
 
-      function startAnimation () {
-         // var bar_length = this.style.width;
-         console.log('start',this);
-        
+      function startAnimation (bar) {
          var level = 1;
-         var step_bar = bar_length / 100;
+         var value_length = parseInt(bar.style.width,10);
+         var step_bar = value_length / 100;
          var anim_width = 0;
          var step = function () {
             anim_width = anim_width + step_bar;
-            this.style.width = anim_width +'px';
-            console.log(anim_width);
+            bar.style.width = anim_width +'px';
             if (level < 100) {
               level++;
               setTimeout(step, 10);
