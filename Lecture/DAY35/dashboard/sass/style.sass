@@ -71,7 +71,8 @@ body
     border-top: 4px solid #1992eb
     border-radius: 4px
     h3
-      margin-left: 30px
+      margin:
+        left: 30px
       color: #1d2531
       font-size: 24px
   .daily-sales, .customers, .profit
@@ -83,6 +84,68 @@ body
       margin-left: 30px
       color: #354052
       font-size: 20px
+
+.world
+  display: flex
+  flex-flow: row wrap
+  justify-content: center
+  align-items: flex-start
+  img
+    width: 370px
+    height: auto
+  .header-world
+    flex-basis: 100%
+    +flex-align-center(v)
+    justify-content: space-between
+    h3
+      margin:
+        bottom: 0
+    p
+      margin:
+        top: 30px
+        bottom: 0
+        right: 30px
+      color: #9fa9ba
+      font-size: 18px
+      font-weight: 400
+  .value-world
+    +flex-align-center(v, row wrap)
+    justify-content: space-around
+    padding:
+      left: 30px
+      right: 30px
+    .data
+      box-sizing: border-box
+      padding-right: 10px
+      flex: 1 0 50%
+      +flex-align-center(v)
+      justify-content: space-between
+      color: #333c48
+      font-size: 14px
+      font-weight: 600
+      line-height: 30px
+      span
+       +flex-align-center(v)
+    .data span:first-child::before
+      display: inline-block
+      content: ''
+      width: 10px
+      height: 10px
+      margin-right: 9px
+      border: 2px solid #000
+      border-radius: 50%
+    .data.usa span:first-child::before
+      border: 2px solid #0ea1d4
+    .data.brazil span:first-child::before
+      border: 2px solid #fac942
+    .data.australia span:first-child::before
+      border: 2px solid #3fc529
+    .data.china span:first-child::before
+      border: 2px solid #ff7800
+    .data.france span:first-child::before
+      border: 2px solid #3373b3
+    .data.thailand span:first-child::before
+      border: 2px solid #40557d
 
 .product-sales
   display: flex
