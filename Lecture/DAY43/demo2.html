@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko-KR" data-ng-app>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta charset="UTF-8">
+  <title>Demo2</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+</head>
+<body data-ng-init="
+  app = {
+    'name': 'DirectiveApp',
+    'switch': 'open'
+  };
+">
+  <!-- 
+  @ ng-cloak [FOUC 방지]
+  @ ng-switch
+  @ ng-class
+  @ ng-show
+   -->
+   <div data-ng-cloak class="demo-app-container" data-ng-switch="app.switch">
+     <h1 class="demo-app-title">{{app.name}}</h1>
+     <div class="demo-switcher">
+       <button data-ng-click="app.switch = 'something'">Chioice...</button>
+       <button data-ng-click="app.switch = 'open'">Open</button>
+       <button data-ng-click="app.switch = 'close'">Close</button>
+     </div>
+     <p data-ng-switch-when="open" class="switch-open">App switch value is open.</p>
+     <p data-ng-switch-when="close" class="switch-close">App switch value is close.</p>
+     <p data-ng-switch-default class="switch-something">App switch value is something.</p>
+   </div>
+</body>
+</html>

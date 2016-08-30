@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko-KR" data-ng-app>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta charset="UTF-8">
+  <title>Demo - Angular</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      /*background: {{view_color}};*/
+    }
+    button {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+    .palette-container {
+      display: flex;
+    }
+    .color-palette {
+      width: 20%;
+      height: 100vh;
+    }
+    .color-view {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100vh;
+      background: {{view_color}};
+      font-size: 80px;
+      color: #fff;
+    }
+  </style>
+</head>
+<body data-ng-init="
+    view_color = '#FF6666'; 
+    is_hidden = true;
+    colors ={
+      'Red': '#FF6666',
+      'Orange': '#FFCC66',
+      'Green': '#66FFCC',
+      'Blue': '#66CCFF',
+      'Pink': '#FF6FCF'
+    };
+">
+  <!-- 
+  @ ng-intit 
+  @ ng-show
+  @ ng-hide
+  @ ng-model
+  @ ng-click
+  -->
+
+<!-- 팔레트 토글 버튼 -->
+    <!-- 팔레트 <span data-ng-show="!is_hidden">보이기</span> -->
+    <!-- <span data-ng-show="is_hidden">감추기</span> -->
+    <!-- 팔레트 <span data-ng-bind="is_hidden ? '감추기' : '보이기'"></span> -->
+  <button type="button" class="toggle-btn" data-ng-click="is_hidden = !is_hidden">
+    팔레트 {{is_hidden ? '감추기' : '보이기'}}
+  </button>
+  <div class="palette-container">
+  <!-- 팔레트 -->
+    <div class="color-palette" data-ng-show="is_hidden" >
+      <label><input type="radio" value="{{colors.Red}}" data-ng-model="view_color">Red</label><br>
+      <label><input type="radio" value="{{colors.Orange}}" data-ng-model="view_color">Orange</label><br>
+      <label><input type="radio" value="{{colors.Green}}" data-ng-model="view_color">Green</label><br>
+      <label><input type="radio" value="{{colors.Blue}}" data-ng-model="view_color">Blue</label><br>
+      <label><input type="radio" value="{{colors.Pink}}" data-ng-model="view_color">Pink</label><br>
+    </div>
+  <!-- 팔레트 제어에 따른 뷰 -->
+    <div class="color-view">{{view_color}}</div>
+  </div>
+</body>
+</html>

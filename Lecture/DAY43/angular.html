@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta charset="UTF-8">
+  <title>AngularJS</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+</head>
+<body data-ng-app data-ng-init="
+    user_name='hanwong'; 
+    members=['hulk', 'ironman', 'captain America'];
+    times = {'one': 1, 'two': 2, 'three': 3};
+    ">
+  <h1 data-ng-repeat="(key, value) in times"> {{user_name}} &lt; {{key}}, {{value}}</h1>
+  <p data-ng-bind=" user_name + [9, 2, 1].join(' - ')"></p>
+  <span>{{times.one}}</span>
+</body>
+</html>

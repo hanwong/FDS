@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko-KR" data-ng-app>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta charset="UTF-8">
+  <title>Demo3</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+  <style>
+    pre {
+      background: #eeeeee;
+    }
+  </style>
+</head>
+<body data-ng-init="
+order_reverse = true;
+people = 
+[
+  {
+    'name': 'tomy',
+    'age': 23,
+    'mail': 'tomy@gmail.com',
+    'money': 5000,
+    'picture': 'http://placehold.it/320x200/FFCC66/fff/?text=tomy'
+  },
+  {
+    'name': 'sunny',
+    'age': 39,
+    'mail': 'sunny@gmail.com',
+    'money': 8000,
+    'picture': 'http://placehold.it/320x200/66FFCC/fff/?text=sunny'
+  },
+  {
+    'name': 'brown',
+    'age': 20,
+    'mail': 'brown@gmail.com',
+    'money': 12000,
+    'picture': 'http://placehold.it/320x200/804000/fff/?text=brown'
+  }
+];
+">
+  <label for="search-name">이름: </label>
+  <input id="search-name" type="search" data-ng-model="search.name">
+  <label for="search-age">나이: </label>
+  <input id="search-age" type="search" data-ng-model="search.age">
+  <label for="search-limit">개수: </label>
+  <input id="search-limit" type="input" data-ng-model="limit">
+  <label>
+    <input name="order" type="radio" data-ng-click="order_reverse = !order_reverse">오름차순
+    <input name="order" type="radio" data-ng-click="order_reverse = order_reverse">내림차순
+  </label>
+  <pre>{{search | json}}</pre>
+  <ul>
+    <!-- orderBy Filter -->
+    <li data-ng-repeat="person in people | filter : search | limitTo: limit | orderBy: 'age' : order_reverse">
+      <div>{{person.name | uppercase}}</div>
+      <div>{{person.age}}</div>
+      <div>{{person.mail}}</div>
+      <div>{{person.money | currency: '€ ' : 0}}</div>
+      <div>{{person.money * 1250 | number : 0}} 원</div>
+      <div><img data-ng-src="{{person.picture}}" alt="{{person.name}}"></div>
+    </li>
+  </ul>
+
+  <pre>
+    <code>
+      {{ people | json }}
+    </code>
+  </pre>
+</body>
+</html>
