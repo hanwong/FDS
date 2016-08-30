@@ -46,4 +46,13 @@
 * [DAY35 - Core(Hoisting, Scope, Closure)](DAY35/README.md)
 * [DAY36 - Core(Object), Carousel](DAY36/README.md)
 * [DAY37 - Carousel, jQuery](DAY37/README.md)
-* [DAY38 - jQuery](DAY38/README.md)
+* [DAY38 - jQuery(Selector, Filter, Styling)](DAY38/README.md)
+* [DAY39 - jQuery(Selector, Filter, Styling)](DAY39/README.md)
+* [DAY40 - jQuery(Filter, Finding, Chaning, Manipulation,  Insert! in,  Insert! wrap)](DAY40/README.md)
+
+### Framework
+* [DAY41- AJAX, SPA, AgularJS](DAY41/README.md)
+* [DAY42- AgularJS(Big Picture)](DAY42/README.md)
+* [DAY43- AgularJS(View, Controller)](DAY43/README.md)
+
+
