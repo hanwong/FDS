@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta charset="UTF-8">
+  <title>Angular 1.5.8</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+  <script src="modules/main.js"></script>
+</head>
+<body data-ng-app="fdsApp">
+  <div class="fds-members" data-ng-controller="fdsMemberController as fds">
+    <!-- <pre>{{fds.members | json}}</pre> -->
+    <ul>
+      <li data-ng-repeat="member in fds.members">
+        <span>{{ member.name }} - </span>
+        <span>{{ member.position }} - </span>
+        <span>{{ member.wanted }}</span>
+      </li>
+    </ul>
+  </div>
+</body>
+</html>

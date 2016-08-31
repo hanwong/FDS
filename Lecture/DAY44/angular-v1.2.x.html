@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta charset="UTF-8">
+  <title>AngularJS</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+</head>
+<body data-ng-app>
+  <div class="ngtemplate" data-ng-controller="moduleController as mCtrl">
+    <h1 class="ng-template-headline">AngularJS</h1>
+    <button data-ng-click="mCtrl.setContent()" type="button" class="fire-set-content-btn">화이아~!!</button>
+    <p>{{ mCtrl.content }}</p>
+  </div>
+<script>
+  (function(global, ng, jq){
+    'use strict';
+    
+    global.moduleController = function ($scope) {
+       // console.log('angular version: ', ng.version.full);
+       // console.log('this', this);
+       // console.log('$scope', $scope);
+       // console.log('angular.element: ', ng.element);
+       // [v1.2.x,  IE 8 호환]
+       // jQuery와 유사한 jqLite를 Angular컨트롤러 내부에서 사용하는 예
+       var template_headline = jq('.ng-template-headline');
+       // console.log(template_headline);
+       template_headline.addClass('test').text('this is not jQuery. this is jqLite.');
+       var template_headline_content = template_headline.text();
+
+       // $scope 객체의 속성
+       this.content = '';
+       this.setContent = function () {
+          this.content = template_headline_content;
+       }
+
+    };
+  
+  //END IIFE PATTERN
+  })(this, this.angular, this.jQuery);
+</script>
+</body>
+</html>
