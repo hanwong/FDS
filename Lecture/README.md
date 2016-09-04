@@ -54,5 +54,8 @@
 * [DAY41- AJAX, SPA, AgularJS](DAY41/README.md)
 * [DAY42- AgularJS(Big Picture)](DAY42/README.md)
 * [DAY43- AgularJS(View, Controller)](DAY43/README.md)
+* [DAY44- AgularJS(Module, Service, $scope)](DAY44/README.md)
 
-
+### BackEnd 특강
+* [DAY45- REST API, NodeJS, Route, Render](DAY45/README.md)
+* [DAY46- gulp, express, socket.io, heroku](DAY46/README.md)
