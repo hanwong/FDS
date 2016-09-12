@@ -29,20 +29,22 @@
     'use strict';
     var $test = $('.test');
     
-    // $test.on('click', 'a', function (ev) {
-    //    ev.preventDefault();
-    //    var $this = $(this) 
-    //    $this.parent().radioClass('active');
-    // });
+    $test.on('click', 'a', function (ev) {
+       ev.preventDefault();
+       var $this = $(this);
+        console.log('$this: ', $this);
+        console.log('$this.parent(): ', $this.parent());
+       $this.parent().radioClass('active');
+    });
 
-  $test.find('a').on('click', function(e) {
-    e.preventDefault();
-    // var href = $(this).attr('href');
-    console.log( '객체 생성 전:', $.data(this, '$this') );
-    var href = $.$(this).attr('href');
-    console.log( '객체 생성 후:', $.data(this, '$this') );
-    console.log(href);
-  });
+  // $test.find('a').on('click', function(e) {
+  //   e.preventDefault();
+  //   // var href = $(this).attr('href');
+  //   console.log( '객체 생성 전:', $.data(this, '$this') );
+  //   var href = $.$(this).attr('href');
+  //   console.log( '객체 생성 후:', $.data(this, '$this') );
+  //   console.log(href);
+  // });
   //END IIFE PATTERN
   })(this, this.jQuery);
 </script>

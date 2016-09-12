@@ -16,7 +16,7 @@
        this.selected_tab = getRandom($tabmenu_btns);
     }
   
-  $scope.selected_tab_idx = 0;
+  $scope.selected_tab_idx = 2;
   
   $scope.isSelectedTab = function (idx) {
      return this.selected_tab_idx === idx;
