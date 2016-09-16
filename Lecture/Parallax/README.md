@@ -78,3 +78,6 @@ https://youtu.be/5MjCXEz55CU
   // $('.navigation .nav-home').on('click', function () {
   //   TweenMax.from(this, 1, {css: {rotation: 180, opacity:0, scale:0.5}, ease: Quad.easeInOut});
   // })
+
+> node + gulp 강의
+https://youtu.be/R6VhorvMH6I
