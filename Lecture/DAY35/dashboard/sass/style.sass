@@ -80,10 +80,83 @@ body
     box-sizing: border-box
     border: 1px solid #e6eaee
     border-radius: 4px
-    h3
-      margin-left: 30px
-      color: #354052
-      font-size: 20px
+    [class='info-box']
+      +flex-align-center(v, column)
+      width: 100%
+      height: 260px
+      img
+        margin-bottom: 15px
+    [class*='wbar-box-']
+      padding: 0 30px
+      box-sizing: border-box
+      width: 100%
+      height: 117px
+      background: #fafbfc
+      border-top: 1px solid #e6eaee
+
+    [class*='header-']
+      flex-basis: 100%
+      display: flex
+      align-contents: flex-start
+      justify-content: space-between
+      h3
+        margin: 30px 30px
+        color: #354052
+        font-size: 20px
+      p
+        margin: 29px 30px 13px
+        font-size: 30px
+        color: #333c48
+      span
+        display: block
+        text-align: right
+        margin-right: 30px
+        color: #3fc529
+        font-size: 14px
+  .daily-sales
+    .wbar-box-dailysales
+      position: relative
+      .wbar-name
+        font-size: 12px
+        color: #9fa9ba
+        text-transform: uppercase
+      .wbar-value
+        position: absolute
+        right: 20px
+        color: #333c48
+        font-size: 30px
+      .blue .wbar-value
+        top: 15px
+      .purple .wbar-value
+        top: 70px
+
+  .customers
+    .wbar-box-customers
+      +flex-align-center(v)
+      .wbar.blue
+        margin-right: 20px
+      .wbar-info
+        position: relative
+        padding-top: 30px
+        .wbar-name
+          font-size: 12px
+          color: #9fa9ba
+          text-transform: uppercase
+        .wbar-value
+          position: absolute
+          top: 0
+          left: 0
+          color: #333c48
+          font-size: 30px
+
+  .profit 
+    .wbar-box-profit 
+      position: relative
+      img
+        position: absolute
+        top: 16px
+        left: 0
+        
 
 .world
   display: flex
@@ -155,8 +228,26 @@ body
   h3
     align-self: flex-start
     margin-bottom: 20px
+  .wbar 
+    .wbar-info span:first-child::before
+      display: inline-block
+      content: ''
+      width: 10px
+      height: 10px
+      margin-right: 9px
+      border: 2px solid #000
+      border-radius: 50%
+    &.blue span:first-child::before
+      border: 2px solid #0ea1d4
+    &.purple span:first-child::before
+      border: 2px solid #8e76e4
+    &.green span:first-child::before
+      border: 2px solid #3fc529
+    &.yellow span:first-child::before
+      border: 2px solid #fac942
+
 .wbar 
-  .wbar-name
+  .wbar-info
     +flex-align-center(v)
     justify-content: space-between
     span
@@ -169,8 +260,6 @@ body
         color: #9fa9ba
   .bar
     position: relative
-    width: 360px
-    height: 18px
     margin-bottom: 8px
     border-radius: 9px
     background-color: #e2e7ee
@@ -178,33 +267,4 @@ body
     position: absolute
     height: 18px
     border-radius: 9px
-  .wbar-name span:first-child::before
-    display: inline-block
-    content: ''
-    width: 10px
-    height: 10px
-    margin-right: 9px
-    border: 2px solid #000
-    border-radius: 50%
-  &.blue span:first-child::before
-    border: 2px solid #0ea1d4
-  &.blue .value
-    // width: 292px
-    // background-image: linear-gradient(to top, #1991eb 0%, #2ea1f8 100%)
-  &.purple span:first-child::before
-    border: 2px solid #8e76e4
-  &.purple .value
-    // width: 222px
-    // background-image: linear-gradient(to top, #7f5be6 0%, #7f5be6 1%, #9d8fe3 100%)
-  &.green span:first-child::before
-    border: 2px solid #3fc529
-  &.green .value
-    // width: 144px
-    // background-image: linear-gradient(to top, #24b00d 0%, #59da44 100%)
-  &.yellow span:first-child::before
-    border: 2px solid #fac942
-  &.yellow .value
-    // width: 92px
-    // background-image: linear-gradient(to top, #fdba00 0%, #f8cf5d 100%)
-
 

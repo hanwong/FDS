@@ -1,10 +1,11 @@
 (function(global){
   'use strict';
   
-  function Wbar(selector, maxvalue, barlength) {
+  function Wbar(selector, maxvalue, barlength, barheight) {
     this.wbar = document.querySelector(selector);
     this.maxvalue = maxvalue ? maxvalue : 400;
     this.barlength = barlength ? barlength : 360;
+    this.barheight = barheight ? barheight : 18;
 
     this.init();
   }
@@ -24,11 +25,17 @@
 
         var len = sales.length;
         for( var i = 0; i < len ; i++ ){
-          var sales_value = sales[i].querySelector('.sales-value').childNodes[0].nodeValue;
+          var sales_value = sales[i].querySelector('.wbar-value').childNodes[0].nodeValue;
           var total_clone = total_bar.cloneNode(true);
           var bar_length = this.barlength * sales_value / this.maxvalue;
+          var bar_height = this.barheight;
+
           total_clone.style['width'] = this.barlength + 'px';
           total_clone.querySelector('.value').style['width'] = bar_length + 'px';
+
+          total_clone.style['height'] = this.barheight + 'px';
+          total_clone.querySelector('.value').style['height'] = bar_height + 'px';
+
           if ( hasClass(sales[i], 'blue') ) {
             // console.log(total_clone.firstChild);
             total_clone.firstChild.style['background-image'] = 'linear-gradient(to top, #1991eb 0%, #2ea1f8 100%)';
