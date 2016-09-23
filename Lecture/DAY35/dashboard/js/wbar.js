@@ -45,6 +45,8 @@
             total_clone.firstChild.style['background-image'] = 'linear-gradient(to top, #24b00d 0%, #59da44 100%)';
           } else if ( hasClass(sales[i], 'yellow') ) {
             total_clone.firstChild.style['background-image'] = 'linear-gradient(to top, #fdba00 0%, #f8cf5d 100%)';
+          } else if ( hasClass(sales[i], 'orange') ) {
+            total_clone.firstChild.style['background-image'] = 'linear-gradient(to top, #EB4E20 0%, #E4674A 100%)';
           }
           sales[i].appendChild(total_clone);
         }

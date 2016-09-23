@@ -268,3 +268,42 @@ body
     height: 18px
     border-radius: 9px
 
+.info-body
+  +flex-align-center
+  height: 100vh
+  background: #fff
+
+.info-bar
+  +flex-align-center
+
+.skills
+  +boxing(unquote('500px'), unquote('500px'), #fff)
+  box-sizing: border-box
+  // padding: 30px
+  border: 1px solid #e6eaee
+  border-top: 4px solid #1992eb
+  border-radius: 4px
+  display: flex
+  flex-flow: column wrap
+  justify-content: flex-start
+  align-items: center
+
+  h3
+    margin:
+      left: 30px
+      bottom: 55px
+    color: #1d2531
+    font-size: 24px
+    align-self: flex-start
+    a
+      color: black
+
+  .wbar
+    position: relative
+    height: 120px
+    .wbar-value
+      font-size: 20px
+    img
+      position: absolute
+      top: -40px
+      width: 50px
