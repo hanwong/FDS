@@ -39,7 +39,6 @@ function solution(S) {
 
 // you can write to stdout for debugging purposes, e.g.
 // console.log('this is a debug message');
-
 function solution(A, B) {
     var count = 0, 
         n =0, 
