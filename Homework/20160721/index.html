@@ -8,7 +8,7 @@
 <body>
   <script>
         function remoteSubmit() {
-            window.postMessage('token-message', '*');
+            window.parent.postMessage('token-message', '*');
         }
     </script>
 
