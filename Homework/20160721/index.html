@@ -10,14 +10,17 @@
         var port = null;
         window.onmessage = function(e) {
             port = e.ports[0];
-            console.log(e);
         }
 
-        function remoteSubmit() {
-            // window.parent.postMessage('token-message', '*');
-            console.log(port)
-            port.postMessage('token-message');
-        }
+        function sendToken() {
+            if (port) {
+                port.postMessage('token-message');
+            } else {
+                requestAnimationFrame(sendToken);
+            }
+        };
+
+        sendToken();
 
     </script>
 
