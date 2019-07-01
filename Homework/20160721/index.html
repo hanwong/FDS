@@ -11,16 +11,21 @@
         window.onmessage = function(e) {
             port = e.ports[0];
         }
+    
+        window.addEventListener('DOMContentLoaded', function(){
+                  function sendToken() {
+                      if (port) {
+                          port.postMessage('token-message');
+                      } else {
+                          requestAnimationFrame(sendToken);
+                      }
+                  };
 
-        function sendToken() {
-            if (port) {
-                port.postMessage('token-message');
-            } else {
-                requestAnimationFrame(sendToken);
-            }
-        };
+                  sendToken();
 
-        sendToken();
+
+        })
+
 
     </script>
 
